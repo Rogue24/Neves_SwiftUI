@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2A275E1E610030776A /* ImageCroperView.swift */; };
+		71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2B275E1E610030776A /* ImagePickerView.swift */; };
+		71032D31275E21450030776A /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2F275E21450030776A /* CropViewController.swift */; };
+		71032D32275E21450030776A /* CropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71032D30275E21450030776A /* CropViewController.xib */; };
+		71032D37275E25460030776A /* Gwen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D36275E25460030776A /* Gwen.jpg */; };
 		715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */; };
 		715ED75626FF2E310030F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75526FF2E310030F279 /* ContentView.swift */; };
 		715ED75826FF2E320030F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715ED75726FF2E320030F279 /* Assets.xcassets */; };
@@ -53,6 +58,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
+		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		71032D2F275E21450030776A /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		71032D30275E21450030776A /* CropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CropViewController.xib; sourceTree = "<group>"; };
+		71032D36275E25460030776A /* Gwen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gwen.jpg; sourceTree = "<group>"; };
 		715ED75026FF2E310030F279 /* Neves_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neves_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neves_SwiftUIApp.swift; sourceTree = "<group>"; };
 		715ED75526FF2E310030F279 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +141,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		71032D29275E1CA50030776A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				71032D2E275E1E860030776A /* Crop */,
+				71032D2B275E1E610030776A /* ImagePickerView.swift */,
+				71032D2A275E1E610030776A /* ImageCroperView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		71032D2E275E1E860030776A /* Crop */ = {
+			isa = PBXGroup;
+			children = (
+				71032D2F275E21450030776A /* CropViewController.swift */,
+				71032D30275E21450030776A /* CropViewController.xib */,
+			);
+			path = Crop;
+			sourceTree = "<group>";
+		};
+		71032D33275E23EF0030776A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				71032D36275E25460030776A /* Gwen.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		715ED74726FF2E310030F279 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +196,7 @@
 				715ED7DD2700684E0030F279 /* View */,
 				716828C2275DC0430039F3F7 /* Extension */,
 				716828BE275DBBBD0039F3F7 /* Common */,
+				71032D33275E23EF0030776A /* Resource */,
 				715ED75726FF2E320030F279 /* Assets.xcassets */,
 				715ED75926FF2E320030F279 /* Preview Content */,
 				715ED7D7270064CC0030F279 /* Neves_SwiftUI-Bridging-Header.h */,
@@ -275,6 +313,7 @@
 				716828B5275DB9E40039F3F7 /* Unit */,
 				716828B7275DB9EF0039F3F7 /* Animation */,
 				716828C1275DBFE80039F3F7 /* Modifier */,
+				71032D29275E1CA50030776A /* UIKit */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +445,8 @@
 			files = (
 				715ED75B26FF2E320030F279 /* Preview Assets.xcassets in Resources */,
 				715ED75826FF2E320030F279 /* Assets.xcassets in Resources */,
+				71032D37275E25460030776A /* Gwen.jpg in Resources */,
+				71032D32275E21450030776A /* CropViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +503,7 @@
 				715ED7C42700642C0030F279 /* UIColor.Extension.swift in Sources */,
 				715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
+				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
 				715ED75626FF2E310030F279 /* ContentView.swift in Sources */,
 				715ED7CA2700642C0030F279 /* ListViewReusable.swift in Sources */,
 				715ED7D12700642C0030F279 /* Done.swift in Sources */,
@@ -479,6 +521,8 @@
 				715ED7CE2700642C0030F279 /* Const.swift in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,
+				71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */,
+				71032D31275E21450030776A /* CropViewController.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
 				715ED7B62700642C0030F279 /* GradientView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,

@@ -8,6 +8,7 @@ target 'Neves_SwiftUI' do
     pod 'SwiftyJSON'
     pod 'KakaJSON'
     pod 'JPImageresizerView'
+    pod 'JPCrop'
     pod 'SDWebImageSwiftUI'
     pod 'lottie-ios'
   

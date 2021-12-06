@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 enum Demo: String {
-    
     // MARK: - Test
     case Test1
     case Test2
@@ -26,6 +25,9 @@ enum Demo: String {
     // MARK: - Animation
     case AnimExperience
     
+    // MARK: - UIKit
+    case ImagePicker
+    case ImageCroper
 }
 
 extension Demo {
@@ -48,6 +50,11 @@ extension Demo {
         
         Section(title: "Animation", items: [
             Item(demo: .AnimExperience),
+        ]),
+        
+        Section(title: "UIKit", items: [
+            Item(demo: .ImagePicker),
+            Item(demo: .ImageCroper),
         ]),
     ]
 }
@@ -85,6 +92,15 @@ extension Demo {
                 
             case .AnimExperience:
                 AnimExperienceView()
+                    .navigationBarTitle(title, displayMode: .inline)
+                
+            case .ImagePicker:
+                ImagePickerView(selectedImage: .constant(nil))
+                    .edgesIgnoringSafeArea(.all)
+                    .navigationBarTitle(title, displayMode: .inline)
+            case .ImageCroper:
+                ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
+                    .edgesIgnoringSafeArea(.all)
                     .navigationBarTitle(title, displayMode: .inline)
 
             default:

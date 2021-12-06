@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI-frameworks.sh
+${BUILT_PRODUCTS_DIR}/JPCrop/JPCrop.framework
 ${BUILT_PRODUCTS_DIR}/JPImageresizerView/JPImageresizerView.framework
 ${BUILT_PRODUCTS_DIR}/KakaJSON/KakaJSON.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
