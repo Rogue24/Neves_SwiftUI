@@ -1,0 +1,6 @@
+framework module Pods_Neves_SwiftUI {
+  umbrella header "Pods-Neves_SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
