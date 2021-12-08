@@ -78,7 +78,9 @@ struct MatchedGeometryEffectView: View {
                                 }
                             Spacer(minLength: 34)
                         }
-                        .frame(minHeight: screenSize.height, maxHeight: .infinity)
+                        .frame(maxWidth: .infinity,
+                               minHeight: screenSize.height,
+                               maxHeight: .infinity)
                         .transition(
                             // asymmetric 非对称过渡效果
                             // 例如1和2的过渡，1为源头，设置这两者之间的过渡动画效果

@@ -103,8 +103,8 @@ extension Demo {
                     .edgesIgnoringSafeArea(.all)
                     .navigationBarTitle(title, displayMode: .inline)
 
-            default:
-                PlaceholderView(title: title)
+//            default:
+//                PlaceholderView(title: title)
             }
         }
     }

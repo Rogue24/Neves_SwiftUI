@@ -596,7 +596,7 @@
 		5061792FFCA293DA2978CC0074AAC52F /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Sources/KakaJSON/Metadata/Property.swift; sourceTree = "<group>"; };
 		518C35809F12429475010AFD7E9ABD6A /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift"; sourceTree = "<group>"; };
 		51A48770BE4AC56766068D9647105BC0 /* KakaJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KakaJSON.release.xcconfig; sourceTree = "<group>"; };
-		51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "lottie-ios"; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522BD9B009B01738ED7026C31B9E36EB /* KakaJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KakaJSON.modulemap; sourceTree = "<group>"; };
 		52542B6ED19A1056606A6191BD3D7B46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		532BB93D214BC4B8CF392C89234653AD /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = "lottie-swift/src/Private/Model/Objects/Transform.swift"; sourceTree = "<group>"; };
@@ -608,7 +608,7 @@
 		55E81DF7D478FA107F6B001FBFCAFF07 /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/Core/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		568ECF8C02E909DB731EFFB6267686A4 /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayersInitializer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/CompositionLayersInitializer.swift"; sourceTree = "<group>"; };
 		56EBA78FE53F52645E527D68A023BE4B /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
-		57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JPImageresizerView; path = JPImageresizerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JPImageresizerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C11BACA5EE511C74F374F0CE137F22 /* Descriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Descriptor.swift; path = Sources/KakaJSON/Metadata/Descriptor/Descriptor.swift; sourceTree = "<group>"; };
 		57EB49933FB39C19E597B716A208040C /* DashPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashPattern.swift; path = "lottie-swift/src/Private/Model/Objects/DashPattern.swift"; sourceTree = "<group>"; };
 		592EA0B50F035B463DE1509B02932927 /* NSImage+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+Compatibility.h"; path = "SDWebImage/Core/NSImage+Compatibility.h"; sourceTree = "<group>"; };
@@ -617,7 +617,7 @@
 		5BAF2953B6C4632EA265F5769FDA87A3 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/Core/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		5BC9AEFA2E0F743EEC6F9EC7F65A980C /* SDWebImageDownloaderDecryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderDecryptor.m; path = SDWebImage/Core/SDWebImageDownloaderDecryptor.m; sourceTree = "<group>"; };
 		5C0E0F2C9EE51F00342FE83D75F0A550 /* SDWebImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.debug.xcconfig; sourceTree = "<group>"; };
-		5C486813DD34575BEB05ECF2CE808917 /* JPCrop */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JPCrop; path = JPCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C486813DD34575BEB05ECF2CE808917 /* JPCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JPCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFDC3B9106FBBB2AE865D9AF933962E /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
 		5D24A8937E4C535FAAF6DB3FCF6648C3 /* UIColor+SDHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SDHexString.h"; path = "SDWebImage/Private/UIColor+SDHexString.h"; sourceTree = "<group>"; };
 		5D599F0F4197891248AE41B26B31BBDB /* Pods-Neves_SwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Neves_SwiftUI-dummy.m"; sourceTree = "<group>"; };
@@ -666,7 +666,7 @@
 		7B05151587FAC63BE8CD946793566C64 /* JPImageresizer+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JPImageresizer+Extension.h"; path = "JPImageresizerView/Classes/JPImageresizer+Extension.h"; sourceTree = "<group>"; };
 		7B31BEEF36B249A5FC10BD25458FDF2F /* AnyValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyValueContainer.swift"; sourceTree = "<group>"; };
 		7B62D3EF89B312F24B7711E6BA230E05 /* JPImageresizerTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPImageresizerTool.h; path = JPImageresizerView/Classes/JPImageresizerTool.h; sourceTree = "<group>"; };
-		7D3ECBBFDE3A5E800F07584A97048F05 /* KakaJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KakaJSON; path = KakaJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D3ECBBFDE3A5E800F07584A97048F05 /* KakaJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F40814E2FBCA0D55AC46D2DAE2207 /* ConvertibleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConvertibleConfig.swift; path = Sources/KakaJSON/Convert/ConvertibleConfig.swift; sourceTree = "<group>"; };
 		82232BBCC8FBC473E0D29C6DD06FD870 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/Core/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		82254977C8A51B33800E1DB38FF4AD03 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/Core/SDWebImageManager.h; sourceTree = "<group>"; };
@@ -711,7 +711,7 @@
 		9C8267629CDA804188FA42C6358EACBB /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
 		9CD3EFD590CDB33451A7B4E26A157142 /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/PathNode.swift"; sourceTree = "<group>"; };
 		9D0C315EA43A42AB0D351FDC7E92378D /* SDWebImageDownloaderResponseModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderResponseModifier.h; path = SDWebImage/Core/SDWebImageDownloaderResponseModifier.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9CB3F03CC7BD9E14DE3E212D53820D /* FillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/FillRenderer.swift"; sourceTree = "<group>"; };
 		9DBFC12859725C6421CCA48943628319 /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheKeyFilter.m; path = SDWebImage/Core/SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
 		9E5FBD2CB5EEF863E37A0DF1E94CC53B /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
@@ -742,7 +742,7 @@
 		AF58003568CFEB841527C89F3821182F /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/Core/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		AF7D9DFFFD0AE2B2352BF3FF5E24BEDC /* FieldList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldList.swift; path = Sources/KakaJSON/Metadata/Layout/FieldList.swift; sourceTree = "<group>"; };
 		B0120FF202D6C07DE383D44CB3DC1B2B /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
-		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E2387FDE87068E1001CBCEA4883866 /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = "lottie-swift/src/Public/iOS/AnimatedSwitch.swift"; sourceTree = "<group>"; };
 		B1045D57D862990B5FCE7A2B7FD60992 /* SDWebImageSwiftUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImageSwiftUI-umbrella.h"; sourceTree = "<group>"; };
 		B1B64CAC403EF58D8BA99C4B2F067A8F /* ProgressIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressIndicator.swift; path = SDWebImageSwiftUI/Classes/Indicator/ProgressIndicator.swift; sourceTree = "<group>"; };
@@ -833,7 +833,7 @@
 		E10A4AF71CC9B29CAB9952F2097791C3 /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
 		E11843B92600C71070795460D36CBBC0 /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = SDWebImageSwiftUI/Classes/AnimatedImage.swift; sourceTree = "<group>"; };
 		E14D76D9FF812DC92C2B95E07C889A42 /* KakaJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KakaJSON-Info.plist"; sourceTree = "<group>"; };
-		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37A3D6E7A5FEAB6A582245FCEF04B1A /* SDWebImageDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDefine.h; path = SDWebImage/Core/SDWebImageDefine.h; sourceTree = "<group>"; };
 		E3C1F64E459BA09AA1B9DB7094C73886 /* SDmetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDmetamacros.h; path = SDWebImage/Private/SDmetamacros.h; sourceTree = "<group>"; };
 		E3D5A5C124B7A5B418AA14EDD8D0C036 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
@@ -981,7 +981,6 @@
 				DCE5EE4063D07AD39768731CFC895DB2 /* JPImageresizerView.m */,
 				A45D57AF061B4E2ABC47894DECAEF72A /* Support Files */,
 			);
-			name = JPImageresizerView;
 			path = JPImageresizerView;
 			sourceTree = "<group>";
 		};
@@ -1120,7 +1119,6 @@
 				0EDC6ECB6D68D3E302FDC5713357CCCD /* VectorsExtensions.swift */,
 				79A4A67760541BCF8161A8D10D5F96B1 /* Support Files */,
 			);
-			name = "lottie-ios";
 			path = "lottie-ios";
 			sourceTree = "<group>";
 		};
@@ -1309,7 +1307,6 @@
 				9C6A56FDD16CE630B826F5D30E42E1E4 /* SwiftyJSON.swift */,
 				76224815336E6B2ACD49F60FAEECFAF0 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -1425,21 +1422,20 @@
 				989A2A8B7C2FA65647DEB90E89A2B114 /* Values.swift */,
 				E116D1641DDC151B1F74B8028A8A2C39 /* Support Files */,
 			);
-			name = KakaJSON;
 			path = KakaJSON;
 			sourceTree = "<group>";
 		};
 		ABA4ECEC6D1623BBA12CEE05458E8983 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C486813DD34575BEB05ECF2CE808917 /* JPCrop */,
-				57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView */,
-				7D3ECBBFDE3A5E800F07584A97048F05 /* KakaJSON */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
+				5C486813DD34575BEB05ECF2CE808917 /* JPCrop.framework */,
+				57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView.framework */,
+				7D3ECBBFDE3A5E800F07584A97048F05 /* KakaJSON.framework */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
 				A48BF578B7ECD8D51C83132F0B8A4C73 /* Pods-Neves_SwiftUI */,
-				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
+				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */,
 				6B1B10F952F684F6767E6903C2F5E816 /* SDWebImageSwiftUI */,
-				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1498,7 +1494,6 @@
 				D24287F39D9B1603720B09293FA31149 /* Croper.swift */,
 				9EDDF42D895B4EA350AD16C0CE979008 /* Support Files */,
 			);
-			name = JPCrop;
 			path = JPCrop;
 			sourceTree = "<group>";
 		};
@@ -1508,7 +1503,6 @@
 				5B71E8493D9E93E982DB8FD6DCB0E34C /* Core */,
 				C11DB2AF834B3203E0AF201669AF7AA0 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -1571,7 +1565,6 @@
 				20C94D2AC8F22C57D49A477AD25C9F54 /* WebImage.swift */,
 				CE16EA3098E79848661C57352A251178 /* Support Files */,
 			);
-			name = SDWebImageSwiftUI;
 			path = SDWebImageSwiftUI;
 			sourceTree = "<group>";
 		};
@@ -1744,7 +1737,7 @@
 			);
 			name = "lottie-ios";
 			productName = Lottie;
-			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */;
+			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		153D6B62063BA917EC8DB4092EFA615E /* JPImageresizerView */ = {
@@ -1762,7 +1755,7 @@
 			);
 			name = JPImageresizerView;
 			productName = JPImageresizerView;
-			productReference = 57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView */;
+			productReference = 57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		25FEE10C6E3A039D9C04BB397323B94A /* KakaJSON */ = {
@@ -1780,7 +1773,7 @@
 			);
 			name = KakaJSON;
 			productName = KakaJSON;
-			productReference = 7D3ECBBFDE3A5E800F07584A97048F05 /* KakaJSON */;
+			productReference = 7D3ECBBFDE3A5E800F07584A97048F05 /* KakaJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3847153A6E5EEFB86565BA840768F429 /* SDWebImage */ = {
@@ -1798,7 +1791,7 @@
 			);
 			name = SDWebImage;
 			productName = SDWebImage;
-			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */;
+			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		548657D290D5BB84737DDCFC34E67ADF /* JPCrop */ = {
@@ -1816,7 +1809,7 @@
 			);
 			name = JPCrop;
 			productName = JPCrop;
-			productReference = 5C486813DD34575BEB05ECF2CE808917 /* JPCrop */;
+			productReference = 5C486813DD34575BEB05ECF2CE808917 /* JPCrop.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		92EBFA3E7005B4C18A9C0B44324EB80F /* SDWebImageSwiftUI */ = {
@@ -1853,7 +1846,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E72654E19FF35BC858E9A5730C0DF919 /* Pods-Neves_SwiftUI */ = {
@@ -1888,7 +1881,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -2381,7 +2374,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2416,7 +2409,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/KakaJSON/KakaJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/KakaJSON/KakaJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2486,7 +2479,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPImageresizerView/JPImageresizerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPImageresizerView/JPImageresizerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2661,7 +2654,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/KakaJSON/KakaJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/KakaJSON/KakaJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2695,7 +2688,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2791,7 +2784,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPCrop/JPCrop-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPCrop/JPCrop-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2862,7 +2855,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2897,7 +2890,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2931,7 +2924,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2965,7 +2958,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3000,7 +2993,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPImageresizerView/JPImageresizerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPImageresizerView/JPImageresizerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3034,7 +3027,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPCrop/JPCrop-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPCrop/JPCrop-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
