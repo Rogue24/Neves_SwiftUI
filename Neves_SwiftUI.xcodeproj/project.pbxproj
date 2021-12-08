@@ -12,6 +12,18 @@
 		71032D31275E21450030776A /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2F275E21450030776A /* CropViewController.swift */; };
 		71032D32275E21450030776A /* CropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71032D30275E21450030776A /* CropViewController.xib */; };
 		71032D37275E25460030776A /* Gwen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D36275E25460030776A /* Gwen.jpg */; };
+		71032D3927605D6F0030776A /* MatchedGeometryEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D3827605D6F0030776A /* MatchedGeometryEffectView.swift */; };
+		71032D4227605EA40030776A /* Girl4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D3A27605EA40030776A /* Girl4.jpg */; };
+		71032D4327605EA40030776A /* Girl1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D3B27605EA40030776A /* Girl1.jpg */; };
+		71032D4427605EA40030776A /* Girl3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D3C27605EA40030776A /* Girl3.jpg */; };
+		71032D4527605EA40030776A /* Girl8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D3D27605EA40030776A /* Girl8.jpg */; };
+		71032D4627605EA40030776A /* Girl6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D3E27605EA40030776A /* Girl6.jpg */; };
+		71032D4727605EA40030776A /* Girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D3F27605EA40030776A /* Girl2.jpg */; };
+		71032D4827605EA40030776A /* Girl5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D4027605EA40030776A /* Girl5.jpg */; };
+		71032D4927605EA40030776A /* Girl7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71032D4127605EA40030776A /* Girl7.jpg */; };
+		71032D4C27605F150030776A /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4B27605F150030776A /* Beauty.swift */; };
+		71032D4E2760632E0030776A /* BeautyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4D2760632E0030776A /* BeautyItem.swift */; };
+		71032D50276081F40030776A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4F276081F40030776A /* BlurView.swift */; };
 		715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */; };
 		715ED75626FF2E310030F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75526FF2E310030F279 /* ContentView.swift */; };
 		715ED75826FF2E320030F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715ED75726FF2E320030F279 /* Assets.xcassets */; };
@@ -63,6 +75,18 @@
 		71032D2F275E21450030776A /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		71032D30275E21450030776A /* CropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CropViewController.xib; sourceTree = "<group>"; };
 		71032D36275E25460030776A /* Gwen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gwen.jpg; sourceTree = "<group>"; };
+		71032D3827605D6F0030776A /* MatchedGeometryEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectView.swift; sourceTree = "<group>"; };
+		71032D3A27605EA40030776A /* Girl4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl4.jpg; sourceTree = "<group>"; };
+		71032D3B27605EA40030776A /* Girl1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl1.jpg; sourceTree = "<group>"; };
+		71032D3C27605EA40030776A /* Girl3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl3.jpg; sourceTree = "<group>"; };
+		71032D3D27605EA40030776A /* Girl8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl8.jpg; sourceTree = "<group>"; };
+		71032D3E27605EA40030776A /* Girl6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl6.jpg; sourceTree = "<group>"; };
+		71032D3F27605EA40030776A /* Girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl2.jpg; sourceTree = "<group>"; };
+		71032D4027605EA40030776A /* Girl5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl5.jpg; sourceTree = "<group>"; };
+		71032D4127605EA40030776A /* Girl7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Girl7.jpg; sourceTree = "<group>"; };
+		71032D4B27605F150030776A /* Beauty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty.swift; sourceTree = "<group>"; };
+		71032D4D2760632E0030776A /* BeautyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyItem.swift; sourceTree = "<group>"; };
+		71032D4F276081F40030776A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		715ED75026FF2E310030F279 /* Neves_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neves_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neves_SwiftUIApp.swift; sourceTree = "<group>"; };
 		715ED75526FF2E310030F279 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,9 +168,10 @@
 		71032D29275E1CA50030776A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				71032D2E275E1E860030776A /* Crop */,
+				71032D4F276081F40030776A /* BlurView.swift */,
 				71032D2B275E1E610030776A /* ImagePickerView.swift */,
 				71032D2A275E1E610030776A /* ImageCroperView.swift */,
+				71032D2E275E1E860030776A /* Crop */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -163,9 +188,25 @@
 		71032D33275E23EF0030776A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				71032D3B27605EA40030776A /* Girl1.jpg */,
+				71032D3F27605EA40030776A /* Girl2.jpg */,
+				71032D3C27605EA40030776A /* Girl3.jpg */,
+				71032D3A27605EA40030776A /* Girl4.jpg */,
+				71032D4027605EA40030776A /* Girl5.jpg */,
+				71032D3E27605EA40030776A /* Girl6.jpg */,
+				71032D4127605EA40030776A /* Girl7.jpg */,
+				71032D3D27605EA40030776A /* Girl8.jpg */,
 				71032D36275E25460030776A /* Gwen.jpg */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		71032D4A27605ED20030776A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71032D4B27605F150030776A /* Beauty.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		715ED74726FF2E310030F279 = {
@@ -193,6 +234,7 @@
 				715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */,
 				715ED75526FF2E310030F279 /* ContentView.swift */,
 				715ED7DE2700684E0030F279 /* Data */,
+				71032D4A27605ED20030776A /* Model */,
 				715ED7DD2700684E0030F279 /* View */,
 				716828C2275DC0430039F3F7 /* Extension */,
 				716828BE275DBBBD0039F3F7 /* Common */,
@@ -355,6 +397,8 @@
 		716828B9275DBA000039F3F7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				71032D3827605D6F0030776A /* MatchedGeometryEffectView.swift */,
+				71032D4D2760632E0030776A /* BeautyItem.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -443,10 +487,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71032D4727605EA40030776A /* Girl2.jpg in Resources */,
 				715ED75B26FF2E320030F279 /* Preview Assets.xcassets in Resources */,
+				71032D4427605EA40030776A /* Girl3.jpg in Resources */,
+				71032D4827605EA40030776A /* Girl5.jpg in Resources */,
+				71032D4227605EA40030776A /* Girl4.jpg in Resources */,
+				71032D4927605EA40030776A /* Girl7.jpg in Resources */,
 				715ED75826FF2E320030F279 /* Assets.xcassets in Resources */,
 				71032D37275E25460030776A /* Gwen.jpg in Resources */,
 				71032D32275E21450030776A /* CropViewController.xib in Resources */,
+				71032D4527605EA40030776A /* Girl8.jpg in Resources */,
+				71032D4327605EA40030776A /* Girl1.jpg in Resources */,
+				71032D4627605EA40030776A /* Girl6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +554,7 @@
 				716828BD275DBBA50039F3F7 /* Buttons.swift in Sources */,
 				715ED7C42700642C0030F279 /* UIColor.Extension.swift in Sources */,
 				715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */,
+				71032D4C27605F150030776A /* Beauty.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
 				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
 				715ED75626FF2E310030F279 /* ContentView.swift in Sources */,
@@ -511,6 +564,7 @@
 				715ED7C12700642C0030F279 /* UIWindow.Extension.swift in Sources */,
 				715ED7B92700642C0030F279 /* SheetView.swift in Sources */,
 				715ED7C62700642C0030F279 /* UIScrollView.Extension.swift in Sources */,
+				71032D50276081F40030776A /* BlurView.swift in Sources */,
 				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
 				715ED7BE2700642C0030F279 /* UIView.Extension.swift in Sources */,
@@ -531,6 +585,8 @@
 				715ED7C72700642C0030F279 /* UIScreen.Extension.swift in Sources */,
 				715ED7CF2700642C0030F279 /* Function.swift in Sources */,
 				716828C4275DC0580039F3F7 /* Color.Extension.swift in Sources */,
+				71032D3927605D6F0030776A /* MatchedGeometryEffectView.swift in Sources */,
+				71032D4E2760632E0030776A /* BeautyItem.swift in Sources */,
 				715ED7C32700642C0030F279 /* ScreenFit.Extension.swift in Sources */,
 				715ED7BF2700642C0030F279 /* UIImage.Extension.swift in Sources */,
 				715ED7D22700642C0030F279 /* Asyncs.swift in Sources */,

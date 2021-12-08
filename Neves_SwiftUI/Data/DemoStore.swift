@@ -15,9 +15,7 @@ enum Demo: String {
     case Test3
     
     // MARK: - Base
-    case Base1
-    case Base2
-    case Base3
+    case MatchedGeometryEffect
     
     // MARK: - Unit
     case Buttons
@@ -39,9 +37,7 @@ extension Demo {
         ]),
         
         Section(title: "Base", items: [
-            Item(demo: .Base1),
-            Item(demo: .Base2),
-            Item(demo: .Base3),
+            Item(demo: .MatchedGeometryEffect),
         ]),
         
         Section(title: "Unit", items: [
@@ -84,6 +80,10 @@ extension Demo {
                     .navigationBarTitle(title, displayMode: .inline)
             case .Test3:
                 Test3View()
+                    .navigationBarTitle(title, displayMode: .inline)
+                
+            case .MatchedGeometryEffect:
+                MatchedGeometryEffectView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
             case .Buttons:
