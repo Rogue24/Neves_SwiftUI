@@ -71,4 +71,11 @@ extension JP where Base: UIImage {
         
         return newImage
     }
+    
+    static func fromBundle(_ bundle: Bundle? = nil, forName name: String?, ofType ext: String?) -> UIImage? {
+        guard let path = (bundle ?? Bundle.main).path(forResource: name, ofType: ext) else {
+            return nil
+        }
+        return UIImage(contentsOfFile: path)
+    }
 }

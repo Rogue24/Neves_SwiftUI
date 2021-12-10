@@ -66,6 +66,7 @@
 		716828C6275DC0B70039F3F7 /* Test1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C5275DC0B70039F3F7 /* Test1View.swift */; };
 		716828C8275DDB450039F3F7 /* Test2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C7275DDB450039F3F7 /* Test2View.swift */; };
 		716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C9275DDB4D0039F3F7 /* Test3View.swift */; };
+		7199D9C72761D6980001118E /* FrameTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199D9C62761D6980001118E /* FrameTestView.swift */; };
 		A900AE262C842F6285A5D29F /* Pods_Neves_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		716828C5275DC0B70039F3F7 /* Test1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1View.swift; sourceTree = "<group>"; };
 		716828C7275DDB450039F3F7 /* Test2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2View.swift; sourceTree = "<group>"; };
 		716828C9275DDB4D0039F3F7 /* Test3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3View.swift; sourceTree = "<group>"; };
+		7199D9C62761D6980001118E /* FrameTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTestView.swift; sourceTree = "<group>"; };
 		A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neves_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1398D9D6DA22DECD4EFB9EC /* Pods-Neves_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C1545B07380151D92646637B /* Pods-Neves_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				716828C5275DC0B70039F3F7 /* Test1View.swift */,
 				716828C7275DDB450039F3F7 /* Test2View.swift */,
 				716828C9275DDB4D0039F3F7 /* Test3View.swift */,
+				7199D9C62761D6980001118E /* FrameTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				716828C6275DC0B70039F3F7 /* Test1View.swift in Sources */,
 				715ED7CD2700642C0030F279 /* JPError.swift in Sources */,
 				715ED7CC2700642C0030F279 /* PopViewReusable.swift in Sources */,
+				7199D9C72761D6980001118E /* FrameTestView.swift in Sources */,
 				715ED7CE2700642C0030F279 /* Const.swift in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,

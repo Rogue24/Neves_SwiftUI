@@ -13,6 +13,7 @@ enum Demo: String {
     case Test1
     case Test2
     case Test3
+    case FrameTest
     
     // MARK: - Base
     case MatchedGeometryEffect
@@ -72,6 +73,7 @@ extension Demo {
         var body: some View {
             switch demo {
                 
+            // Test
             case .Test1:
                 Test1View()
                     .navigationBarTitle(title, displayMode: .inline)
@@ -81,19 +83,26 @@ extension Demo {
             case .Test3:
                 Test3View()
                     .navigationBarTitle(title, displayMode: .inline)
+            case .FrameTest:
+                FrameTestView()
+                    .navigationBarTitle(title, displayMode: .inline)
                 
+            // Base
             case .MatchedGeometryEffect:
                 MatchedGeometryEffectView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
+            // Unit
             case .Buttons:
                 ButtonsView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
+            // Animation
             case .AnimExperience:
                 AnimExperienceView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
+            // UIKit
             case .ImagePicker:
                 ImagePickerView(selectedImage: .constant(nil))
                     .edgesIgnoringSafeArea(.all)
