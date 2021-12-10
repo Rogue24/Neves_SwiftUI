@@ -36,7 +36,7 @@ struct MatchedGeometryEffectView: View {
                     ForEach(beauties) { beauty in
                         BeautyItem(beauty: beauty)
                             .matchedGeometryEffect(id: beauty.id, in: namespace, isSource: !show)
-                            .frame(width: screenSize.width - 32, height: 270)
+                            .frame(width: screenSize.width - 40, height: 270)
                             .onTapGesture {
                                 // 使用withAnimation就可以实现【仅在点击时】才添加动画
                                 withAnimation(.spring()) {

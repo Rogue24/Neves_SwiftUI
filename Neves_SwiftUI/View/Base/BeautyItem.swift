@@ -33,8 +33,7 @@ struct BeautyItem: View {
             // 当设置VStack的width比子视图的最大width还大的话，设置这个alignment才是这个VStack对于父视图的对齐方式
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(minWidth: 0, maxWidth: .infinity,
-               minHeight: 0, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
     }
