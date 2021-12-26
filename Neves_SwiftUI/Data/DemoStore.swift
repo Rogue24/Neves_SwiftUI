@@ -17,6 +17,7 @@ enum Demo: String {
     
     // MARK: - Base
     case MatchedGeometryEffect
+    case LazyGrid
     
     // MARK: - Unit
     case Buttons
@@ -39,6 +40,7 @@ extension Demo {
         
         Section(title: "Base", items: [
             Item(demo: .MatchedGeometryEffect),
+            Item(demo: .LazyGrid),
         ]),
         
         Section(title: "Unit", items: [
@@ -90,6 +92,9 @@ extension Demo {
             // Base
             case .MatchedGeometryEffect:
                 MatchedGeometryEffectView()
+                    .navigationBarTitle(title, displayMode: .inline)
+            case .LazyGrid:
+                LazyGridView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
             // Unit
