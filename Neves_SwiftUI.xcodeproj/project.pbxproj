@@ -67,6 +67,7 @@
 		716828C8275DDB450039F3F7 /* Test2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C7275DDB450039F3F7 /* Test2View.swift */; };
 		716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C9275DDB4D0039F3F7 /* Test3View.swift */; };
 		7199D9C72761D6980001118E /* FrameTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199D9C62761D6980001118E /* FrameTestView.swift */; };
+		719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E838C277024FD009DD435 /* GeometryReaderTestView.swift */; };
 		A900AE262C842F6285A5D29F /* Pods_Neves_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		716828C7275DDB450039F3F7 /* Test2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2View.swift; sourceTree = "<group>"; };
 		716828C9275DDB4D0039F3F7 /* Test3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3View.swift; sourceTree = "<group>"; };
 		7199D9C62761D6980001118E /* FrameTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTestView.swift; sourceTree = "<group>"; };
+		719E838C277024FD009DD435 /* GeometryReaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTestView.swift; sourceTree = "<group>"; };
 		A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neves_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1398D9D6DA22DECD4EFB9EC /* Pods-Neves_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C1545B07380151D92646637B /* Pods-Neves_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				716828C7275DDB450039F3F7 /* Test2View.swift */,
 				716828C9275DDB4D0039F3F7 /* Test3View.swift */,
 				7199D9C62761D6980001118E /* FrameTestView.swift */,
+				719E838C277024FD009DD435 /* GeometryReaderTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				716828BD275DBBA50039F3F7 /* Buttons.swift in Sources */,
 				715ED7C42700642C0030F279 /* UIColor.Extension.swift in Sources */,
 				715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */,
+				719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */,
 				71032D4C27605F150030776A /* Beauty.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
 				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
