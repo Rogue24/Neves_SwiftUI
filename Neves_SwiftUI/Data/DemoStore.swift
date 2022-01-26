@@ -22,6 +22,7 @@ enum Demo: String {
     
     // MARK: - Unit
     case Buttons
+    case ProgressHUD
     
     // MARK: - Animation
     case AnimExperience
@@ -46,6 +47,7 @@ extension Demo {
         
         Section(title: "Unit", items: [
             Item(demo: .Buttons),
+            Item(demo: .ProgressHUD),
         ]),
         
         Section(title: "Animation", items: [
@@ -104,6 +106,9 @@ extension Demo {
             // Unit
             case .Buttons:
                 ButtonsView()
+                    .navigationBarTitle(title, displayMode: .inline)
+            case .ProgressHUD:
+                ProgressHUDView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
             // Animation

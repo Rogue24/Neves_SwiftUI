@@ -70,6 +70,10 @@
 		7199D9C72761D6980001118E /* FrameTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199D9C62761D6980001118E /* FrameTestView.swift */; };
 		719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E838C277024FD009DD435 /* GeometryReaderTestView.swift */; };
 		71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */; };
+		71ADDF8427A0E88000404FF4 /* TTProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */; };
+		71ADDF8527A0E88000404FF4 /* TTProgressHUDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */; };
+		71ADDF8627A0E88000404FF4 /* CGSize+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8327A0E88000404FF4 /* CGSize+Hashable.swift */; };
+		71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8727A0E8A900404FF4 /* ProgressHUDView.swift */; };
 		A900AE262C842F6285A5D29F /* Pods_Neves_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +143,10 @@
 		7199D9C62761D6980001118E /* FrameTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTestView.swift; sourceTree = "<group>"; };
 		719E838C277024FD009DD435 /* GeometryReaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTestView.swift; sourceTree = "<group>"; };
 		71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTProgressHUD.swift; sourceTree = "<group>"; };
+		71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTProgressHUDConfig.swift; sourceTree = "<group>"; };
+		71ADDF8327A0E88000404FF4 /* CGSize+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Hashable.swift"; sourceTree = "<group>"; };
+		71ADDF8727A0E8A900404FF4 /* ProgressHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDView.swift; sourceTree = "<group>"; };
 		A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neves_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1398D9D6DA22DECD4EFB9EC /* Pods-Neves_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C1545B07380151D92646637B /* Pods-Neves_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +254,7 @@
 				715ED7DD2700684E0030F279 /* View */,
 				716828C2275DC0430039F3F7 /* Extension */,
 				716828BE275DBBBD0039F3F7 /* Common */,
+				71ADDF7F27A0E88000404FF4 /* ThirdLib */,
 				71032D33275E23EF0030776A /* Resource */,
 				715ED75726FF2E320030F279 /* Assets.xcassets */,
 				715ED75926FF2E320030F279 /* Preview Content */,
@@ -380,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				716828BC275DBBA50039F3F7 /* Buttons.swift */,
+				71ADDF8727A0E8A900404FF4 /* ProgressHUDView.swift */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -436,6 +446,24 @@
 				716828C3275DC0580039F3F7 /* Color.Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		71ADDF7F27A0E88000404FF4 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				71ADDF8027A0E88000404FF4 /* TTProgressHUD */,
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		71ADDF8027A0E88000404FF4 /* TTProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				71ADDF8327A0E88000404FF4 /* CGSize+Hashable.swift */,
+				71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */,
+				71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */,
+			);
+			path = TTProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,7 +598,10 @@
 				71032D4C27605F150030776A /* Beauty.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
 				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
+				71ADDF8527A0E88000404FF4 /* TTProgressHUDConfig.swift in Sources */,
 				715ED75626FF2E310030F279 /* ContentView.swift in Sources */,
+				71ADDF8427A0E88000404FF4 /* TTProgressHUD.swift in Sources */,
+				71ADDF8627A0E88000404FF4 /* CGSize+Hashable.swift in Sources */,
 				715ED7CA2700642C0030F279 /* ListViewReusable.swift in Sources */,
 				715ED7D12700642C0030F279 /* Done.swift in Sources */,
 				715ED7BA2700642C0030F279 /* OptionPopView.swift in Sources */,
@@ -607,6 +638,7 @@
 				715ED7BF2700642C0030F279 /* UIImage.Extension.swift in Sources */,
 				715ED7D22700642C0030F279 /* Asyncs.swift in Sources */,
 				715ED7BD2700642C0030F279 /* Literal.Extension.swift in Sources */,
+				71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */,
 				715ED7E02700684E0030F279 /* DemoStore.swift in Sources */,
 				715ED7CB2700642C0030F279 /* Bindable.swift in Sources */,
 				715ED7D02700642C0030F279 /* File.swift in Sources */,
