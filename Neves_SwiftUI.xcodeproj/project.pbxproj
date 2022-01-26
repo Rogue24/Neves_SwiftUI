@@ -24,6 +24,7 @@
 		71032D4C27605F150030776A /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4B27605F150030776A /* Beauty.swift */; };
 		71032D4E2760632E0030776A /* BeautyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4D2760632E0030776A /* BeautyItem.swift */; };
 		71032D50276081F40030776A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4F276081F40030776A /* BlurView.swift */; };
+		714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A3A4C277B45FA005A337E /* LazyGridView.swift */; };
 		715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */; };
 		715ED75626FF2E310030F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75526FF2E310030F279 /* ContentView.swift */; };
 		715ED75826FF2E320030F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715ED75726FF2E320030F279 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C9275DDB4D0039F3F7 /* Test3View.swift */; };
 		7199D9C72761D6980001118E /* FrameTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199D9C62761D6980001118E /* FrameTestView.swift */; };
 		719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E838C277024FD009DD435 /* GeometryReaderTestView.swift */; };
+		71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */; };
 		A900AE262C842F6285A5D29F /* Pods_Neves_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,7 @@
 		71032D4B27605F150030776A /* Beauty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty.swift; sourceTree = "<group>"; };
 		71032D4D2760632E0030776A /* BeautyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyItem.swift; sourceTree = "<group>"; };
 		71032D4F276081F40030776A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		714A3A4C277B45FA005A337E /* LazyGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyGridView.swift; sourceTree = "<group>"; };
 		715ED75026FF2E310030F279 /* Neves_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neves_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neves_SwiftUIApp.swift; sourceTree = "<group>"; };
 		715ED75526FF2E310030F279 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		716828C9275DDB4D0039F3F7 /* Test3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3View.swift; sourceTree = "<group>"; };
 		7199D9C62761D6980001118E /* FrameTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTestView.swift; sourceTree = "<group>"; };
 		719E838C277024FD009DD435 /* GeometryReaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTestView.swift; sourceTree = "<group>"; };
+		71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neves_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1398D9D6DA22DECD4EFB9EC /* Pods-Neves_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C1545B07380151D92646637B /* Pods-Neves_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neves_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				71032D3827605D6F0030776A /* MatchedGeometryEffectView.swift */,
+				714A3A4C277B45FA005A337E /* LazyGridView.swift */,
 				71032D4D2760632E0030776A /* BeautyItem.swift */,
 			);
 			path = Base;
@@ -420,6 +425,7 @@
 		716828C1275DBFE80039F3F7 /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
+				71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
 				715ED7BE2700642C0030F279 /* UIView.Extension.swift in Sources */,
+				714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */,
 				715ED7B72700642C0030F279 /* PopViewCompatible.swift in Sources */,
 				716828C6275DC0B70039F3F7 /* Test1View.swift in Sources */,
 				715ED7CD2700642C0030F279 /* JPError.swift in Sources */,
@@ -584,6 +591,7 @@
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,
 				71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */,
+				71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */,
 				71032D31275E21450030776A /* CropViewController.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
 				715ED7B62700642C0030F279 /* GradientView.swift in Sources */,
