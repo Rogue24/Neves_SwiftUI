@@ -24,6 +24,13 @@
 		71032D4C27605F150030776A /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4B27605F150030776A /* Beauty.swift */; };
 		71032D4E2760632E0030776A /* BeautyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4D2760632E0030776A /* BeautyItem.swift */; };
 		71032D50276081F40030776A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4F276081F40030776A /* BlurView.swift */; };
+		7115A6BF27EDC7D800C5B145 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */; };
+		7115A6C127EDC7D900C5B145 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6C027EDC7D800C5B145 /* SwiftUI.framework */; };
+		7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7115A6C327EDC7D900C5B145 /* NevesWidget.swift */; };
+		7115A6C727EDC7DA00C5B145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7115A6C627EDC7DA00C5B145 /* Assets.xcassets */; };
+		7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */; };
+		7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */; };
+		7115A6CD27EDC7DA00C5B145 /* NevesWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A3A4C277B45FA005A337E /* LazyGridView.swift */; };
 		715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */; };
 		715ED75626FF2E310030F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75526FF2E310030F279 /* ContentView.swift */; };
@@ -77,6 +84,30 @@
 		A900AE262C842F6285A5D29F /* Pods_Neves_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7115A6CB27EDC7DA00C5B145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 715ED74826FF2E310030F279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7115A6BC27EDC7D800C5B145;
+			remoteInfo = NevesWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7115A6CE27EDC7DA00C5B145 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7115A6CD27EDC7DA00C5B145 /* NevesWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
 		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -95,6 +126,13 @@
 		71032D4B27605F150030776A /* Beauty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty.swift; sourceTree = "<group>"; };
 		71032D4D2760632E0030776A /* BeautyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyItem.swift; sourceTree = "<group>"; };
 		71032D4F276081F40030776A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NevesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7115A6C027EDC7D800C5B145 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7115A6C327EDC7D900C5B145 /* NevesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidget.swift; sourceTree = "<group>"; };
+		7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NevesWidget.intentdefinition; sourceTree = "<group>"; };
+		7115A6C627EDC7DA00C5B145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7115A6C827EDC7DA00C5B145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		714A3A4C277B45FA005A337E /* LazyGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyGridView.swift; sourceTree = "<group>"; };
 		715ED75026FF2E310030F279 /* Neves_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neves_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neves_SwiftUIApp.swift; sourceTree = "<group>"; };
@@ -153,6 +191,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7115A6BA27EDC7D800C5B145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7115A6C127EDC7D900C5B145 /* SwiftUI.framework in Frameworks */,
+				7115A6BF27EDC7D800C5B145 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		715ED74D26FF2E310030F279 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				A8C9E40F62F32DC33FBE0D29 /* Pods_Neves_SwiftUI.framework */,
+				7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */,
+				7115A6C027EDC7D800C5B145 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,10 +274,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7115A6C227EDC7D900C5B145 /* NevesWidget */ = {
+			isa = PBXGroup;
+			children = (
+				7115A6C327EDC7D900C5B145 /* NevesWidget.swift */,
+				7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */,
+				7115A6C627EDC7DA00C5B145 /* Assets.xcassets */,
+				7115A6C827EDC7DA00C5B145 /* Info.plist */,
+			);
+			path = NevesWidget;
+			sourceTree = "<group>";
+		};
 		715ED74726FF2E310030F279 = {
 			isa = PBXGroup;
 			children = (
 				715ED75226FF2E310030F279 /* Neves_SwiftUI */,
+				7115A6C227EDC7D900C5B145 /* NevesWidget */,
 				715ED75126FF2E310030F279 /* Products */,
 				561E8C64FB0C6ADCC7766560 /* Pods */,
 				3A01F6D206FA6FD3A6FB773E /* Frameworks */,
@@ -239,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				715ED75026FF2E310030F279 /* Neves_SwiftUI.app */,
+				7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -469,6 +531,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7115A6BC27EDC7D800C5B145 /* NevesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7115A6D127EDC7DA00C5B145 /* Build configuration list for PBXNativeTarget "NevesWidgetExtension" */;
+			buildPhases = (
+				7115A6B927EDC7D800C5B145 /* Sources */,
+				7115A6BA27EDC7D800C5B145 /* Frameworks */,
+				7115A6BB27EDC7D800C5B145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NevesWidgetExtension;
+			productName = NevesWidgetExtension;
+			productReference = 7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		715ED74F26FF2E310030F279 /* Neves_SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 715ED75E26FF2E320030F279 /* Build configuration list for PBXNativeTarget "Neves_SwiftUI" */;
@@ -478,10 +557,12 @@
 				715ED74D26FF2E310030F279 /* Frameworks */,
 				715ED74E26FF2E310030F279 /* Resources */,
 				C71B33D9A0547C317367010C /* [CP] Embed Pods Frameworks */,
+				7115A6CE27EDC7DA00C5B145 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7115A6CC27EDC7DA00C5B145 /* PBXTargetDependency */,
 			);
 			name = Neves_SwiftUI;
 			productName = Neves_SwiftUI;
@@ -495,9 +576,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					7115A6BC27EDC7D800C5B145 = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					715ED74F26FF2E310030F279 = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
@@ -518,11 +602,20 @@
 			projectRoot = "";
 			targets = (
 				715ED74F26FF2E310030F279 /* Neves_SwiftUI */,
+				7115A6BC27EDC7D800C5B145 /* NevesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7115A6BB27EDC7D800C5B145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7115A6C727EDC7DA00C5B145 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		715ED74E26FF2E310030F279 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -587,6 +680,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7115A6B927EDC7D800C5B145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
+				7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		715ED74C26FF2E310030F279 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -625,6 +727,7 @@
 				71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */,
 				71032D31275E21450030776A /* CropViewController.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
+				7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
 				715ED7B62700642C0030F279 /* GradientView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,
 				716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */,
@@ -651,7 +754,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7115A6CC27EDC7DA00C5B145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7115A6BC27EDC7D800C5B145 /* NevesWidgetExtension */;
+			targetProxy = 7115A6CB27EDC7DA00C5B145 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7115A6CF27EDC7DA00C5B145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NevesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NevesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.Neves-SwiftUI.NevesWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7115A6D027EDC7DA00C5B145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NevesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NevesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.Neves-SwiftUI.NevesWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		715ED75C26FF2E320030F279 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -772,6 +939,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1398D9D6DA22DECD4EFB9EC /* Pods-Neves_SwiftUI.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -806,6 +974,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1545B07380151D92646637B /* Pods-Neves_SwiftUI.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -838,6 +1007,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7115A6D127EDC7DA00C5B145 /* Build configuration list for PBXNativeTarget "NevesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7115A6CF27EDC7DA00C5B145 /* Debug */,
+				7115A6D027EDC7DA00C5B145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		715ED74B26FF2E310030F279 /* Build configuration list for PBXProject "Neves_SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
