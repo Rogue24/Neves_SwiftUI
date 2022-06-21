@@ -15,6 +15,7 @@ enum Demo: String {
     case Test3
     case FrameTest
     case GeometryReaderTest
+    case StateObjectTest
     
     // MARK: - Base
     case MatchedGeometryEffect
@@ -38,6 +39,8 @@ extension Demo {
             Item(demo: .Test1),
             Item(demo: .Test2),
             Item(demo: .Test3),
+            Item(demo: .GeometryReaderTest),
+            Item(demo: .StateObjectTest),
         ]),
         
         Section(title: "Base", items: [
@@ -93,6 +96,9 @@ extension Demo {
                     .navigationBarTitle(title, displayMode: .inline)
             case .GeometryReaderTest:
                 GeometryReaderTestView()
+                    .navigationBarTitle(title, displayMode: .inline)
+            case .StateObjectTest:
+                StateObjectTestView()
                     .navigationBarTitle(title, displayMode: .inline)
                 
             // Base

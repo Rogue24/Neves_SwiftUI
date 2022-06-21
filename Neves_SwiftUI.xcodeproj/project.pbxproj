@@ -76,6 +76,7 @@
 		716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716828C9275DDB4D0039F3F7 /* Test3View.swift */; };
 		7199D9C72761D6980001118E /* FrameTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199D9C62761D6980001118E /* FrameTestView.swift */; };
 		719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E838C277024FD009DD435 /* GeometryReaderTestView.swift */; };
+		719F9FBB28616015008B4C1F /* StateObjectTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9FBA28616015008B4C1F /* StateObjectTestView.swift */; };
 		71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */; };
 		71ADDF8427A0E88000404FF4 /* TTProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */; };
 		71ADDF8527A0E88000404FF4 /* TTProgressHUDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */; };
@@ -180,6 +181,7 @@
 		716828C9275DDB4D0039F3F7 /* Test3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3View.swift; sourceTree = "<group>"; };
 		7199D9C62761D6980001118E /* FrameTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTestView.swift; sourceTree = "<group>"; };
 		719E838C277024FD009DD435 /* GeometryReaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTestView.swift; sourceTree = "<group>"; };
+		719F9FBA28616015008B4C1F /* StateObjectTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateObjectTestView.swift; sourceTree = "<group>"; };
 		71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTProgressHUD.swift; sourceTree = "<group>"; };
 		71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTProgressHUDConfig.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				716828C9275DDB4D0039F3F7 /* Test3View.swift */,
 				7199D9C62761D6980001118E /* FrameTestView.swift */,
 				719E838C277024FD009DD435 /* GeometryReaderTestView.swift */,
+				719F9FBA28616015008B4C1F /* StateObjectTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				71032D31275E21450030776A /* CropViewController.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
 				7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
+				719F9FBB28616015008B4C1F /* StateObjectTestView.swift in Sources */,
 				715ED7B62700642C0030F279 /* GradientView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,
 				716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */,
