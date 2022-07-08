@@ -93,6 +93,7 @@ struct ResultBuilderView: View {
     }
 }
 
+// MARK: - 基本使用
 extension ResultBuilderView {
     @StringBuilder var myString: String {
         /// `@StringBuilder`标记的函数，其`{}`包裹的函数体称作【组件区域】，
@@ -173,6 +174,7 @@ extension ResultBuilderView {
     }
 }
 
+// MARK: - 等同写法
 /// `@StringBuilder`标记的函数的执行效果说白了就是把【组件区域】内的全部组件（每一行的结果）作为其静态函数`buildBlock(_ component: T...)`的可变参数去调用。
 extension ResultBuilderView {
     /// `@StringBuilder var myString: String {}`等价于以下写法：
