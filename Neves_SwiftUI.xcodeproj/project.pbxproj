@@ -77,6 +77,7 @@
 		7199D9C72761D6980001118E /* FrameTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199D9C62761D6980001118E /* FrameTestView.swift */; };
 		719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E838C277024FD009DD435 /* GeometryReaderTestView.swift */; };
 		719F9FBB28616015008B4C1F /* StateObjectTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F9FBA28616015008B4C1F /* StateObjectTestView.swift */; };
+		71AD216628759EAF00AD5568 /* ResultBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AD216528759EAF00AD5568 /* ResultBuilderView.swift */; };
 		71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */; };
 		71ADDF8427A0E88000404FF4 /* TTProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */; };
 		71ADDF8527A0E88000404FF4 /* TTProgressHUDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */; };
@@ -182,6 +183,7 @@
 		7199D9C62761D6980001118E /* FrameTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTestView.swift; sourceTree = "<group>"; };
 		719E838C277024FD009DD435 /* GeometryReaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTestView.swift; sourceTree = "<group>"; };
 		719F9FBA28616015008B4C1F /* StateObjectTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateObjectTestView.swift; sourceTree = "<group>"; };
+		71AD216528759EAF00AD5568 /* ResultBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilderView.swift; sourceTree = "<group>"; };
 		71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		71ADDF8127A0E88000404FF4 /* TTProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTProgressHUD.swift; sourceTree = "<group>"; };
 		71ADDF8227A0E88000404FF4 /* TTProgressHUDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTProgressHUDConfig.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				71032D3827605D6F0030776A /* MatchedGeometryEffectView.swift */,
 				714A3A4C277B45FA005A337E /* LazyGridView.swift */,
 				71032D4D2760632E0030776A /* BeautyItem.swift */,
+				71AD216528759EAF00AD5568 /* ResultBuilderView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				715ED7D22700642C0030F279 /* Asyncs.swift in Sources */,
 				715ED7BD2700642C0030F279 /* Literal.Extension.swift in Sources */,
 				71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */,
+				71AD216628759EAF00AD5568 /* ResultBuilderView.swift in Sources */,
 				715ED7E02700684E0030F279 /* DemoStore.swift in Sources */,
 				715ED7CB2700642C0030F279 /* Bindable.swift in Sources */,
 				715ED7D02700642C0030F279 /* File.swift in Sources */,

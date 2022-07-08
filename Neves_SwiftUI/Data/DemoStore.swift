@@ -20,6 +20,7 @@ enum Demo: String {
     // MARK: - Base
     case MatchedGeometryEffect
     case LazyGrid
+    case ResultBuilder
     
     // MARK: - Unit
     case Buttons
@@ -46,6 +47,7 @@ extension Demo {
         Section(title: "Base", items: [
             Item(demo: .MatchedGeometryEffect),
             Item(demo: .LazyGrid),
+            Item(demo: .ResultBuilder),
         ]),
         
         Section(title: "Unit", items: [
@@ -79,62 +81,38 @@ extension Demo {
         
         @ViewBuilder
         var body: some View {
-            switch demo {
-                
-            // Test
-            case .Test1:
-                Test1View()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .Test2:
-                Test2View()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .Test3:
-                Test3View()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .FrameTest:
-                FrameTestView()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .GeometryReaderTest:
-                GeometryReaderTestView()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .StateObjectTest:
-                StateObjectTestView()
-                    .navigationBarTitle(title, displayMode: .inline)
-                
-            // Base
-            case .MatchedGeometryEffect:
-                MatchedGeometryEffectView()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .LazyGrid:
-                LazyGridView()
-                    .navigationBarTitle(title, displayMode: .inline)
-                
-            // Unit
-            case .Buttons:
-                ButtonsView()
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .ProgressHUD:
-                ProgressHUDView()
-                    .navigationBarTitle(title, displayMode: .inline)
-                
-            // Animation
-            case .AnimExperience:
-                AnimExperienceView()
-                    .navigationBarTitle(title, displayMode: .inline)
-                
-            // UIKit
-            case .ImagePicker:
-                ImagePickerView(selectedImage: .constant(nil))
-                    .edgesIgnoringSafeArea(.all)
-                    .navigationBarTitle(title, displayMode: .inline)
-            case .ImageCroper:
-                ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
-                    .edgesIgnoringSafeArea(.all)
-                    .navigationBarTitle(title, displayMode: .inline)
-
-//            default:
-//                PlaceholderView(title: title)
+            Group {
+                switch demo {
+                // Test
+                case .Test1: Test1View()
+                case .Test2: Test2View()
+                case .Test3: Test3View()
+                case .FrameTest: FrameTestView()
+                case .GeometryReaderTest: GeometryReaderTestView()
+                case .StateObjectTest: StateObjectTestView()
+                    
+                // Base
+                case .MatchedGeometryEffect: MatchedGeometryEffectView()
+                case .LazyGrid: LazyGridView()
+                case .ResultBuilder: ResultBuilderView()
+                    
+                // Unit
+                case .Buttons: ButtonsView()
+                case .ProgressHUD: ProgressHUDView()
+                    
+                // Animation
+                case .AnimExperience: AnimExperienceView()
+                    
+                // UIKit
+                case .ImagePicker:
+                    ImagePickerView(selectedImage: .constant(nil))
+                        .edgesIgnoringSafeArea(.all)
+                case .ImageCroper:
+                    ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
+                        .edgesIgnoringSafeArea(.all)
+                }
             }
+            .navigationBarTitle(title, displayMode: .inline)
         }
     }
     
