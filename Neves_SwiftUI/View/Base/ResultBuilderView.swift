@@ -29,7 +29,7 @@ struct StringBuilder {
         component + "(🐔second)"
     }
     
-    // 使用了`for in`时，循环返回的全部结果会组成数组形式在这里返回处理
+    // 使用了`for in`时，循环返回的全部结果会组成一个数组在这里返回处理
     static func buildArray(_ components: [String]) -> String {
         components.joined(separator: "🐻")
     }
