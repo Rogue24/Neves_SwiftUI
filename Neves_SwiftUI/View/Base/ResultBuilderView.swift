@@ -91,11 +91,7 @@ struct ResultBuilderView: View {
         }
         .padding(20)
     }
-    
-    
-    
 }
-
 
 extension ResultBuilderView {
     @StringBuilder var myString: String {
@@ -140,6 +136,7 @@ extension ResultBuilderView {
     @StringBuilder var myStringWithLoop: String {
         "wo"
         "shuai"
+        
         if isOpen {
             for i in 0..<5 {
                 "\(i)"
@@ -149,6 +146,7 @@ extension ResultBuilderView {
                 "\(i)"
             }
         }
+        
         "(loop)"
     }
     
@@ -175,7 +173,7 @@ extension ResultBuilderView {
     }
 }
 
-/// `@StringBuilder`标记的函数的执行效果等同于把【组件区域】内的全部组件（每一行的结果）作为其静态函数`buildBlock(_ component: T...)`的可变参数去调用。
+/// `@StringBuilder`标记的函数的执行效果说白了就是把【组件区域】内的全部组件（每一行的结果）作为其静态函数`buildBlock(_ component: T...)`的可变参数去调用。
 extension ResultBuilderView {
     /// `@StringBuilder var myString: String {}`等价于以下写法：
     func myString2() -> String {
