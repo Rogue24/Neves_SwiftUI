@@ -24,6 +24,19 @@
 		71032D4C27605F150030776A /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4B27605F150030776A /* Beauty.swift */; };
 		71032D4E2760632E0030776A /* BeautyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4D2760632E0030776A /* BeautyItem.swift */; };
 		71032D50276081F40030776A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D4F276081F40030776A /* BlurView.swift */; };
+		7107CD82287BBE4900AC9B9F /* JP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A92700642C0030F279 /* JP.swift */; };
+		7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A62700642C0030F279 /* UIScreen.Extension.swift */; };
+		7107CD8F287BC36B00AC9B9F /* Gwen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7107CD8E287BC36B00AC9B9F /* Gwen.jpg */; };
+		7107CD96287BC6A700AC9B9F /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */; };
+		7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */; };
+		7107CD9A287BC72800AC9B9F /* UIImage.JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */; };
+		7107CD9C287BC81D00AC9B9F /* Cat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7107CD9B287BC81D00AC9B9F /* Cat.gif */; };
+		7107CDA0287BCC0000AC9B9F /* ImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD9F287BCC0000AC9B9F /* ImageTool.m */; };
+		7107CDA1287BCC0000AC9B9F /* ImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD9F287BCC0000AC9B9F /* ImageTool.m */; };
+		7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CDA5287BF35500AC9B9F /* GifImage.swift */; };
+		7107CDA7287BF35500AC9B9F /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CDA5287BF35500AC9B9F /* GifImage.swift */; };
+		7107CDA8287BF70000AC9B9F /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */; };
+		7107CDAA287BF73B00AC9B9F /* Cat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7107CDA9287BF73B00AC9B9F /* Cat.gif */; };
 		7115A6BF27EDC7D800C5B145 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */; };
 		7115A6C127EDC7D900C5B145 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6C027EDC7D800C5B145 /* SwiftUI.framework */; };
 		7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7115A6C327EDC7D900C5B145 /* NevesWidget.swift */; };
@@ -128,6 +141,15 @@
 		71032D4B27605F150030776A /* Beauty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty.swift; sourceTree = "<group>"; };
 		71032D4D2760632E0030776A /* BeautyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyItem.swift; sourceTree = "<group>"; };
 		71032D4F276081F40030776A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		7107CD8E287BC36B00AC9B9F /* Gwen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gwen.jpg; sourceTree = "<group>"; };
+		7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NevesWidgetView.swift; sourceTree = "<group>"; };
+		7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.JPExtension.swift; sourceTree = "<group>"; };
+		7107CD9B287BC81D00AC9B9F /* Cat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Cat.gif; sourceTree = "<group>"; };
+		7107CD9D287BCBFF00AC9B9F /* NevesWidgetExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NevesWidgetExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		7107CD9E287BCC0000AC9B9F /* ImageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTool.h; sourceTree = "<group>"; };
+		7107CD9F287BCC0000AC9B9F /* ImageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTool.m; sourceTree = "<group>"; };
+		7107CDA5287BF35500AC9B9F /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		7107CDA9287BF73B00AC9B9F /* Cat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Cat.gif; sourceTree = "<group>"; };
 		7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NevesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		7115A6C027EDC7D800C5B145 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -266,6 +288,7 @@
 				71032D4127605EA40030776A /* Girl7.jpg */,
 				71032D3D27605EA40030776A /* Girl8.jpg */,
 				71032D36275E25460030776A /* Gwen.jpg */,
+				7107CD9B287BC81D00AC9B9F /* Cat.gif */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -278,11 +301,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7107CD91287BC64500AC9B9F /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */,
+				7107CDA5287BF35500AC9B9F /* GifImage.swift */,
+				7107CD9E287BCC0000AC9B9F /* ImageTool.h */,
+				7107CD9F287BCC0000AC9B9F /* ImageTool.m */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		7115A6C227EDC7D900C5B145 /* NevesWidget */ = {
 			isa = PBXGroup;
 			children = (
 				7115A6C327EDC7D900C5B145 /* NevesWidget.swift */,
 				7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */,
+				7107CD8E287BC36B00AC9B9F /* Gwen.jpg */,
+				7107CDA9287BF73B00AC9B9F /* Cat.gif */,
 				7115A6C627EDC7DA00C5B145 /* Assets.xcassets */,
 				7115A6C827EDC7DA00C5B145 /* Info.plist */,
 			);
@@ -325,6 +361,7 @@
 				715ED75726FF2E320030F279 /* Assets.xcassets */,
 				715ED75926FF2E320030F279 /* Preview Content */,
 				715ED7D7270064CC0030F279 /* Neves_SwiftUI-Bridging-Header.h */,
+				7107CD9D287BCBFF00AC9B9F /* NevesWidgetExtension-Bridging-Header.h */,
 			);
 			path = Neves_SwiftUI;
 			sourceTree = "<group>";
@@ -390,6 +427,7 @@
 				715ED7A72700642C0030F279 /* String.Extension.swift */,
 				715ED7A32700642C0030F279 /* UIColor.Extension.swift */,
 				715ED79E2700642C0030F279 /* UIImage.Extension.swift */,
+				7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */,
 				715ED7A62700642C0030F279 /* UIScreen.Extension.swift */,
 				715ED7A52700642C0030F279 /* UIScrollView.Extension.swift */,
 				715ED79D2700642C0030F279 /* UIView.Extension.swift */,
@@ -439,6 +477,7 @@
 				716828B7275DB9EF0039F3F7 /* Animation */,
 				716828C1275DBFE80039F3F7 /* Modifier */,
 				71032D29275E1CA50030776A /* UIKit */,
+				7107CD91287BC64500AC9B9F /* Widget */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +626,7 @@
 				TargetAttributes = {
 					7115A6BC27EDC7D800C5B145 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 					715ED74F26FF2E310030F279 = {
 						CreatedOnToolsVersion = 13.0;
@@ -618,6 +658,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7107CDAA287BF73B00AC9B9F /* Cat.gif in Resources */,
+				7107CD8F287BC36B00AC9B9F /* Gwen.jpg in Resources */,
 				7115A6C727EDC7DA00C5B145 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71032D4727605EA40030776A /* Girl2.jpg in Resources */,
+				7107CD9C287BC81D00AC9B9F /* Cat.gif in Resources */,
 				715ED75B26FF2E320030F279 /* Preview Assets.xcassets in Resources */,
 				71032D4427605EA40030776A /* Girl3.jpg in Resources */,
 				71032D4827605EA40030776A /* Girl5.jpg in Resources */,
@@ -690,7 +733,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7107CDA8287BF70000AC9B9F /* NevesWidgetView.swift in Sources */,
+				7107CD9A287BC72800AC9B9F /* UIImage.JPExtension.swift in Sources */,
+				7107CDA1287BCC0000AC9B9F /* ImageTool.m in Sources */,
 				7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
+				7107CDA7287BF35500AC9B9F /* GifImage.swift in Sources */,
+				7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */,
+				7107CD82287BBE4900AC9B9F /* JP.swift in Sources */,
 				7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,8 +764,10 @@
 				715ED7BA2700642C0030F279 /* OptionPopView.swift in Sources */,
 				715ED7C12700642C0030F279 /* UIWindow.Extension.swift in Sources */,
 				715ED7B92700642C0030F279 /* SheetView.swift in Sources */,
+				7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */,
 				715ED7C62700642C0030F279 /* UIScrollView.Extension.swift in Sources */,
 				71032D50276081F40030776A /* BlurView.swift in Sources */,
+				7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */,
 				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
 				715ED7BE2700642C0030F279 /* UIView.Extension.swift in Sources */,
@@ -727,6 +778,7 @@
 				715ED7CC2700642C0030F279 /* PopViewReusable.swift in Sources */,
 				7199D9C72761D6980001118E /* FrameTestView.swift in Sources */,
 				715ED7CE2700642C0030F279 /* Const.swift in Sources */,
+				7107CDA0287BCC0000AC9B9F /* ImageTool.m in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,
 				71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */,
@@ -743,6 +795,7 @@
 				715ED7CF2700642C0030F279 /* Function.swift in Sources */,
 				716828C4275DC0580039F3F7 /* Color.Extension.swift in Sources */,
 				71032D3927605D6F0030776A /* MatchedGeometryEffectView.swift in Sources */,
+				7107CD96287BC6A700AC9B9F /* NevesWidgetView.swift in Sources */,
 				71032D4E2760632E0030776A /* BeautyItem.swift in Sources */,
 				715ED7C32700642C0030F279 /* ScreenFit.Extension.swift in Sources */,
 				715ED7BF2700642C0030F279 /* UIImage.Extension.swift in Sources */,
@@ -776,6 +829,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
@@ -783,7 +837,7 @@
 				INFOPLIST_FILE = NevesWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NevesWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -794,6 +848,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Neves_SwiftUI/NevesWidgetExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -804,6 +860,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
@@ -811,7 +868,7 @@
 				INFOPLIST_FILE = NevesWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NevesWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -822,6 +879,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Neves_SwiftUI/NevesWidgetExtension-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
