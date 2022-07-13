@@ -294,7 +294,7 @@
             [self __removeVideoObj];
         }
         if (_slider) {
-            _slider.alpha = 1;
+            _slider.alpha = self.isPreview ? 0 : 1;
             [self addSubview:_slider];
             if (_frameView) {
                 CGRect sliderFrame = [_frameView convertRect:_frameView.imageresizerFrame toView:self];
@@ -305,23 +305,29 @@
         return;
     }
     
-    BOOL isGIF = _isGIF;
-    BOOL isLoopPlaybackGIF = _isLoopPlaybackGIF;
     if (isAnimated) {
         self.userInteractionEnabled = NO;
         NSTimeInterval duration1 = 0.18;
         NSTimeInterval duration2 = 0.35;
         UIViewAnimationOptions options = _animationOption;
-        if ((isVideo && _image != nil) ||
-            (!isVideo && _videoObj != nil)) {
-            
+        
+        BOOL isGIF = _isGIF;
+        BOOL isLoopPlaybackGIF = _isLoopPlaybackGIF;
+        BOOL isShowSlider = isVideo || (isGIF && !isLoopPlaybackGIF);
+        
+        if (isShowSlider) {
             if (self.slider && !self.slider.superview) {
                 CGRect sliderFrame = [self.frameView convertRect:self.frameView.imageresizerFrame toView:self];
                 [self.slider setImageresizerFrame:sliderFrame isRoundResize:self.frameView.isRoundResize];
                 self.slider.alpha = 0;
                 [self addSubview:self.slider];
             }
-            
+            self.frameView.slider = self.slider;
+        } else {
+            self.frameView.slider = nil;
+        }
+        
+        if ((isVideo && _image != nil) || (!isVideo && _videoObj != nil)) {
             if (isVideo) {
                 [self.playerView removeFromSuperview];
                 JPPlayerView *playerView = [[JPPlayerView alloc] initWithVideoObj:_videoObj];
@@ -332,11 +338,10 @@
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [UIView animateWithDuration:duration1 delay:0 options:options animations:^{
                         self.playerView.alpha = 1;
-                        self.slider.alpha = 1;
+                        self.slider.alpha = self.isPreview ? 0 : 1;
                     } completion:^(BOOL finished) {
                         [self __removeImage];
                         self.frameView.playerView = self.playerView;
-                        self.frameView.slider = self.slider;
                         [UIView animateWithDuration:duration2 delay:0 options:options animations:^{
                             [self __updateSubviewLayouts:duration2];
                         } completion:^(BOOL finished) {
@@ -346,11 +351,10 @@
                 });
             } else {
                 self.frameView.playerView = nil;
-                self.frameView.slider = (isGIF && !isLoopPlaybackGIF) ? self.slider : nil;
                 [self __updateImageViewImage:NO];
                 [UIView animateWithDuration:duration1 delay:0 options:options animations:^{
                     self.playerView.alpha = 0;
-                    self.slider.alpha = (isGIF && !isLoopPlaybackGIF) ? 1 : 0;
+                    self.slider.alpha = isShowSlider ? (self.isPreview ? 0 : 1) : 0;
                 } completion:^(BOOL finished) {
                     [self __removeVideoObj];
                     [UIView animateWithDuration:duration2 delay:0 options:options animations:^{
@@ -364,20 +368,9 @@
         }
         
         if (!isVideo) {
-            if (isGIF && !isLoopPlaybackGIF) {
-                if (self.slider && !self.slider.superview) {
-                    CGRect sliderFrame = [self.frameView convertRect:self.frameView.imageresizerFrame toView:self];
-                    [self.slider setImageresizerFrame:sliderFrame isRoundResize:self.frameView.isRoundResize];
-                    self.slider.alpha = 0;
-                    [self addSubview:self.slider];
-                }
-                self.frameView.slider = self.slider;
-            } else {
-                self.frameView.slider = nil;
-            }
             [UIView transitionWithView:self.imageView duration:duration1 options:(options | UIViewAnimationOptionTransitionCrossDissolve) animations:^{
                 [self __updateImageViewImage:NO];
-                self.slider.alpha = (isGIF && !isLoopPlaybackGIF) ? 1 : 0;
+                self.slider.alpha = isShowSlider ? (self.isPreview ? 0 : 1) : 0;
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:duration2 delay:0 options:self->_animationOption animations:^{
                     [self __updateSubviewLayouts:duration2];
@@ -394,6 +387,7 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [UIView animateWithDuration:duration1 delay:0 options:options animations:^{
                     playerView.alpha = 1;
+                    self.slider.alpha = self.isPreview ? 0 : 1;
                 } completion:^(BOOL finished) {
                     [self.playerView removeFromSuperview];
                     self.playerView = playerView;
@@ -423,7 +417,7 @@
         }
         if (_slider) {
             self.frameView.slider = self.slider;
-            self.slider.alpha = 1;
+            self.slider.alpha = self.isPreview ? 0 : 1;
             [self addSubview:self.slider];
         }
         [self __updateSubviewLayouts:0];
@@ -464,7 +458,7 @@
             if (!wSelf) return;
             __strong typeof(wSelf) sSelf = wSelf;
             CMTime time = CMTimeMakeWithSeconds(second, sSelf.videoObj.timescale);
-            CMTime toleranceTime = sSelf.videoObj.toleranceTime;
+            CMTime toleranceTime = CMTimeMake(0, sSelf.videoObj.timescale);
             [sSelf.playerView.player seekToTime:time toleranceBefore:toleranceTime toleranceAfter:toleranceTime];
         };
     } else {
@@ -677,7 +671,7 @@
         self.slider.alpha = 0;
         [self addSubview:self.slider];
         [UIView animateWithDuration:0.2 animations:^{
-            self.slider.alpha = 1;
+            self.slider.alpha = self.isPreview ? 0 : 1;
         }];
         self.frameView.slider = self.slider;
     }
@@ -895,19 +889,38 @@
 
 #pragma mark 旋转
 - (void)rotation {
+    NSInteger directionIndex = self.directionIndex;
+    BOOL isNormal = _verticalityMirror == _horizontalMirror;
+    directionIndex += (isNormal ? 1 : -1);
+    
+    NSInteger maxIndex = self.allDirections.count - 1;
+    NSInteger minIndex = 0;
+    if (directionIndex < minIndex) {
+        directionIndex = maxIndex;
+    } else if (directionIndex > maxIndex) {
+        directionIndex = minIndex;
+    }
+    
+    JPImageresizerRotationDirection direction = [self.allDirections[directionIndex] integerValue];
+    [self rotationToDirection:direction];
+}
+
+- (void)rotationToDirection:(JPImageresizerRotationDirection)direction {
     if (self.frameView.isPrepareToScale) {
         JPIRLog(@"jp_tip: 裁剪区域预备缩放至适合位置，旋转功能暂不可用，此时应该将旋转按钮设为不可点或隐藏");
         return;
     }
     
+    NSInteger directionIndex = [self.allDirections indexOfObject:@(direction)];
+    NSInteger diffIndex = directionIndex - self.directionIndex;
+    if (diffIndex == 0) return;
+    self.directionIndex = directionIndex;
+    
     BOOL isNormal = _verticalityMirror == _horizontalMirror;
     
-    CGFloat angle = (self.isClockwiseRotation ? 1.0 : -1.0) * (isNormal ? 1.0 : -1.0) * M_PI_2;
+    CGFloat angle = (self.isClockwiseRotation ? diffIndex : -diffIndex) * (isNormal ? 1.0 : -1.0) * M_PI_2;
     CATransform3D svTransform = CATransform3DRotate(self.scrollView.layer.transform, angle, 0, 0, 1);
     CATransform3D fvTransform = CATransform3DRotate(self.frameView.layer.transform, angle, 0, 0, 1);
-    
-    self.directionIndex += (isNormal ? 1 : -1);
-    JPImageresizerRotationDirection direction = [self.allDirections[self.directionIndex] integerValue];
     
     NSTimeInterval delay = [self.frameView willRotationWithDirection:direction];
     
@@ -1471,8 +1484,7 @@
         second = self.slider.seconds;
     }
     [JPImageresizerTool cropVideoWithAsset:self.videoObj.asset
-                                      time:CMTimeMakeWithSeconds(second, self.videoObj.timescale)
-                               maximumSize:self.videoObj.videoSize
+                                  atSecond:second
                                  maskImage:self.frameView.maskImage
                                  configure:self.frameView.currentCropConfigure
                              compressScale:compressScale
@@ -1562,8 +1574,6 @@
     }
     __weak typeof(self) wSelf = self;
     [JPImageresizerTool cropVideoWithAsset:self.videoObj.asset
-                                 timeRange:self.videoObj.timeRange
-                             frameDuration:self.videoObj.frameDuration
                                 presetName:presetName
                                  configure:self.frameView.currentCropConfigure
                                   cacheURL:cacheURL

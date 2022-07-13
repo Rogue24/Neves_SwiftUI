@@ -29,13 +29,10 @@
 		7107CD8F287BC36B00AC9B9F /* Gwen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7107CD8E287BC36B00AC9B9F /* Gwen.jpg */; };
 		7107CD96287BC6A700AC9B9F /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */; };
 		7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */; };
-		7107CD9A287BC72800AC9B9F /* UIImage.JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */; };
 		7107CD9C287BC81D00AC9B9F /* Cat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7107CD9B287BC81D00AC9B9F /* Cat.gif */; };
 		7107CDA0287BCC0000AC9B9F /* ImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD9F287BCC0000AC9B9F /* ImageTool.m */; };
 		7107CDA1287BCC0000AC9B9F /* ImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD9F287BCC0000AC9B9F /* ImageTool.m */; };
 		7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CDA5287BF35500AC9B9F /* GifImage.swift */; };
-		7107CDA7287BF35500AC9B9F /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CDA5287BF35500AC9B9F /* GifImage.swift */; };
-		7107CDA8287BF70000AC9B9F /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */; };
 		7107CDAA287BF73B00AC9B9F /* Cat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7107CDA9287BF73B00AC9B9F /* Cat.gif */; };
 		7115A6BF27EDC7D800C5B145 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */; };
 		7115A6C127EDC7D900C5B145 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6C027EDC7D800C5B145 /* SwiftUI.framework */; };
@@ -733,11 +730,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7107CDA8287BF70000AC9B9F /* NevesWidgetView.swift in Sources */,
-				7107CD9A287BC72800AC9B9F /* UIImage.JPExtension.swift in Sources */,
 				7107CDA1287BCC0000AC9B9F /* ImageTool.m in Sources */,
 				7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
-				7107CDA7287BF35500AC9B9F /* GifImage.swift in Sources */,
 				7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */,
 				7107CD82287BBE4900AC9B9F /* JP.swift in Sources */,
 				7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */,

@@ -1,42 +1,20 @@
 PODS:
-  - JPCrop (0.1.1)
-  - JPImageresizerView (1.9.3)
-  - KakaJSON (1.1.2)
-  - lottie-ios (3.2.3)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
-  - SDWebImageSwiftUI (2.0.2):
-    - SDWebImage (~> 5.10)
-  - SwiftyJSON (5.0.1)
+  - JPCrop (0.2.0)
+  - JPImageresizerView (1.9.9)
 
 DEPENDENCIES:
   - JPCrop
   - JPImageresizerView
-  - KakaJSON
-  - lottie-ios
-  - SDWebImageSwiftUI
-  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - JPCrop
     - JPImageresizerView
-    - KakaJSON
-    - lottie-ios
-    - SDWebImage
-    - SDWebImageSwiftUI
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  JPCrop: fb8abca3af846bf9dfd069e4063b16be818d2c7e
-  JPImageresizerView: cc5d6d4357ad9b45f9321ecb58769bcc66b43e46
-  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
-  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  JPCrop: 2a5742db56fa30f495683e8b51c0d7548ab04368
+  JPImageresizerView: 762cd3ea68450cb3985fa3a06cd55afd0527fa73
 
-PODFILE CHECKSUM: a44a7bc97777345f1c96d3efeb8e0c162daaf1a9
+PODFILE CHECKSUM: 20de66addd02be6f0877dee1cbc7c6d06de17bb5
 
 COCOAPODS: 1.11.2

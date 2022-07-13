@@ -5,11 +5,11 @@ target 'Neves_SwiftUI' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-    pod 'SwiftyJSON'
-    pod 'KakaJSON'
+#    pod 'SwiftyJSON'
+#    pod 'KakaJSON'
     pod 'JPImageresizerView'
     pod 'JPCrop'
-    pod 'SDWebImageSwiftUI'
-    pod 'lottie-ios'
+#    pod 'SDWebImageSwiftUI'
+#    pod 'lottie-ios'
   
 end

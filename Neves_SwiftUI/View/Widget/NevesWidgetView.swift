@@ -29,27 +29,28 @@ struct NevesWidgetView: View {
 //
 //            }
             
-//            GifImage(gifResult: $gifResult)
-//                .aspectRatio(contentMode: .fit)
+            GifImage(gifResult: $gifResult, isAnimating: .constant(true))
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200)
             
-            AsyncImage(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Cat", ofType: "gif")!), transaction: Transaction(animation: .easeOut)) { phase in
-                switch phase {
-                // 请求中
-                case .empty:
-                    ProgressView()
-                // 请求成功
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                // 请求失败
-                case .failure:
-                    Color.gray
-                // 其他未知情况
-                @unknown default:
-                    EmptyView() // 此视图无论设置什么都是空白的。
-                }
-            }
+//            AsyncImage(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Cat", ofType: "gif")!), transaction: Transaction(animation: .easeOut)) { phase in
+//                switch phase {
+//                // 请求中
+//                case .empty:
+//                    ProgressView()
+//                // 请求成功
+//                case .success(let image):
+//                    image
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                // 请求失败
+//                case .failure:
+//                    Color.gray
+//                // 其他未知情况
+//                @unknown default:
+//                    EmptyView() // 此视图无论设置什么都是空白的。
+//                }
+//            }
             
             Text("????")
                 .font(.title)
