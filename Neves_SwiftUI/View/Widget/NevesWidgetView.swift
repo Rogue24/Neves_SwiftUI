@@ -12,10 +12,11 @@ struct NevesWidgetView: View {
     
     @State var gifResult: UIImage.GifResult? = nil
     
-    
+    @State var color: UIColor = .red
+    @State var index: Int = 0
     
     var body: some View {
-        ZStack {
+        VStack {
 //            Image(uiImage: UIImage.animatedImage(with: [iamge], duration: iamge.duration)!)
 //                .resizable()
 //                .aspectRatio(contentMode: .fit)
@@ -29,7 +30,7 @@ struct NevesWidgetView: View {
 //
 //            }
             
-            GifImage(gifResult: $gifResult, isAnimating: .constant(true))
+            GifImage(gifResult: gifResult, isAnimating: .constant(true))
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
             
@@ -55,6 +56,19 @@ struct NevesWidgetView: View {
             Text("????")
                 .font(.title)
                 .foregroundColor(.primary)
+            
+            TestUIView(color: color, index: index)
+                .frame(width: 200, height: 200)
+            
+            Button {
+                index += 1
+                color = .randomColor
+            } label: {
+                Text("\(index)")
+                    .frame(width: 100, height: 50)
+                    .background(.yellow)
+            }
+
         }
         .task {
             do {

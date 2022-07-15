@@ -9,13 +9,14 @@ import SwiftUI
 import UIKit
 
 struct GifImage: UIViewRepresentable {
-    @Binding var gifResult: UIImage.GifResult?
+    var gifResult: UIImage.GifResult?
+    @State var abc: Bool = false
     @Binding var isAnimating: Bool
 
     func makeUIView(context: Context) -> UIView {
-
         let uiView = UIView()
         uiView.clipsToBounds = true
+        uiView.backgroundColor = .randomColor
         
         let imgView = UIImageView()
         imgView.tag = 33
@@ -28,10 +29,14 @@ struct GifImage: UIViewRepresentable {
             imgView.heightAnchor.constraint(equalTo: uiView.heightAnchor),
         ])
 
+        JPrint("新建了？！")
         return uiView
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {
+        JPrint("更新了？！", abc, isAnimating)
+        abc = isAnimating
+        
         guard let imgView = uiView.viewWithTag(33) as? UIImageView else { return }
         guard let gifResult = self.gifResult else {
             isAnimating = false
@@ -48,24 +53,6 @@ struct GifImage: UIViewRepresentable {
         } else {
             imgView.stopAnimating()
         }
-        
-//        guard let gifResult = self.gifResult else {
-//            isAnimating = false
-//            uiView.stopAnimating()
-//            uiView.animationImages = nil
-//            uiView.animationDuration = 0
-//            return
-//        }
-//
-//        uiView.animationImages = gifResult.images
-//        uiView.animationDuration = gifResult.duration
-//        if isAnimating {
-//            uiView.startAnimating()
-//        } else {
-//            uiView.stopAnimating()
-//        }
-        
-        
     }
 }
 
@@ -263,7 +250,7 @@ struct AsyncGifImage<Content>: View where Content : View {
     
     func updateGifResult() {
         if let result = gifResult, result.images.count > 0 {
-            updatePhase(.success(GifImage(gifResult: $gifResult, isAnimating: $isAnimating)))
+            updatePhase(.success(GifImage(gifResult: gifResult, isAnimating: $isAnimating)))
         } else {
             gifResult = nil
             updatePhase(.failure)

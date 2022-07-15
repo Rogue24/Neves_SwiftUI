@@ -67,6 +67,7 @@ extension UIImage {
             if delay <= Double.ulpOfOne {
                 if let delayValue2 = CFDictionaryGetValue(gifDic, Unmanaged.passRetained(kCGImagePropertyGIFDelayTime).autorelease().toOpaque()) {
                     delayNum = Unmanaged<NSNumber>.fromOpaque(delayValue2).takeUnretainedValue()
+                    delay = delayNum.doubleValue
                 }
             }
             

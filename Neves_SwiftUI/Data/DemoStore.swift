@@ -129,7 +129,7 @@ extension Demo {
 //                        }
                         
                         VStack {
-                            GifImage(gifResult: .constant(nil), isAnimating: .constant(true))
+                            GifImage(gifResult: nil, isAnimating: .constant(true))
                                 .frame(width: 200, height: 200)
                                 .background(.pink)
                                 .zIndex(1)
