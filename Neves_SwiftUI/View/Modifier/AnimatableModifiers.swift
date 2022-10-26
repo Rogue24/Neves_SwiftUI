@@ -38,7 +38,15 @@ struct AnimatableForegroundColorModifier: AnimatableModifier {
     }
     
     var animatableData: CGFloat {
-        set { progress = newValue }
+        set {
+            if newValue < 0 {
+                progress = 0
+            } else if newValue > 1 {
+                progress = 1
+            } else {
+                progress = newValue
+            }
+        }
         get { progress }
     }
 
