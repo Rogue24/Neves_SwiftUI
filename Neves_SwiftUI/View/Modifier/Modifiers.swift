@@ -8,28 +8,65 @@
 
 import SwiftUI
 
-struct ShadowModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 12)
-            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-    }
-}
-
-struct FontModifier: ViewModifier {
-    var style: Font.TextStyle = .body
+struct BaseShadowModifier: ViewModifier {
+    let color: SwiftUI.Color
     
     func body(content: Content) -> some View {
         content
-            .font(.system(style, design: .serif))
+            .shadow(color: color, radius: 6, x: 0, y: 3)
+            .shadow(color: color, radius: 1, x: 0, y: 1)
     }
 }
 
-struct CustomFontModifier: ViewModifier {
-    var size: CGFloat = 28
+struct BaseStrokeStyle: ViewModifier {
+    let cornerRadius: CGFloat
+    @Environment(\.colorScheme) var colorScheme
     
     func body(content: Content) -> some View {
         content
-            .font(.custom("WorkSans-Bold", size: size))
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(
+                        .linearGradient(
+                            colors: [
+                                .white.opacity(colorScheme == .dark ? 0.1 : 0.3),
+                                .black.opacity(colorScheme == .dark ? 0.3 : 0.1)
+                            ],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .blendMode(.overlay)
+            )
+    }
+}
+
+@available(iOS 15.0.0, *)
+struct IconStyle: ViewModifier {
+    let size: CGFloat
+    let cornerRadius: CGFloat
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.body.weight(.bold))
+            .frame(width: size, height: size)
+            .foregroundColor(.primary)
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+            .baseStrokeStyle(cornerRadius: cornerRadius)
+    }
+}
+
+extension View {
+    func baseShadow(color: SwiftUI.Color = .black.opacity(0.3)) -> some View {
+        modifier(BaseShadowModifier(color: color))
+    }
+    
+    func baseStrokeStyle(cornerRadius: CGFloat = 30) -> some View {
+        modifier(BaseStrokeStyle(cornerRadius: cornerRadius))
+    }
+    
+    @available(iOS 15.0.0, *)
+    func iconStyle(size: CGFloat, cornerRadius: CGFloat) -> some View {
+        modifier(IconStyle(size: size, cornerRadius: cornerRadius))
     }
 }
