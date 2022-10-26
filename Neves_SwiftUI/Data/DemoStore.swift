@@ -27,6 +27,8 @@ enum Demo: String {
     case ProgressHUD
     
     // MARK: - Animation
+    case AnimationValue
+    case AnimExperience_iOS15
     case AnimExperience
     
     // MARK: - UIKit
@@ -56,6 +58,8 @@ extension Demo {
         ]),
         
         Section(title: "Animation", items: [
+            Item(demo: .AnimationValue),
+            Item(demo: .AnimExperience_iOS15),
             Item(demo: .AnimExperience),
         ]),
         
@@ -101,6 +105,8 @@ extension Demo {
                 case .ProgressHUD: ProgressHUDView()
                     
                 // Animation
+                case .AnimationValue: AnimationValueView()
+                case .AnimExperience_iOS15: AnimExperience_iOS15_View()
                 case .AnimExperience: AnimExperienceView()
                     
                 // UIKit

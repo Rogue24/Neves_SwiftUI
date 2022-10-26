@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DFE9F62908E88400B6611B /* AnimExperienceView_iOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */; };
+		00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F8290905ED00B6611B /* ButtonStyles.swift */; };
+		00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FA2909062400B6611B /* AnimationValueView.swift */; };
 		1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A621CD02880FD8D00DC463F /* TestUIView.swift */; };
 		71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2A275E1E610030776A /* ImageCroperView.swift */; };
 		71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2B275E1E610030776A /* ImagePickerView.swift */; };
@@ -122,6 +125,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimExperienceView_iOS15.swift; sourceTree = "<group>"; };
+		00DFE9F8290905ED00B6611B /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		00DFE9FA2909062400B6611B /* AnimationValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationValueView.swift; sourceTree = "<group>"; };
 		1A621CD02880FD8D00DC463F /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
 		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -236,6 +242,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00DFE9F7290905E100B6611B /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				00DFE9F8290905ED00B6611B /* ButtonStyles.swift */,
+			);
+			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
 		3A01F6D206FA6FD3A6FB773E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +490,7 @@
 				716828B5275DB9E40039F3F7 /* Unit */,
 				716828B7275DB9EF0039F3F7 /* Animation */,
 				716828C1275DBFE80039F3F7 /* Modifier */,
+				00DFE9F7290905E100B6611B /* ButtonStyles */,
 				71032D29275E1CA50030776A /* UIKit */,
 				7107CD91287BC64500AC9B9F /* Widget */,
 			);
@@ -502,6 +517,8 @@
 		716828B7275DB9EF0039F3F7 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				00DFE9FA2909062400B6611B /* AnimationValueView.swift */,
+				00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */,
 				716828BA275DBA4C0039F3F7 /* AnimExperienceView.swift */,
 			);
 			path = Animation;
@@ -762,11 +779,13 @@
 				715ED7C12700642C0030F279 /* UIWindow.Extension.swift in Sources */,
 				715ED7B92700642C0030F279 /* SheetView.swift in Sources */,
 				7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */,
+				00DFE9F62908E88400B6611B /* AnimExperienceView_iOS15.swift in Sources */,
 				715ED7C62700642C0030F279 /* UIScrollView.Extension.swift in Sources */,
 				71032D50276081F40030776A /* BlurView.swift in Sources */,
 				7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */,
 				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
+				00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */,
 				715ED7BE2700642C0030F279 /* UIView.Extension.swift in Sources */,
 				714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */,
 				715ED7B72700642C0030F279 /* PopViewCompatible.swift in Sources */,
@@ -777,6 +796,7 @@
 				715ED7CE2700642C0030F279 /* Const.swift in Sources */,
 				7107CDA0287BCC0000AC9B9F /* ImageTool.m in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
+				00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,
 				71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */,
 				71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */,
