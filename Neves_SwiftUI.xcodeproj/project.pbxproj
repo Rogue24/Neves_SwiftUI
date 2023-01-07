@@ -11,6 +11,7 @@
 		00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F8290905ED00B6611B /* ButtonStyles.swift */; };
 		00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FA2909062400B6611B /* AnimationValueView.swift */; };
 		00DFE9FD29090ABA00B6611B /* AnimatableModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FC29090ABA00B6611B /* AnimatableModifiers.swift */; };
+		00ED821E296962F5006F035B /* StateInitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED821D296962F5006F035B /* StateInitTestView.swift */; };
 		1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A621CD02880FD8D00DC463F /* TestUIView.swift */; };
 		71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2A275E1E610030776A /* ImageCroperView.swift */; };
 		71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2B275E1E610030776A /* ImagePickerView.swift */; };
@@ -45,7 +46,7 @@
 		7115A6C727EDC7DA00C5B145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7115A6C627EDC7DA00C5B145 /* Assets.xcassets */; };
 		7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */; };
 		7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7115A6C527EDC7D900C5B145 /* NevesWidget.intentdefinition */; };
-		7115A6CD27EDC7DA00C5B145 /* NevesWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7115A6CD27EDC7DA00C5B145 /* NevesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A3A4C277B45FA005A337E /* LazyGridView.swift */; };
 		715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */; };
 		715ED75626FF2E310030F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75526FF2E310030F279 /* ContentView.swift */; };
@@ -112,15 +113,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7115A6CE27EDC7DA00C5B145 /* Embed App Extensions */ = {
+		7115A6CE27EDC7DA00C5B145 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7115A6CD27EDC7DA00C5B145 /* NevesWidgetExtension.appex in Embed App Extensions */,
+				7115A6CD27EDC7DA00C5B145 /* NevesWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -130,6 +131,7 @@
 		00DFE9F8290905ED00B6611B /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		00DFE9FA2909062400B6611B /* AnimationValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationValueView.swift; sourceTree = "<group>"; };
 		00DFE9FC29090ABA00B6611B /* AnimatableModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableModifiers.swift; sourceTree = "<group>"; };
+		00ED821D296962F5006F035B /* StateInitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInitTestView.swift; sourceTree = "<group>"; };
 		1A621CD02880FD8D00DC463F /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
 		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -535,6 +537,7 @@
 				7199D9C62761D6980001118E /* FrameTestView.swift */,
 				719E838C277024FD009DD435 /* GeometryReaderTestView.swift */,
 				719F9FBA28616015008B4C1F /* StateObjectTestView.swift */,
+				00ED821D296962F5006F035B /* StateInitTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -622,7 +625,7 @@
 				715ED74D26FF2E310030F279 /* Frameworks */,
 				715ED74E26FF2E310030F279 /* Resources */,
 				C71B33D9A0547C317367010C /* [CP] Embed Pods Frameworks */,
-				7115A6CE27EDC7DA00C5B145 /* Embed App Extensions */,
+				7115A6CE27EDC7DA00C5B145 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -642,7 +645,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					7115A6BC27EDC7D800C5B145 = {
 						CreatedOnToolsVersion = 13.3;
@@ -786,6 +789,7 @@
 				715ED7C62700642C0030F279 /* UIScrollView.Extension.swift in Sources */,
 				71032D50276081F40030776A /* BlurView.swift in Sources */,
 				7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */,
+				00ED821E296962F5006F035B /* StateInitTestView.swift in Sources */,
 				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
 				00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */,
