@@ -32,9 +32,16 @@ enum Demo: String {
     case AnimExperience_iOS15
     case AnimExperience
     
+    // MARK: - GIF
+    case GifImage
+    case AsyncGifImage
+    
     // MARK: - UIKit
     case ImagePicker
     case ImageCroper
+    
+    // MARK: - Widget
+    case NevesWidget
 }
 
 extension Demo {
@@ -65,9 +72,18 @@ extension Demo {
             Item(demo: .AnimExperience),
         ]),
         
+        Section(title: "GIF", items: [
+            Item(demo: .GifImage),
+            Item(demo: .AsyncGifImage),
+        ]),
+        
         Section(title: "UIKit", items: [
             Item(demo: .ImagePicker),
             Item(demo: .ImageCroper),
+        ]),
+        
+        Section(title: "Widget", items: [
+            Item(demo: .NevesWidget),
         ]),
     ]
 }
@@ -112,74 +128,36 @@ extension Demo {
                 case .AnimExperience_iOS15: AnimExperience_iOS15_View()
                 case .AnimExperience: AnimExperienceView()
                     
+                // GIF
+                case .GifImage:
+                    if #available(iOS 15.0.0, *) {
+                        GifImageView()
+                    } else {
+                        Text("需要iOS15+")
+                    }
+                case .AsyncGifImage:
+                    if #available(iOS 15.0.0, *) {
+                        AsyncGifImageView()
+                    } else {
+                        Text("需要iOS15+")
+                    }
+                    
                 // UIKit
                 case .ImagePicker:
-                    if #available(iOS 15.0, *) {
-                        NevesWidgetView()
-                    }
-//                    ImagePickerView(selectedImage: .constant(nil))
-//                        .edgesIgnoringSafeArea(.all)
+                    ImagePickerView(selectedImage: .constant(nil))
+                        .edgesIgnoringSafeArea(.all)
                 case .ImageCroper:
-//                    ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
-//                        .edgesIgnoringSafeArea(.all)
-                    if #available(iOS 15.0, *) {
-//                        AsyncGifImage(url: url, isReLoad: .constant(false), isAnimating: .constant(true)) { phase in
-//                            switch phase {
-//                            // 请求中
-//                            case .empty:
-//                                ProgressView()
-//                            // 请求成功
-//                            case .success(let image):
-//                                image.aspectRatio(contentMode: .fit)
-//                            // 请求失败
-//                            case .failure:
-//                                Text("Failure")
-//                            }
-//                        }
-                        
-                        VStack {
-                            GifImage(gifResult: nil, isAnimating: .constant(true))
-                                .frame(width: 200, height: 200)
-                                .background(.pink)
-                                .zIndex(1)
-                            
-//                            Image("")
-//                                .resizable()
-                            
-                            
-                            AsyncGifImage(url: url,
-                                          transaction: Transaction(animation: .easeOut),
-                                          isReLoad: .constant(false), isAnimating: .constant(true)) { phase in
-                                    Group {
-                                        switch phase {
-                                        // 请求中
-                                        case .empty:
-                                            ProgressView()
-                                        // 请求成功
-                                        case .success(let image):
-                                            image
-                                                .aspectRatio(contentMode: .fit)
-//                                                .frame(maxWidth: .infinity)
-                                                .frame(width: 300, height: 300)
-                                                .background(.green)
-                                        // 请求失败
-                                        case .failure:
-                                            Text("Failure")
-                                        }
-                                    }
-                                    .background(.red)
-                                }
-                        }
-                    }
+                    ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
+                        .edgesIgnoringSafeArea(.all)
+                    
+                // Widget
+                case .NevesWidget: NevesWidgetEditView()
                 }
             }
             .navigationBarTitle(title, displayMode: .inline)
         }
         
-        var url: URL? {
-//            URL(fileURLWithPath: Bundle.main.path(forResource: "Cat", ofType: "gif")!)
-            URL(string: "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff6f34b91b5046c292092205bfc0aaea~tplv-k3u1fbpfcp-watermark.image?")
-        }
+        
     }
     
     struct PlaceholderView: View {

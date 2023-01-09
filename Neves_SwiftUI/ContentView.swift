@@ -26,7 +26,6 @@ struct ContentView: View {
         }
         // NavigationView在iPad端默认是左右两列的形式展示，需要手动设置回默认样式
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
 }
 

@@ -12,6 +12,14 @@
 		00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FA2909062400B6611B /* AnimationValueView.swift */; };
 		00DFE9FD29090ABA00B6611B /* AnimatableModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FC29090ABA00B6611B /* AnimatableModifiers.swift */; };
 		00ED821E296962F5006F035B /* StateInitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED821D296962F5006F035B /* StateInitTestView.swift */; };
+		00ED822E296BBF73006F035B /* AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED822D296BBF73006F035B /* AppGroups.swift */; };
+		00ED822F296BBF76006F035B /* AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED822D296BBF73006F035B /* AppGroups.swift */; };
+		00ED8253296BE99D006F035B /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED8252296BE99D006F035B /* GifImageView.swift */; };
+		00ED8257296BE9BD006F035B /* AsyncGifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED8256296BE9BD006F035B /* AsyncGifImageView.swift */; };
+		00F0A1D5296BEDA5006B5A28 /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */; };
+		00F0A1D6296BEDA7006B5A28 /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */; };
+		00F0A1DA296BEDF0006B5A28 /* NevesWidgetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */; };
+		00F0A1DB296BEDFF006B5A28 /* NevesWidgetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */; };
 		1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A621CD02880FD8D00DC463F /* TestUIView.swift */; };
 		71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2A275E1E610030776A /* ImageCroperView.swift */; };
 		71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2B275E1E610030776A /* ImagePickerView.swift */; };
@@ -33,11 +41,8 @@
 		7107CD82287BBE4900AC9B9F /* JP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A92700642C0030F279 /* JP.swift */; };
 		7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A62700642C0030F279 /* UIScreen.Extension.swift */; };
 		7107CD8F287BC36B00AC9B9F /* Gwen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7107CD8E287BC36B00AC9B9F /* Gwen.jpg */; };
-		7107CD96287BC6A700AC9B9F /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */; };
 		7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */; };
 		7107CD9C287BC81D00AC9B9F /* Cat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7107CD9B287BC81D00AC9B9F /* Cat.gif */; };
-		7107CDA0287BCC0000AC9B9F /* ImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD9F287BCC0000AC9B9F /* ImageTool.m */; };
-		7107CDA1287BCC0000AC9B9F /* ImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7107CD9F287BCC0000AC9B9F /* ImageTool.m */; };
 		7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107CDA5287BF35500AC9B9F /* GifImage.swift */; };
 		7107CDAA287BF73B00AC9B9F /* Cat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7107CDA9287BF73B00AC9B9F /* Cat.gif */; };
 		7115A6BF27EDC7D800C5B145 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7115A6BE27EDC7D800C5B145 /* WidgetKit.framework */; };
@@ -132,6 +137,13 @@
 		00DFE9FA2909062400B6611B /* AnimationValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationValueView.swift; sourceTree = "<group>"; };
 		00DFE9FC29090ABA00B6611B /* AnimatableModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableModifiers.swift; sourceTree = "<group>"; };
 		00ED821D296962F5006F035B /* StateInitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInitTestView.swift; sourceTree = "<group>"; };
+		00ED821F296BB478006F035B /* Neves_SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Neves_SwiftUI.entitlements; sourceTree = "<group>"; };
+		00ED8220296BB491006F035B /* NevesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NevesWidgetExtension.entitlements; sourceTree = "<group>"; };
+		00ED822D296BBF73006F035B /* AppGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroups.swift; sourceTree = "<group>"; };
+		00ED8252296BE99D006F035B /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
+		00ED8256296BE9BD006F035B /* AsyncGifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncGifImageView.swift; sourceTree = "<group>"; };
+		00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetView.swift; sourceTree = "<group>"; };
+		00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetEditView.swift; sourceTree = "<group>"; };
 		1A621CD02880FD8D00DC463F /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
 		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -151,12 +163,9 @@
 		71032D4D2760632E0030776A /* BeautyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyItem.swift; sourceTree = "<group>"; };
 		71032D4F276081F40030776A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		7107CD8E287BC36B00AC9B9F /* Gwen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gwen.jpg; sourceTree = "<group>"; };
-		7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NevesWidgetView.swift; sourceTree = "<group>"; };
 		7107CD98287BC71300AC9B9F /* UIImage.JPExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.JPExtension.swift; sourceTree = "<group>"; };
 		7107CD9B287BC81D00AC9B9F /* Cat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Cat.gif; sourceTree = "<group>"; };
 		7107CD9D287BCBFF00AC9B9F /* NevesWidgetExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NevesWidgetExtension-Bridging-Header.h"; sourceTree = "<group>"; };
-		7107CD9E287BCC0000AC9B9F /* ImageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTool.h; sourceTree = "<group>"; };
-		7107CD9F287BCC0000AC9B9F /* ImageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTool.m; sourceTree = "<group>"; };
 		7107CDA5287BF35500AC9B9F /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		7107CDA9287BF73B00AC9B9F /* Cat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Cat.gif; sourceTree = "<group>"; };
 		7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NevesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +263,16 @@
 			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
+		00ED8251296BE6CB006F035B /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				00ED8252296BE99D006F035B /* GifImageView.swift */,
+				00ED8256296BE9BD006F035B /* AsyncGifImageView.swift */,
+				7107CDA5287BF35500AC9B9F /* GifImage.swift */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
 		3A01F6D206FA6FD3A6FB773E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,10 +341,8 @@
 		7107CD91287BC64500AC9B9F /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				7107CD95287BC6A700AC9B9F /* NevesWidgetView.swift */,
-				7107CDA5287BF35500AC9B9F /* GifImage.swift */,
-				7107CD9E287BCC0000AC9B9F /* ImageTool.h */,
-				7107CD9F287BCC0000AC9B9F /* ImageTool.m */,
+				00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */,
+				00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -346,6 +363,7 @@
 		715ED74726FF2E310030F279 = {
 			isa = PBXGroup;
 			children = (
+				00ED8220296BB491006F035B /* NevesWidgetExtension.entitlements */,
 				715ED75226FF2E310030F279 /* Neves_SwiftUI */,
 				7115A6C227EDC7D900C5B145 /* NevesWidget */,
 				715ED75126FF2E310030F279 /* Products */,
@@ -366,17 +384,21 @@
 		715ED75226FF2E310030F279 /* Neves_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				715ED78F2700642C0030F279 /* Neves */,
+				00ED821F296BB478006F035B /* Neves_SwiftUI.entitlements */,
 				715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */,
 				715ED75526FF2E310030F279 /* ContentView.swift */,
+				715ED7DF2700684E0030F279 /* DemoStore.swift */,
+				715ED7DD2700684E0030F279 /* View */,
 				715ED7DE2700684E0030F279 /* Data */,
 				71032D4A27605ED20030776A /* Model */,
-				715ED7DD2700684E0030F279 /* View */,
+				716828C1275DBFE80039F3F7 /* Modifier */,
+				00DFE9F7290905E100B6611B /* ButtonStyles */,
 				716828C2275DC0430039F3F7 /* Extension */,
 				716828BE275DBBBD0039F3F7 /* Common */,
 				71ADDF7F27A0E88000404FF4 /* ThirdLib */,
-				71032D33275E23EF0030776A /* Resource */,
+				715ED78F2700642C0030F279 /* Neves */,
 				715ED75726FF2E320030F279 /* Assets.xcassets */,
+				71032D33275E23EF0030776A /* Resource */,
 				715ED75926FF2E320030F279 /* Preview Content */,
 				715ED7D7270064CC0030F279 /* Neves_SwiftUI-Bridging-Header.h */,
 				7107CD9D287BCBFF00AC9B9F /* NevesWidgetExtension-Bridging-Header.h */,
@@ -493,8 +515,7 @@
 				716828B9275DBA000039F3F7 /* Base */,
 				716828B5275DB9E40039F3F7 /* Unit */,
 				716828B7275DB9EF0039F3F7 /* Animation */,
-				716828C1275DBFE80039F3F7 /* Modifier */,
-				00DFE9F7290905E100B6611B /* ButtonStyles */,
+				00ED8251296BE6CB006F035B /* GIF */,
 				71032D29275E1CA50030776A /* UIKit */,
 				7107CD91287BC64500AC9B9F /* Widget */,
 			);
@@ -504,7 +525,7 @@
 		715ED7DE2700684E0030F279 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				715ED7DF2700684E0030F279 /* DemoStore.swift */,
+				00ED822D296BBF73006F035B /* AppGroups.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -756,11 +777,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7107CDA1287BCC0000AC9B9F /* ImageTool.m in Sources */,
+				00F0A1DB296BEDFF006B5A28 /* NevesWidgetEditView.swift in Sources */,
 				7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
 				7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */,
 				7107CD82287BBE4900AC9B9F /* JP.swift in Sources */,
 				7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */,
+				00F0A1D6296BEDA7006B5A28 /* NevesWidgetView.swift in Sources */,
+				00ED822F296BBF76006F035B /* AppGroups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00ED8253296BE99D006F035B /* GifImageView.swift in Sources */,
 				716828BD275DBBA50039F3F7 /* Buttons.swift in Sources */,
 				715ED7C42700642C0030F279 /* UIColor.Extension.swift in Sources */,
 				715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */,
@@ -783,8 +807,10 @@
 				715ED7D12700642C0030F279 /* Done.swift in Sources */,
 				715ED7BA2700642C0030F279 /* OptionPopView.swift in Sources */,
 				715ED7C12700642C0030F279 /* UIWindow.Extension.swift in Sources */,
+				00F0A1D5296BEDA5006B5A28 /* NevesWidgetView.swift in Sources */,
 				715ED7B92700642C0030F279 /* SheetView.swift in Sources */,
 				7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */,
+				00F0A1DA296BEDF0006B5A28 /* NevesWidgetEditView.swift in Sources */,
 				00DFE9F62908E88400B6611B /* AnimExperienceView_iOS15.swift in Sources */,
 				715ED7C62700642C0030F279 /* UIScrollView.Extension.swift in Sources */,
 				71032D50276081F40030776A /* BlurView.swift in Sources */,
@@ -795,13 +821,13 @@
 				00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */,
 				715ED7BE2700642C0030F279 /* UIView.Extension.swift in Sources */,
 				714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */,
+				00ED8257296BE9BD006F035B /* AsyncGifImageView.swift in Sources */,
 				715ED7B72700642C0030F279 /* PopViewCompatible.swift in Sources */,
 				716828C6275DC0B70039F3F7 /* Test1View.swift in Sources */,
 				715ED7CD2700642C0030F279 /* JPError.swift in Sources */,
 				715ED7CC2700642C0030F279 /* PopViewReusable.swift in Sources */,
 				7199D9C72761D6980001118E /* FrameTestView.swift in Sources */,
 				715ED7CE2700642C0030F279 /* Const.swift in Sources */,
-				7107CDA0287BCC0000AC9B9F /* ImageTool.m in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,
@@ -812,6 +838,7 @@
 				7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
 				00DFE9FD29090ABA00B6611B /* AnimatableModifiers.swift in Sources */,
 				719F9FBB28616015008B4C1F /* StateObjectTestView.swift in Sources */,
+				00ED822E296BBF73006F035B /* AppGroups.swift in Sources */,
 				1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */,
 				715ED7B62700642C0030F279 /* GradientView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,
@@ -821,7 +848,6 @@
 				715ED7CF2700642C0030F279 /* Function.swift in Sources */,
 				716828C4275DC0580039F3F7 /* Color.Extension.swift in Sources */,
 				71032D3927605D6F0030776A /* MatchedGeometryEffectView.swift in Sources */,
-				7107CD96287BC6A700AC9B9F /* NevesWidgetView.swift in Sources */,
 				71032D4E2760632E0030776A /* BeautyItem.swift in Sources */,
 				715ED7C32700642C0030F279 /* ScreenFit.Extension.swift in Sources */,
 				715ED7BF2700642C0030F279 /* UIImage.Extension.swift in Sources */,
@@ -856,6 +882,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NevesWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
@@ -887,6 +914,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NevesWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
@@ -1035,6 +1063,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neves_SwiftUI/Neves_SwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Neves_SwiftUI/Preview Content\"";
@@ -1070,6 +1099,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neves_SwiftUI/Neves_SwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Neves_SwiftUI/Preview Content\"";
