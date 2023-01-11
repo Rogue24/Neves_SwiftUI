@@ -44,7 +44,8 @@ struct NevesWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+//        Text(entry.date, style: .time)
+        NevesWidgetView()
     }
 }
 

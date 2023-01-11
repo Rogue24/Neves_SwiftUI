@@ -11,6 +11,8 @@
 		00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F8290905ED00B6611B /* ButtonStyles.swift */; };
 		00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FA2909062400B6611B /* AnimationValueView.swift */; };
 		00DFE9FD29090ABA00B6611B /* AnimatableModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FC29090ABA00B6611B /* AnimatableModifiers.swift */; };
+		00E5D9CE296EA130006A6FDD /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADDF7D27A0E7A600404FF4 /* Modifiers.swift */; };
+		00E5D9CF296EA13A006A6FDD /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F8290905ED00B6611B /* ButtonStyles.swift */; };
 		00ED821E296962F5006F035B /* StateInitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED821D296962F5006F035B /* StateInitTestView.swift */; };
 		00ED822E296BBF73006F035B /* AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED822D296BBF73006F035B /* AppGroups.swift */; };
 		00ED822F296BBF76006F035B /* AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED822D296BBF73006F035B /* AppGroups.swift */; };
@@ -20,6 +22,14 @@
 		00F0A1D6296BEDA7006B5A28 /* NevesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */; };
 		00F0A1DA296BEDF0006B5A28 /* NevesWidgetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */; };
 		00F0A1DB296BEDFF006B5A28 /* NevesWidgetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */; };
+		00F0A1DD296BF62E006B5A28 /* NevesWidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1DC296BF62E006B5A28 /* NevesWidgetStore.swift */; };
+		00F0A1DE296BF696006B5A28 /* NevesWidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1DC296BF62E006B5A28 /* NevesWidgetStore.swift */; };
+		00F0A1E0296BFFCB006B5A28 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1DF296BFFCB006B5A28 /* UserDefault.swift */; };
+		00F0A1E4296D3148006B5A28 /* NevesWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */; };
+		00F0A1E5296D453D006B5A28 /* NevesWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */; };
+		00F0A1E7296D607F006B5A28 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1DF296BFFCB006B5A28 /* UserDefault.swift */; };
+		00F0A1F5296E584F006B5A28 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
+		00F0A1F6296E8629006B5A28 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
 		1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A621CD02880FD8D00DC463F /* TestUIView.swift */; };
 		71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2A275E1E610030776A /* ImageCroperView.swift */; };
 		71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2B275E1E610030776A /* ImagePickerView.swift */; };
@@ -144,6 +154,10 @@
 		00ED8256296BE9BD006F035B /* AsyncGifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncGifImageView.swift; sourceTree = "<group>"; };
 		00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetView.swift; sourceTree = "<group>"; };
 		00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetEditView.swift; sourceTree = "<group>"; };
+		00F0A1DC296BF62E006B5A28 /* NevesWidgetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetStore.swift; sourceTree = "<group>"; };
+		00F0A1DF296BFFCB006B5A28 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetModel.swift; sourceTree = "<group>"; };
+		00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremPicsum.swift; sourceTree = "<group>"; };
 		1A621CD02880FD8D00DC463F /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
 		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -343,6 +357,8 @@
 			children = (
 				00F0A1D9296BEDF0006B5A28 /* NevesWidgetEditView.swift */,
 				00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */,
+				00F0A1DC296BF62E006B5A28 /* NevesWidgetStore.swift */,
+				00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -485,6 +501,7 @@
 				715ED7AD2700642C0030F279 /* JPError.swift */,
 				715ED7AA2700642C0030F279 /* ListViewReusable.swift */,
 				715ED7AC2700642C0030F279 /* PopViewReusable.swift */,
+				00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -525,6 +542,7 @@
 		715ED7DE2700684E0030F279 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				00F0A1DF296BFFCB006B5A28 /* UserDefault.swift */,
 				00ED822D296BBF73006F035B /* AppGroups.swift */,
 			);
 			path = Data;
@@ -779,10 +797,16 @@
 			files = (
 				00F0A1DB296BEDFF006B5A28 /* NevesWidgetEditView.swift in Sources */,
 				7115A6C927EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
+				00F0A1E7296D607F006B5A28 /* UserDefault.swift in Sources */,
 				7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */,
+				00E5D9CE296EA130006A6FDD /* Modifiers.swift in Sources */,
+				00F0A1DE296BF696006B5A28 /* NevesWidgetStore.swift in Sources */,
+				00F0A1E5296D453D006B5A28 /* NevesWidgetModel.swift in Sources */,
+				00E5D9CF296EA13A006A6FDD /* ButtonStyles.swift in Sources */,
 				7107CD82287BBE4900AC9B9F /* JP.swift in Sources */,
 				7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */,
 				00F0A1D6296BEDA7006B5A28 /* NevesWidgetView.swift in Sources */,
+				00F0A1F6296E8629006B5A28 /* LoremPicsum.swift in Sources */,
 				00ED822F296BBF76006F035B /* AppGroups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -812,6 +836,7 @@
 				7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */,
 				00F0A1DA296BEDF0006B5A28 /* NevesWidgetEditView.swift in Sources */,
 				00DFE9F62908E88400B6611B /* AnimExperienceView_iOS15.swift in Sources */,
+				00F0A1E4296D3148006B5A28 /* NevesWidgetModel.swift in Sources */,
 				715ED7C62700642C0030F279 /* UIScrollView.Extension.swift in Sources */,
 				71032D50276081F40030776A /* BlurView.swift in Sources */,
 				7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */,
@@ -819,6 +844,7 @@
 				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
 				00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */,
+				00F0A1F5296E584F006B5A28 /* LoremPicsum.swift in Sources */,
 				715ED7BE2700642C0030F279 /* UIView.Extension.swift in Sources */,
 				714A3A4D277B45FA005A337E /* LazyGridView.swift in Sources */,
 				00ED8257296BE9BD006F035B /* AsyncGifImageView.swift in Sources */,
@@ -834,6 +860,7 @@
 				71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */,
 				71ADDF7E27A0E7A600404FF4 /* Modifiers.swift in Sources */,
 				71032D31275E21450030776A /* CropViewController.swift in Sources */,
+				00F0A1DD296BF62E006B5A28 /* NevesWidgetStore.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
 				7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
 				00DFE9FD29090ABA00B6611B /* AnimatableModifiers.swift in Sources */,
@@ -852,6 +879,7 @@
 				715ED7C32700642C0030F279 /* ScreenFit.Extension.swift in Sources */,
 				715ED7BF2700642C0030F279 /* UIImage.Extension.swift in Sources */,
 				715ED7D22700642C0030F279 /* Asyncs.swift in Sources */,
+				00F0A1E0296BFFCB006B5A28 /* UserDefault.swift in Sources */,
 				715ED7BD2700642C0030F279 /* Literal.Extension.swift in Sources */,
 				71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */,
 				71AD216628759EAF00AD5568 /* ResultBuilderView.swift in Sources */,

@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct NevesWidgetView: View {
+    @StateObject var store = NevesWidgetStore()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Group {
+                if let image = store.image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    Color.black
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            Text(store.content)
+                .font(.largeTitle)
+                .baseShadow()
+        }
     }
 }
 

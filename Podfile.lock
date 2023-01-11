@@ -1,20 +1,24 @@
 PODS:
   - JPCrop (0.2.0)
   - JPImageresizerView (1.9.9)
+  - Kingfisher (7.4.1)
 
 DEPENDENCIES:
   - JPCrop
   - JPImageresizerView
+  - Kingfisher (~> 7.4.0)
 
 SPEC REPOS:
   trunk:
     - JPCrop
     - JPImageresizerView
+    - Kingfisher
 
 SPEC CHECKSUMS:
   JPCrop: 2a5742db56fa30f495683e8b51c0d7548ab04368
   JPImageresizerView: 762cd3ea68450cb3985fa3a06cd55afd0527fa73
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
 
-PODFILE CHECKSUM: 20de66addd02be6f0877dee1cbc7c6d06de17bb5
+PODFILE CHECKSUM: 8f3b0be486d88ef5b8348a2ceea322161cde1073
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

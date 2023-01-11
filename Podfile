@@ -11,5 +11,6 @@ target 'Neves_SwiftUI' do
     pod 'JPCrop'
 #    pod 'SDWebImageSwiftUI'
 #    pod 'lottie-ios'
+    pod 'Kingfisher', '~> 7.4.0'
   
 end

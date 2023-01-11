@@ -7,8 +7,22 @@
 
 enum AppGroups {
     static let identifier: String = "group.com.zhoujianping.Neves"
+}
+
+extension AppGroups {
+    static var directoryPath: String {
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppGroups.identifier)!.path
+    }
     
-    @propertyWrapper struct UserDefault<T> {
+    static func getFilePath(_ fileName: String) -> String {
+        guard !fileName.isEmpty else { return "" }
+        return directoryPath + "/" + fileName
+    }
+}
+
+extension AppGroups {
+    @propertyWrapper
+    struct UserDefault<T> {
         let key: String
         
         var wrappedValue: T? {
@@ -20,13 +34,5 @@ enum AppGroups {
                 UserDefaults(suiteName: AppGroups.identifier)?.object(forKey: key) as? T
             }
         }
-    }
-    
-    func getFilePath(_ fileName: String) -> String {
-        guard fileName.count > 0 else { return "" }
-        var filePath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppGroups.identifier)!.path
-        filePath += "/"
-        filePath += fileName
-        return filePath
     }
 }
