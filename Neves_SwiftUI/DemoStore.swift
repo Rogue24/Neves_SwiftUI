@@ -17,6 +17,7 @@ enum Demo: String {
     case GeometryReaderTest
     case StateObjectTest
     case StateInitTest
+    case EnvironmentTest
     
     // MARK: - Base
     case MatchedGeometryEffect
@@ -53,6 +54,7 @@ extension Demo {
             Item(demo: .GeometryReaderTest),
             Item(demo: .StateObjectTest),
             Item(demo: .StateInitTest),
+            Item(demo: .EnvironmentTest),
         ]),
         
         Section(title: "Base", items: [
@@ -113,6 +115,7 @@ extension Demo {
                 case .GeometryReaderTest: GeometryReaderTestView()
                 case .StateObjectTest: StateObjectTestView()
                 case .StateInitTest: StateInitTestView()
+                case .EnvironmentTest: EnvironmentTestView()
                     
                 // Base
                 case .MatchedGeometryEffect: MatchedGeometryEffectView()
@@ -144,8 +147,7 @@ extension Demo {
                     
                 // UIKit
                 case .ImagePicker:
-                    ImagePickerView(selectedImage: .constant(nil))
-                        .edgesIgnoringSafeArea(.all)
+                    ImagePickerShowView()
                 case .ImageCroper:
                     ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
                         .edgesIgnoringSafeArea(.all)
@@ -156,8 +158,6 @@ extension Demo {
             }
             .navigationBarTitle(title, displayMode: .inline)
         }
-        
-        
     }
     
     struct PlaceholderView: View {
