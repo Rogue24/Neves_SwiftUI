@@ -13,16 +13,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(Demo.sections) { section in
-                Section(header: Text(section.title)) {
-                    ForEach(section.items) { item in
-                        NavigationLink(destination: item.body) {
-                            Text(item.title)
-                        }
-                    }
-                }
-            }
-            .navigationBarTitle("Neves")
+            List(Demo.sections) { section($0) }
+                .navigationBarTitle("Neves")
         }
         // NavigationView在iPad端默认是左右两列的形式展示，需要手动设置回默认样式
         .navigationViewStyle(StackNavigationViewStyle())
@@ -31,6 +23,18 @@ struct ContentView: View {
         .environment(\.testBindTag, $bindTag)
         .environment(\.testTagBox, $tagBox)
         .environment(\.testAction, JPTestAction())
+    }
+    
+    func section(_ section: Demo.Section) -> some View {
+        Section(header: Text(section.title)) {
+            ForEach(section.items) { item($0) }
+        }
+    }
+    
+    func item(_ item: Demo.Item) -> some View {
+        NavigationLink(destination: item.body) {
+            Text(item.title)
+        }
     }
 }
 

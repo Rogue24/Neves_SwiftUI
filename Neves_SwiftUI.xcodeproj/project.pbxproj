@@ -146,6 +146,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		008DC2B8297254320039AB22 /* Neves-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Neves-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimExperienceView_iOS15.swift; sourceTree = "<group>"; };
 		00DFE9F8290905ED00B6611B /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		00DFE9FA2909062400B6611B /* AnimationValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationValueView.swift; sourceTree = "<group>"; };
@@ -408,6 +409,7 @@
 		715ED75226FF2E310030F279 /* Neves_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				008DC2B8297254320039AB22 /* Neves-SwiftUI-Info.plist */,
 				00ED821F296BB478006F035B /* Neves_SwiftUI.entitlements */,
 				715ED75326FF2E310030F279 /* Neves_SwiftUIApp.swift */,
 				715ED75526FF2E310030F279 /* ContentView.swift */,
@@ -1112,7 +1114,7 @@
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Neves-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1148,7 +1150,7 @@
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Neves-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
