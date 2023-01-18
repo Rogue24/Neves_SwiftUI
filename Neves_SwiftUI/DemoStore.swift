@@ -27,6 +27,7 @@ enum Demo: String {
     // MARK: - Unit
     case Buttons
     case ProgressHUD
+    case FunnyPlay
     
     // MARK: - Animation
     case AnimationValue
@@ -66,6 +67,7 @@ extension Demo {
         Section(title: "Unit", items: [
             Item(demo: .Buttons),
             Item(demo: .ProgressHUD),
+            Item(demo: .FunnyPlay),
         ]),
         
         Section(title: "Animation", items: [
@@ -125,6 +127,7 @@ extension Demo {
                 // Unit
                 case .Buttons: ButtonsView()
                 case .ProgressHUD: ProgressHUDView()
+                case .FunnyPlay: FunnyPlayView()
                     
                 // Animation
                 case .AnimationValue: AnimationValueView()

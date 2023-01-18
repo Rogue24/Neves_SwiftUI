@@ -12,6 +12,7 @@ struct Neves_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .overlay(FunnyView())
         }
     }
 }

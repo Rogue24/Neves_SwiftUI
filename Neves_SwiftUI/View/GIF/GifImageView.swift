@@ -78,10 +78,7 @@ struct GifImageView: View {
             }
             gifResult = await UIImage.decodeBundleGIF("Cat")
         }
-            
     }
-    
-    
 }
 
 @available(iOS 15.0.0, *)

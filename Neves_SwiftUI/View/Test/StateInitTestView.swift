@@ -23,13 +23,13 @@ struct StateInitTestView: View {
                 Button("+") { value += 1 }
             }
             
-            DetailView0(number: value) // -> 100（以前会报错，现在不会）
+            DetailView0(number: value) // 99 -> 100（以前会报错，现在不会）
             
-            DetailView1(number: value) // -> 0
+            DetailView1(number: value) // 99 -> 0（需掌握为什么）
             
-            DetailView2(number: value) // -> 100
+            DetailView2(number: value) // 99 -> 100（需掌握为什么）
             
-            DetailView3(number: value) // -> 0 -> 100
+            DetailView3(number: value) // 99 -> 0 -> 100
                 .id(identifier)
             /// 被`id modifier`修饰后：
             /// 每次`body`求值时，如果`identifier`出现不一致，原来的 DetailView3 将被废弃，所有状态将被清除，并被重新创建；
@@ -77,7 +77,11 @@ struct DetailView1: View {
         self.number = number + 1
         print("111: init \(self.number ?? 0)") // -> 0
     }
-
+    
+    /// - `init`【之后】
+    /// * 此时`_graph`才被赋值，有值之后`_number`才能通过`self.number`进行赋值
+    /// - `body`【之前】
+    
     var body: some View {
         print("111: body \(number ?? 0)")
         return HStack(spacing: 10) {
