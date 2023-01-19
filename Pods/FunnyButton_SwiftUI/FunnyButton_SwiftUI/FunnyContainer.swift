@@ -1,13 +1,13 @@
 //
-//  Penetrable.swift
-//  Neves
+//  FunnyContainer.swift
+//  FunnyButton_SwiftUI
 //
 //  Created by aa on 2023/1/17.
 //
 
 import UIKit
 
-class FunnyContainer: UIView {
+public class FunnyContainer: UIView {
     private var funnyBtn: FunnyButton { .shared }
     
     init() {
@@ -21,7 +21,7 @@ class FunnyContainer: UIView {
         funnyBtn.moveToBorder(animated: false)
     }
     
-    override func didMoveToSuperview() {
+    public override func didMoveToSuperview() {
         super.didMoveToSuperview()
         guard let superview = superview else { return }
         // superview: _UIConstraintBasedLayoutHostingView
@@ -32,7 +32,7 @@ class FunnyContainer: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         guard funnyBtn.safeFrame != bounds else { return }
         funnyBtn.updateSafeFrame(bounds)

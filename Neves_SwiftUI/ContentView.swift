@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State var bindTag = 333
     @State var tagBox = JPTestTagBox()
-    @StateObject var funny = Funny()
     
     var body: some View {
         NavigationView {
@@ -24,7 +23,6 @@ struct ContentView: View {
         .environment(\.testBindTag, $bindTag)
         .environment(\.testTagBox, $tagBox)
         .environment(\.testAction, JPTestAction())
-        .environmentObject(funny)
     }
     
     func section(_ section: Demo.Section) -> some View {

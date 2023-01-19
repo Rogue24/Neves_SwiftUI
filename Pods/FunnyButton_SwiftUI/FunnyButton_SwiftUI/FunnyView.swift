@@ -1,6 +1,6 @@
 //
 //  FunnyView.swift
-//  Neves_SwiftUI
+//  FunnyButton_SwiftUI
 //
 //  Created by aa on 2023/1/16.
 //
@@ -16,14 +16,16 @@ import SwiftUI
  */
 
 /// 遵守 UIViewRepresentable，可以使用UIKit的视图
-struct FunnyView: UIViewRepresentable {
+public struct FunnyView: UIViewRepresentable {
+    public init() {}
+    
     /// 创建视图
-    func makeUIView(context: Context) -> FunnyContainer {
+    public func makeUIView(context: Context) -> FunnyContainer {
         FunnyContainer()
     }
     
     /// 刷新视图
-    func updateUIView(_ uiView: FunnyContainer, context: Context) {
+    public func updateUIView(_ uiView: FunnyContainer, context: Context) {
         
     }
 }

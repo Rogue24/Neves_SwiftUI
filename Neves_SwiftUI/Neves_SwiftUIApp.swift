@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import FunnyButton_SwiftUI
 
 @main
 struct Neves_SwiftUIApp: App {
+    @StateObject var funny = Funny()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(funny)
                 .overlay(FunnyView())
         }
     }

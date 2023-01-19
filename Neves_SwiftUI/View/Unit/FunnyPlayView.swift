@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FunnyButton_SwiftUI
 
 struct FunnyPlayView: View {
     

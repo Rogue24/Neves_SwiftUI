@@ -7,13 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008DC2D8297532CB0039AB22 /* FunnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC2D7297532CB0039AB22 /* FunnyView.swift */; };
-		008DC2FD29778DF10039AB22 /* FunnyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC2FC29778DF10039AB22 /* FunnyContainer.swift */; };
 		008DC2FE29778E300039AB22 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
-		008DC304297793920039AB22 /* FunnyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC300297793920039AB22 /* FunnyButton.swift */; };
-		008DC305297793920039AB22 /* FunnyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC301297793920039AB22 /* FunnyAction.swift */; };
-		008DC3092977A1510039AB22 /* Funny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC3082977A1510039AB22 /* Funny.swift */; };
-		008DC3172977D4A60039AB22 /* FunnyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC3162977D4A60039AB22 /* FunnyModifier.swift */; };
 		008DC3192977DCCF0039AB22 /* FunnyPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */; };
 		00DFE9F62908E88400B6611B /* AnimExperienceView_iOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */; };
 		00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9F8290905ED00B6611B /* ButtonStyles.swift */; };
@@ -154,12 +148,6 @@
 
 /* Begin PBXFileReference section */
 		008DC2B8297254320039AB22 /* Neves-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Neves-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
-		008DC2D7297532CB0039AB22 /* FunnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyView.swift; sourceTree = "<group>"; };
-		008DC2FC29778DF10039AB22 /* FunnyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyContainer.swift; sourceTree = "<group>"; };
-		008DC300297793920039AB22 /* FunnyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyButton.swift; sourceTree = "<group>"; };
-		008DC301297793920039AB22 /* FunnyAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyAction.swift; sourceTree = "<group>"; };
-		008DC3082977A1510039AB22 /* Funny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funny.swift; sourceTree = "<group>"; };
-		008DC3162977D4A60039AB22 /* FunnyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyModifier.swift; sourceTree = "<group>"; };
 		008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyPlayView.swift; sourceTree = "<group>"; };
 		00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimExperienceView_iOS15.swift; sourceTree = "<group>"; };
 		00DFE9F8290905ED00B6611B /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -291,19 +279,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		008DC2FF297793920039AB22 /* FunnyButton */ = {
-			isa = PBXGroup;
-			children = (
-				008DC3082977A1510039AB22 /* Funny.swift */,
-				008DC301297793920039AB22 /* FunnyAction.swift */,
-				008DC300297793920039AB22 /* FunnyButton.swift */,
-				008DC2FC29778DF10039AB22 /* FunnyContainer.swift */,
-				008DC2D7297532CB0039AB22 /* FunnyView.swift */,
-				008DC3162977D4A60039AB22 /* FunnyModifier.swift */,
-			);
-			path = FunnyButton;
-			sourceTree = "<group>";
-		};
 		00DFE9F7290905E100B6611B /* ButtonStyles */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,7 +425,6 @@
 				716828C2275DC0430039F3F7 /* Extension */,
 				716828BE275DBBBD0039F3F7 /* Common */,
 				71ADDF7F27A0E88000404FF4 /* ThirdLib */,
-				008DC2FF297793920039AB22 /* FunnyButton */,
 				715ED78F2700642C0030F279 /* Neves */,
 				715ED75726FF2E320030F279 /* Assets.xcassets */,
 				71032D33275E23EF0030776A /* Resource */,
@@ -863,16 +837,13 @@
 				715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */,
 				719E838D277024FD009DD435 /* GeometryReaderTestView.swift in Sources */,
 				71032D4C27605F150030776A /* Beauty.swift in Sources */,
-				008DC305297793920039AB22 /* FunnyAction.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
 				00E5D9D7296FB110006A6FDD /* EnvironmentValues.swift in Sources */,
 				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
 				71ADDF8527A0E88000404FF4 /* TTProgressHUDConfig.swift in Sources */,
 				715ED75626FF2E310030F279 /* ContentView.swift in Sources */,
 				71ADDF8427A0E88000404FF4 /* TTProgressHUD.swift in Sources */,
-				008DC3172977D4A60039AB22 /* FunnyModifier.swift in Sources */,
 				71ADDF8627A0E88000404FF4 /* CGSize+Hashable.swift in Sources */,
-				008DC2D8297532CB0039AB22 /* FunnyView.swift in Sources */,
 				715ED7CA2700642C0030F279 /* ListViewReusable.swift in Sources */,
 				715ED7D12700642C0030F279 /* Done.swift in Sources */,
 				715ED7BA2700642C0030F279 /* OptionPopView.swift in Sources */,
@@ -933,14 +904,11 @@
 				71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */,
 				71AD216628759EAF00AD5568 /* ResultBuilderView.swift in Sources */,
 				715ED7E02700684E0030F279 /* DemoStore.swift in Sources */,
-				008DC3092977A1510039AB22 /* Funny.swift in Sources */,
 				715ED7CB2700642C0030F279 /* Bindable.swift in Sources */,
-				008DC2FD29778DF10039AB22 /* FunnyContainer.swift in Sources */,
 				715ED7D02700642C0030F279 /* File.swift in Sources */,
 				715ED7C02700642C0030F279 /* Bundle.Extension.swift in Sources */,
 				715ED7B82700642C0030F279 /* AlertView.swift in Sources */,
 				715ED7C92700642C0030F279 /* JP.swift in Sources */,
-				008DC304297793920039AB22 /* FunnyButton.swift in Sources */,
 				715ED7C82700642C0030F279 /* String.Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
