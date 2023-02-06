@@ -17,7 +17,7 @@ struct FrameTestView: View {
                 .resizable()
             
                 // 保持图片的宽高比展示
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
                 // fit 图片`宽`和`高`都不会超出父视图区域
                 // fill 铺满整个父视图（设置了resizable后，默认是这个）
                 //  - 竖屏：图片`高`不会超出父视图区域，图片`宽`会超出
@@ -33,10 +33,12 @@ struct FrameTestView: View {
                 .foregroundColor(.randomColor)
                 .padding()
         }
-        // 这样设置只会以子视图的大小（按最大的包裹）
-//        .frame(width: .infinity, height: .infinity)
-        // 这样设置才会延伸至父视图的大小（如果子视图不足父视图的大小的情况下）
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        // 这样设置则会以子视图的大小（按最大的包裹）
+        .frame(width: .infinity, height: .infinity)
+        // PS：图片的`aspectRatio.contentMode`设置为`fit`就能看出明显效果
+        
+        // 这样设置会延伸至父视图的大小（如果子视图不足父视图的大小的情况下）
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
         
         // 要设置frame再设置背景，否则背景的frame不是最新的frame（也就是CGSize.zero）
         .background(Color.randomColor)
