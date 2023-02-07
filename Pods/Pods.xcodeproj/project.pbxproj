@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00BEA6029C428FEE644AC3D42AD83282 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BAFCD096C27D08C3669B03B4348D3 /* ImagePrefetcher.swift */; };
+		02794AD85A1DC2D5FC60A01C924CFD34 /* JPImageresizerSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE46CA960E6A8E6539C9B0AD17D6D /* JPImageresizerSlider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0285857A24F66E925987A5876F0BE63B /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C957FAE7487310975DC13893F60F02C /* ImageDataProvider.swift */; };
 		0510E8EA51914CB2176AD0F173937FAB /* KFImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6942AB5C26614609434AA161354A5DC3 /* KFImageRenderer.swift */; };
 		05228565AAA7FCED4BAFB2B7EF71D53D /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9742B84DB42B35C8EAD5C2AF2517458 /* KingfisherOptionsInfo.swift */; };
@@ -32,17 +33,15 @@
 		25FC036BEA33CAB5D80F5A41644535D3 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10307416244B2740B56286A9E8B6C85A /* Storage.swift */; };
 		29FF13E23FD52E46D30530549410AD7C /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C48BA756C9A419D3C066C5A8955BCD8 /* ImageTransition.swift */; };
 		2BE89C24BFD3FB663E37C607C289B3B6 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A545865D09FC2CF45C2A2C90C973EE97 /* RedirectHandler.swift */; };
-		2C043C15586694D45EDA00B550280070 /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E5EB02608FF08C47A58BC34ED683 /* JPImageresizerConfigure.m */; };
 		2CF0BDC6F898E581578A75CD16BC936D /* Pods-Neves_SwiftUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A8A020BBFE54FE560AE2DAC79DF405 /* Pods-Neves_SwiftUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32C04CAEF92F5BA5BDA27DEC19B9BE44 /* JPImageresizerBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 145C54C069E25A814F6341757062B8B5 /* JPImageresizerBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		395BA92A8C4080610E97779D5B08C400 /* JPImageresizerBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A22F2FE26772BC6B9E2F62C8D2AB84 /* JPImageresizerBlurView.m */; };
+		3828E742AA09C6BD60021CC449E5CEE3 /* JPImageresizerConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F49E5EB02608FF08C47A58BC34ED683 /* JPImageresizerConfigure.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		393D10B787395546B6B388B143A22227 /* JPImageresizerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4CCAD2F801E580F8AE5E895FD928B /* JPImageresizerTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3AD5DBB915C2623991F7DBACD173BBB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
 		3AF7DB9AEFF47F1F7F91AF28440E4AC6 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0253775B023CCFA614A99A3ECDD1A /* Filter.swift */; };
-		3E6606B446768FA1745D5692D768FBE1 /* JPImageresizer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E9CCC85096755475D85787387CF86 /* JPImageresizer+Extension.m */; };
+		3D9B7053205BE1B05ABE948BC19AAE41 /* JPImageresizerFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C97D01811FC9AC02205D0619F526BA /* JPImageresizerFrameView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		420C200A05BB29E1D299D1BADE9139D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872D7EFA572ECEE8EF993C27196E16DD /* CFNetwork.framework */; };
 		457BE444ED617FA7D6851D6DAA9D7234 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B518AE848865CB36AAAC67675B21BC89 /* Delegate.swift */; };
-		4AB96CBCDAF531A5F2B2D331F1351617 /* JPImageresizerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4CCAD2F801E580F8AE5E895FD928B /* JPImageresizerTool.m */; };
-		4D9A67BBA926EDFF31AB3A05451058C0 /* JPImageresizerFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C97D01811FC9AC02205D0619F526BA /* JPImageresizerFrameView.m */; };
 		4DCA9775E5CCF599460BDB46E77F6FA4 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 327DDEEE9544CD8B5BFD6F4F5EB39361 /* Kingfisher-dummy.m */; };
 		4E64E24219BBAEA12C35734B91EC31EC /* FunnyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD06396B81779DE6B0B2C7B88127CFFC /* FunnyAction.swift */; };
 		4F37E521D341C47CE73DDCF21BA95A52 /* KingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF171E183F4FC303E1C3CD3A79BC9C /* KingfisherError.swift */; };
@@ -55,13 +54,15 @@
 		5BF771657EAC834C9F9A9529DD2C58E6 /* Funny.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE6764264E0F63A4C8E2FD25733F67E /* Funny.swift */; };
 		5E27DD292D3A55657712DD7AFA7B8FCA /* KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9FA02BD8F7439661CE030636E5F37 /* KFImage.swift */; };
 		5F852F38CBC282496CCBE37C51324B2F /* ImageProgressive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3164747B2FE44B9A14734A6B2FF32E20 /* ImageProgressive.swift */; };
+		64FE67CF7B373312FEFC4FEE88D3D93C /* JPImageresizerVideoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBDC49EB7BF7D8B0FF427E0C4B74B /* JPImageresizerVideoObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		65B1935CB107AFDCF34209496688FCD2 /* JPImageresizerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 331D0278C6127F2924608F4719E1A6C9 /* JPImageresizerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70FEC06F54286257E1BA1ECA0C99198D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A0A4239CEDF35B5BB6FB9679C52C4 /* Image.swift */; };
+		7777D2CFD8979B83AE3580601B2B017F /* JPImageresizerBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A22F2FE26772BC6B9E2F62C8D2AB84 /* JPImageresizerBlurView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C7418FF01DD7BB909719682B634A8A5 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DCA96554E34DA2F9AA19F53B025035 /* SessionDataTask.swift */; };
 		7FFE4021A4F14124342AD41CE1117B3E /* KFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122275EFA499A56C3E335634B9F370E8 /* KFAnimatedImage.swift */; };
 		80738D8956C9987CCCEDF551961E5069 /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF424222ABD8470F62D80C0197AC1B95 /* ImageDataProcessor.swift */; };
-		81A647E5BD85725189E9EB04104FADA1 /* JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF49F773083BBE4FD62ECC541ACD3A6 /* JPImageresizerView.m */; };
 		881A35B28D93C56E46E305F6138B1A76 /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B32EBAB93A150FF284660681573DFD6 /* ImageDownloaderDelegate.swift */; };
+		8B76EE93C3A7F5BC9FB387251ABBCFA6 /* JPImageresizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF49F773083BBE4FD62ECC541ACD3A6 /* JPImageresizerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		926D7006F521B534F1044C0CF8C6022B /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8F0FCC0C43AFFE8036DACC8E0A4DE /* Builder.swift */; };
 		98819C7C1605F68D6C64B8FE099E129F /* JPImageresizer+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 48B3A912BA2625CF5592FD46C7631510 /* JPImageresizer+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B0A78AC22E7EDA755F51D86527E2D9C /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F896B594F656337D097FB3AD96F6515 /* Source.swift */; };
@@ -71,11 +72,11 @@
 		A39D3555EC8B45B7D6B9505DDAF0F117 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CDA6FED944131186F3339C3CD1BC1C /* Kingfisher.swift */; };
 		A3D66EA403C79295DE0BBCB7DE97D87D /* FunnyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895910E01F338C8E67C6DDB2417F6E1 /* FunnyContainer.swift */; };
 		A4E5C62B0B4F791A9E6FA189C15FEAFA /* JPImageresizerTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 78FA6A7B165A771808E0F47285D5A62A /* JPImageresizerTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A685DE8FF7B97779657B791C82B7BCC1 /* JPImageresizerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3B734B8C27BB244DC09E1F5CB4DFD /* JPImageresizerResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A746571928453FC4F46BEA1F9C021AF6 /* JPCrop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155874AAEC840C1EFD8C726E81DDB63 /* JPCrop-dummy.m */; };
-		A7949CAD8543B1B6E921FBAC78F118D5 /* JPImageresizerSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAAE46CA960E6A8E6539C9B0AD17D6D /* JPImageresizerSlider.m */; };
 		A88A844D5356E1690E445024CB796E09 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB6A982974E21F511D1F0559FCF30A /* Result.swift */; };
+		AB6A621026AD7E7F142BC13B6BCA1903 /* JPImageresizer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E9CCC85096755475D85787387CF86 /* JPImageresizer+Extension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B05967D1FF47B3C16713A5F4F9584BE2 /* JPImageresizerConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = A9452FFB942EE4402AB97204463B54DE /* JPImageresizerConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0A9A6ECEF394164EBFB7E5B7B130462 /* JPImageresizerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 909BA5A8829A6F51D6086EA71F275BF1 /* JPImageresizerView-dummy.m */; };
 		B21BB389D771BCAE1690222DD7465589 /* JPImageresizerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9BB947A03BD60BD733BF79172D6D14 /* JPImageresizerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B25E07EA645911443A38DA1E68166156 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4E0F3F899456E8A5DF16EBBA54200 /* Box.swift */; };
 		B923068940B51DE6E7E7CCF5605A9F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
@@ -84,7 +85,7 @@
 		BD382E78580D295D10100678D4F66A76 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A36B6E3949141DC70E77C775A9B529 /* String+MD5.swift */; };
 		C549D8DF09EB4FCC262BADB8AE33800A /* JPImageresizerVideoObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 034829C7EE0764C8A491A99D962EC158 /* JPImageresizerVideoObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C57B1602D4EB3BD74CAE948C5F30F718 /* JPImageresizerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF7499F126292704B8E11B6AB074CFD /* JPImageresizerResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7C378358EFA9BA2EFE1DE71E158D5B7 /* JPImageresizerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3B734B8C27BB244DC09E1F5CB4DFD /* JPImageresizerResult.m */; };
+		C66C625ABE2C56E3197B886B923DA08B /* JPImageresizerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 909BA5A8829A6F51D6086EA71F275BF1 /* JPImageresizerView-dummy.m */; };
 		CD7AC3E1C98EA54F7C05C36C52805220 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63C510D0C7D2513D09FDC15F7607CA9 /* CacheSerializer.swift */; };
 		D188989744B7A47761B6235D1AC602F6 /* Pods-Neves_SwiftUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D599F0F4197891248AE41B26B31BBDB /* Pods-Neves_SwiftUI-dummy.m */; };
 		D1BC24C069813E9A7A10B1B52489F3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4207BEE6DFA63E5CF69828DD467E9674 /* Foundation.framework */; };
@@ -93,7 +94,6 @@
 		DAFC6CE6321395CF4523DD66DADBB9BA /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEF53D5CC87D0DA2B0F656ED69FA53 /* ImageDrawing.swift */; };
 		DBB8088E14A2ADEDB1CD840BAC835267 /* CPListItem+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F004E52C6EC6A7FD65096326512165D /* CPListItem+Kingfisher.swift */; };
 		DD72DC30CF19FFC81AB19CD0B074000D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AABBB6819F4A7BDCBD7A2BEABD48AD /* ImageDownloader.swift */; };
-		DDD208D26FFAA691D94C06E3070796F3 /* JPImageresizerVideoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBDC49EB7BF7D8B0FF427E0C4B74B /* JPImageresizerVideoObject.m */; };
 		DE532EF7D50A9CF68587DAD4C1A02BD7 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2737256A331B0E9B3FDAD6D4313E2 /* FormatIndicatedCacheSerializer.swift */; };
 		DF4563832C19B8582C810BF502A5CA29 /* KF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5347677D71B35BE378F2A7E8CC8CA983 /* KF.swift */; };
 		DF9746DF8C072388A568FE1A392428B7 /* JPImageresizerTypedef.h in Headers */ = {isa = PBXBuildFile; fileRef = 6698D874064619AA0D472CDA0DC14933 /* JPImageresizerTypedef.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -221,7 +221,7 @@
 		8BDDE128694A5CB1331E3D280B117F57 /* Configure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configure.swift; path = JPCrop/Classes/Configure.swift; sourceTree = "<group>"; };
 		8F49E5EB02608FF08C47A58BC34ED683 /* JPImageresizerConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPImageresizerConfigure.m; path = JPImageresizerView/Classes/JPImageresizerConfigure.m; sourceTree = "<group>"; };
 		8F717D463C1A513E09903E200DF40985 /* NSTextAttachment+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextAttachment+Kingfisher.swift"; path = "Sources/Extensions/NSTextAttachment+Kingfisher.swift"; sourceTree = "<group>"; };
-		906E71B2DEDCE96DC7D81BD1E040E1EB /* FunnyButton_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FunnyButton_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		906E71B2DEDCE96DC7D81BD1E040E1EB /* FunnyButton_SwiftUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FunnyButton_SwiftUI; path = FunnyButton_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909BA5A8829A6F51D6086EA71F275BF1 /* JPImageresizerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JPImageresizerView-dummy.m"; sourceTree = "<group>"; };
 		92FDC05C27E31DFED9F46990AA39EB6F /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Sources/Networking/SessionDelegate.swift; sourceTree = "<group>"; };
 		94B6571537995D52067FB7F406C7FFA5 /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKInterfaceImage+Kingfisher.swift"; path = "Sources/Extensions/WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		BF424222ABD8470F62D80C0197AC1B95 /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
 		BFE2737256A331B0E9B3FDAD6D4313E2 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		BFFDBDC49EB7BF7D8B0FF427E0C4B74B /* JPImageresizerVideoObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPImageresizerVideoObject.m; path = JPImageresizerView/Classes/JPImageresizerVideoObject.m; sourceTree = "<group>"; };
-		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AABBB6819F4A7BDCBD7A2BEABD48AD /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
 		C9432453F002E9D4189925FEFDD3719C /* FunnyModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunnyModifier.swift; path = FunnyButton_SwiftUI/FunnyModifier.swift; sourceTree = "<group>"; };
 		CA373A6872AC3278ABE4283DEA224B96 /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
@@ -538,10 +538,10 @@
 		77096BD728B9ED687AF8133A51F3A35A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				906E71B2DEDCE96DC7D81BD1E040E1EB /* FunnyButton_SwiftUI.framework */,
+				906E71B2DEDCE96DC7D81BD1E040E1EB /* FunnyButton_SwiftUI */,
 				5C486813DD34575BEB05ECF2CE808917 /* JPCrop.framework */,
 				57A16F36496F75700A94F44A589F70C0 /* JPImageresizerView.framework */,
-				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				A48BF578B7ECD8D51C83132F0B8A4C73 /* Pods-Neves_SwiftUI */,
 			);
 			name = Products;
@@ -655,7 +655,7 @@
 			buildConfigurationList = 031AA2F87A18F84EFB448C4FCF4B356D /* Build configuration list for PBXNativeTarget "JPImageresizerView" */;
 			buildPhases = (
 				FFAADD712A18FC1450D1416565424C7D /* Headers */,
-				97CE51D58F2A913F1C057A5B3C2FF68E /* Sources */,
+				D87BBAE469781C53D3295CF9439AFFF4 /* Sources */,
 				9936C554A245B72E34F8E8B8E5CABA10 /* Frameworks */,
 				58E561118F5CA2C2BBE4D61D19360454 /* Resources */,
 			);
@@ -701,7 +701,7 @@
 			);
 			name = FunnyButton_SwiftUI;
 			productName = FunnyButton_SwiftUI;
-			productReference = 906E71B2DEDCE96DC7D81BD1E040E1EB /* FunnyButton_SwiftUI.framework */;
+			productReference = 906E71B2DEDCE96DC7D81BD1E040E1EB /* FunnyButton_SwiftUI */;
 			productType = "com.apple.product-type.framework";
 		};
 		E72654E19FF35BC858E9A5730C0DF919 /* Pods-Neves_SwiftUI */ = {
@@ -741,7 +741,7 @@
 			);
 			name = Kingfisher;
 			productName = Kingfisher;
-			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */;
+			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -897,23 +897,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97CE51D58F2A913F1C057A5B3C2FF68E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E6606B446768FA1745D5692D768FBE1 /* JPImageresizer+Extension.m in Sources */,
-				395BA92A8C4080610E97779D5B08C400 /* JPImageresizerBlurView.m in Sources */,
-				2C043C15586694D45EDA00B550280070 /* JPImageresizerConfigure.m in Sources */,
-				4D9A67BBA926EDFF31AB3A05451058C0 /* JPImageresizerFrameView.m in Sources */,
-				C7C378358EFA9BA2EFE1DE71E158D5B7 /* JPImageresizerResult.m in Sources */,
-				A7949CAD8543B1B6E921FBAC78F118D5 /* JPImageresizerSlider.m in Sources */,
-				4AB96CBCDAF531A5F2B2D331F1351617 /* JPImageresizerTool.m in Sources */,
-				DDD208D26FFAA691D94C06E3070796F3 /* JPImageresizerVideoObject.m in Sources */,
-				81A647E5BD85725189E9EB04104FADA1 /* JPImageresizerView.m in Sources */,
-				B0A9A6ECEF394164EBFB7E5B7B130462 /* JPImageresizerView-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ABB7A0547C179CAB5B43E4A269A6C018 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -932,6 +915,23 @@
 				0ECD872B1005525EF76B9CA93C3D952A /* Configure.swift in Sources */,
 				BAE290B99AEE899EEF2E8251E0829D2D /* Croper.swift in Sources */,
 				A746571928453FC4F46BEA1F9C021AF6 /* JPCrop-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D87BBAE469781C53D3295CF9439AFFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6A621026AD7E7F142BC13B6BCA1903 /* JPImageresizer+Extension.m in Sources */,
+				7777D2CFD8979B83AE3580601B2B017F /* JPImageresizerBlurView.m in Sources */,
+				3828E742AA09C6BD60021CC449E5CEE3 /* JPImageresizerConfigure.m in Sources */,
+				3D9B7053205BE1B05ABE948BC19AAE41 /* JPImageresizerFrameView.m in Sources */,
+				A685DE8FF7B97779657B791C82B7BCC1 /* JPImageresizerResult.m in Sources */,
+				02794AD85A1DC2D5FC60A01C924CFD34 /* JPImageresizerSlider.m in Sources */,
+				393D10B787395546B6B388B143A22227 /* JPImageresizerTool.m in Sources */,
+				64FE67CF7B373312FEFC4FEE88D3D93C /* JPImageresizerVideoObject.m in Sources */,
+				8B76EE93C3A7F5BC9FB387251ABBCFA6 /* JPImageresizerView.m in Sources */,
+				C66C625ABE2C56E3197B886B923DA08B /* JPImageresizerView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,7 +981,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FunnyButton_SwiftUI/FunnyButton_SwiftUI-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FunnyButton_SwiftUI/FunnyButton_SwiftUI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1015,7 +1015,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPCrop/JPCrop-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPCrop/JPCrop-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1049,7 +1049,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPImageresizerView/JPImageresizerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPImageresizerView/JPImageresizerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1185,7 +1185,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPCrop/JPCrop-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPCrop/JPCrop-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1221,7 +1221,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1256,7 +1256,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1291,7 +1291,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPImageresizerView/JPImageresizerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPImageresizerView/JPImageresizerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1326,7 +1326,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FunnyButton_SwiftUI/FunnyButton_SwiftUI-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FunnyButton_SwiftUI/FunnyButton_SwiftUI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

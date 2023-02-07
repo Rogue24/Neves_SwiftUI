@@ -7,11 +7,11 @@ target 'Neves_SwiftUI' do
   
 #    pod 'SwiftyJSON'
 #    pod 'KakaJSON'
-    pod 'JPImageresizerView'
+    pod 'JPImageresizerView', :inhibit_warnings => true
     pod 'JPCrop'
 #    pod 'SDWebImageSwiftUI'
 #    pod 'lottie-ios'
-    pod 'Kingfisher', '~> 7.4.0'
+    pod 'Kingfisher', '~> 7.4.0', :inhibit_warnings => true
 #    pod 'LookinServer', :configurations => ['Debug']
     pod 'FunnyButton_SwiftUI'
   
