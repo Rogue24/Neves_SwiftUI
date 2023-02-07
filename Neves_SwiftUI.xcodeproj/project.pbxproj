@@ -90,8 +90,6 @@
 		715ED75626FF2E310030F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED75526FF2E310030F279 /* ContentView.swift */; };
 		715ED75826FF2E320030F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715ED75726FF2E320030F279 /* Assets.xcassets */; };
 		715ED75B26FF2E320030F279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715ED75A26FF2E320030F279 /* Preview Assets.xcassets */; };
-		715ED7B52700642C0030F279 /* Gradientable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7922700642C0030F279 /* Gradientable.swift */; };
-		715ED7B62700642C0030F279 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7932700642C0030F279 /* GradientView.swift */; };
 		715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED79A2700642C0030F279 /* NotificationCenter.Extension.swift */; };
 		715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED79B2700642C0030F279 /* UIViewController.Extension.swift */; };
 		715ED7BD2700642C0030F279 /* Literal.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED79C2700642C0030F279 /* Literal.Extension.swift */; };
@@ -106,10 +104,6 @@
 		715ED7C72700642C0030F279 /* UIScreen.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A62700642C0030F279 /* UIScreen.Extension.swift */; };
 		715ED7C82700642C0030F279 /* String.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A72700642C0030F279 /* String.Extension.swift */; };
 		715ED7C92700642C0030F279 /* JP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7A92700642C0030F279 /* JP.swift */; };
-		715ED7CA2700642C0030F279 /* ListViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7AA2700642C0030F279 /* ListViewReusable.swift */; };
-		715ED7CB2700642C0030F279 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7AB2700642C0030F279 /* Bindable.swift */; };
-		715ED7CC2700642C0030F279 /* PopViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7AC2700642C0030F279 /* PopViewReusable.swift */; };
-		715ED7CD2700642C0030F279 /* JPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7AD2700642C0030F279 /* JPError.swift */; };
 		715ED7D02700642C0030F279 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7B22700642C0030F279 /* File.swift */; };
 		715ED7D12700642C0030F279 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7B32700642C0030F279 /* Done.swift */; };
 		715ED7D22700642C0030F279 /* Asyncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ED7B42700642C0030F279 /* Asyncs.swift */; };
@@ -232,8 +226,6 @@
 		715ED75526FF2E310030F279 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		715ED75726FF2E320030F279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715ED75A26FF2E320030F279 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		715ED7922700642C0030F279 /* Gradientable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradientable.swift; sourceTree = "<group>"; };
-		715ED7932700642C0030F279 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		715ED79A2700642C0030F279 /* NotificationCenter.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.Extension.swift; sourceTree = "<group>"; };
 		715ED79B2700642C0030F279 /* UIViewController.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.Extension.swift; sourceTree = "<group>"; };
 		715ED79C2700642C0030F279 /* Literal.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Literal.Extension.swift; sourceTree = "<group>"; };
@@ -248,10 +240,6 @@
 		715ED7A62700642C0030F279 /* UIScreen.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.Extension.swift; sourceTree = "<group>"; };
 		715ED7A72700642C0030F279 /* String.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.Extension.swift; sourceTree = "<group>"; };
 		715ED7A92700642C0030F279 /* JP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JP.swift; sourceTree = "<group>"; };
-		715ED7AA2700642C0030F279 /* ListViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewReusable.swift; sourceTree = "<group>"; };
-		715ED7AB2700642C0030F279 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		715ED7AC2700642C0030F279 /* PopViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewReusable.swift; sourceTree = "<group>"; };
-		715ED7AD2700642C0030F279 /* JPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPError.swift; sourceTree = "<group>"; };
 		715ED7B22700642C0030F279 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		715ED7B32700642C0030F279 /* Done.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
 		715ED7B42700642C0030F279 /* Asyncs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asyncs.swift; sourceTree = "<group>"; };
@@ -556,18 +544,8 @@
 			isa = PBXGroup;
 			children = (
 				00FCC7802990A4DA0086E2C7 /* HUD */,
-				715ED7912700642C0030F279 /* Gradient */,
 			);
 			path = Unit;
-			sourceTree = "<group>";
-		};
-		715ED7912700642C0030F279 /* Gradient */ = {
-			isa = PBXGroup;
-			children = (
-				715ED7922700642C0030F279 /* Gradientable.swift */,
-				715ED7932700642C0030F279 /* GradientView.swift */,
-			);
-			path = Gradient;
 			sourceTree = "<group>";
 		};
 		715ED7992700642C0030F279 /* Extension */ = {
@@ -594,11 +572,7 @@
 		715ED7A82700642C0030F279 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				715ED7AB2700642C0030F279 /* Bindable.swift */,
 				715ED7A92700642C0030F279 /* JP.swift */,
-				715ED7AD2700642C0030F279 /* JPError.swift */,
-				715ED7AA2700642C0030F279 /* ListViewReusable.swift */,
-				715ED7AC2700642C0030F279 /* PopViewReusable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -928,7 +902,6 @@
 				715ED75626FF2E310030F279 /* ContentView.swift in Sources */,
 				71ADDF8427A0E88000404FF4 /* TTProgressHUD.swift in Sources */,
 				71ADDF8627A0E88000404FF4 /* CGSize+Hashable.swift in Sources */,
-				715ED7CA2700642C0030F279 /* ListViewReusable.swift in Sources */,
 				715ED7D12700642C0030F279 /* Done.swift in Sources */,
 				00F0A1D5296BEDA5006B5A28 /* NevesWidgetView.swift in Sources */,
 				00D63E2B2991F1F1003F0C29 /* Const.swift in Sources */,
@@ -943,7 +916,6 @@
 				7107CD99287BC71300AC9B9F /* UIImage.JPExtension.swift in Sources */,
 				00ED821E296962F5006F035B /* StateInitTestView.swift in Sources */,
 				00D63E01299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift in Sources */,
-				715ED7B52700642C0030F279 /* Gradientable.swift in Sources */,
 				716828BB275DBA4C0039F3F7 /* AnimExperienceView.swift in Sources */,
 				00D63E07299103C5003F0C29 /* View+vibrancyEffect.swift in Sources */,
 				00DFE9FB2909062400B6611B /* AnimationValueView.swift in Sources */,
@@ -953,8 +925,6 @@
 				00ED8257296BE9BD006F035B /* AsyncGifImageView.swift in Sources */,
 				00E5D9DC296FE5A8006A6FDD /* EnvironmentTestView.swift in Sources */,
 				716828C6275DC0B70039F3F7 /* Test1View.swift in Sources */,
-				715ED7CD2700642C0030F279 /* JPError.swift in Sources */,
-				715ED7CC2700642C0030F279 /* PopViewReusable.swift in Sources */,
 				7199D9C72761D6980001118E /* FrameTestView.swift in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */,
@@ -972,7 +942,6 @@
 				00D63E02299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift in Sources */,
 				00ED822E296BBF73006F035B /* AppGroups.swift in Sources */,
 				1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */,
-				715ED7B62700642C0030F279 /* GradientView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,
 				00D63E0B299103C5003F0C29 /* VibrancyEffectModifier.swift in Sources */,
 				716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */,
@@ -992,7 +961,6 @@
 				71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */,
 				71AD216628759EAF00AD5568 /* ResultBuilderView.swift in Sources */,
 				715ED7E02700684E0030F279 /* DemoStore.swift in Sources */,
-				715ED7CB2700642C0030F279 /* Bindable.swift in Sources */,
 				715ED7D02700642C0030F279 /* File.swift in Sources */,
 				715ED7C02700642C0030F279 /* Bundle.Extension.swift in Sources */,
 				715ED7C92700642C0030F279 /* JP.swift in Sources */,
