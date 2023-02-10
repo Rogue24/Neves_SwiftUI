@@ -6,35 +6,48 @@
 //
 
 import SwiftUI
+import FunnyButton_SwiftUI
 
 struct ContentView: View {
+    @StateObject var router = NavigationRouter()
     @State var bindTag = 333
     @State var tagBox = JPTestTagBox()
     
     var body: some View {
-        NavigationView {
-            List(Demo.sections) { section($0) }
-                .navigationBarTitle("Neves")
+//        NavigationView {
+//            List(Demo.sections) { section in
+//                Section(header: Text(section.title)) {
+//                    ForEach(section.demos) { demo in
+//                        NavigationLink(destination: demo.body.navigationBarTitle(demo.rawValue, displayMode: .inline)) {
+//                            Text(demo.title)
+//                        }
+//                    }
+//                }
+//            }
+//            .navigationBarTitle("Neves")
+//        }
+        NavigationStack(path: $router.path) {
+            List(Demo.sections) { section in
+                Section(header: Text(section.title)) {
+                    ForEach(section.demos) { demo in
+                        NavigationLink(demo.title, value: demo)
+                    }
+                }
+            }
+            .navigationBarTitle("Neves", displayMode: .large)
+            .navigationDestination(for: Demo.self) { demo in
+                demo.body
+                    .navigationBarTitle(demo.rawValue, displayMode: .inline)
+            }
         }
         // NavigationView在iPad端默认是左右两列的形式展示，需要手动设置回默认样式
         .navigationViewStyle(StackNavigationViewStyle())
         // 从这个根视图开始，打开的所有子视图都共享以下的环境变量（子视图无法重新定义）
+        .environmentObject(router)
         .environment(\.testTag, 222)
         .environment(\.testBindTag, $bindTag)
         .environment(\.testTagBox, $tagBox)
         .environment(\.testAction, JPTestAction())
-    }
-    
-    func section(_ section: Demo.Section) -> some View {
-        Section(header: Text(section.title)) {
-            ForEach(section.items) { item($0) }
-        }
-    }
-    
-    func item(_ item: Demo.Item) -> some View {
-        NavigationLink(destination: item.body) {
-            Text(item.title)
-        }
     }
 }
 

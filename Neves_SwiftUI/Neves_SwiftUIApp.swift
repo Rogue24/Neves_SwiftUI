@@ -18,11 +18,11 @@ struct Neves_SwiftUIApp: App {
             ContentView()
                 .environmentObject(hud)
                 .overlay(TTProgressHUD($hud.visible, config: hud.config))
-                .environmentObject(funny)
-                .overlay(FunnyView())
                 .onOpenURL { url in
                     hud.info(url.absoluteString)
                 }
+                .environmentObject(funny)
+                .onAppear() { FunnyWindow.show() }
         }
     }
 }
