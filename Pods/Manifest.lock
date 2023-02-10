@@ -1,11 +1,11 @@
 PODS:
-  - FunnyButton_SwiftUI (0.1.0)
+  - FunnyButton_SwiftUI (0.1.1)
   - JPCrop (0.2.0)
   - JPImageresizerView (1.9.9)
   - Kingfisher (7.4.1)
 
 DEPENDENCIES:
-  - FunnyButton_SwiftUI
+  - FunnyButton_SwiftUI (~> 0.1.1)
   - JPCrop
   - JPImageresizerView
   - Kingfisher (~> 7.4.0)
@@ -18,11 +18,11 @@ SPEC REPOS:
     - Kingfisher
 
 SPEC CHECKSUMS:
-  FunnyButton_SwiftUI: 96c65b9b299d1a1be145216a937ed9aa7b9ddf82
+  FunnyButton_SwiftUI: 177ab4c840adcb7e51907b44d205496e4389d9f1
   JPCrop: 2a5742db56fa30f495683e8b51c0d7548ab04368
   JPImageresizerView: 762cd3ea68450cb3985fa3a06cd55afd0527fa73
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
 
-PODFILE CHECKSUM: 8125edbb4d0d83e4e140c8664a448357a1284f83
+PODFILE CHECKSUM: ea43247d93df7f30fd1cc93a084e14254ffafbf2
 
 COCOAPODS: 1.11.3

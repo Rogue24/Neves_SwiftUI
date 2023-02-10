@@ -3,13 +3,14 @@
 **FunnyButton_SwiftUI** - 全局便捷调试的按钮，是[FunnyButton](https://github.com/Rogue24/FunnyButton)的`SwiftUI`版本，只需在View上添加调试事件，即可随时点击按钮进行调试。
 
     Feature：
-        ✅ 位于Window层级，不会被app内的界面覆盖；
+        ✅ 位于【父View顶层】或【Window层级】，不会被app内的界面覆盖；
         ✅ 自适应父View区域，自动靠边，适配横竖屏；
         ✅ 可执行单个/多个调试事件；
-        ✅ 兼容iPhone&iPad；
-        ✅ 仅限DEBUG环境；
+        ✅ 兼容`iPhone`&`iPad`；
         ✅ API简单易用。
-    
+
+`UIKit`版本：[FunnyButton](https://github.com/Rogue24/FunnyButton)
+
 ## Effect
 - 单个调试事件
 
@@ -36,12 +37,18 @@ struct DemoApp: App {
             ContentView()
                 // 将funny对象从根视图开始注入到环境中，使其子View都能添加/移除调试事件
                 .environmentObject(funny)
-                // 添加`FunnyButton`的容器视图在最顶部（不会拦截按钮区域以外的手势事件）
-                .overlay(FunnyView())
+                // 方式1：将`FunnyButton`添加在`ContentView`的顶层（不会拦截按钮区域以外的手势事件）
+//                .overlay(FunnyView())
+                // 方式2：将`FunnyButton`添加在自定义的`UIWindow`上（不会拦截按钮区域以外的手势事件）
+                .onAppear() {
+                    FunnyWindow.show()
+                }
         }
     }
 }
 ```
+- 方式1：添加在`ContentView`的最顶部，会被通过`Present`打开的视图覆盖（新页面是盖在`ContentView`的上方）
+- 方式2：添加在自定义的`UIWindow`，不会被通过`Present`打开的视图覆盖
 
 ## API
 
