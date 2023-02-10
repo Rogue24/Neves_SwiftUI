@@ -11,13 +11,13 @@ import FunnyButton_SwiftUI
 var routeTag = 0
 
 struct RouteTestView: View {
+    var isFromPresent = false
+    
     @EnvironmentObject var router: NavigationRouter
+    @Environment(\.presentationMode) var presentationMode
     
     @State var isPresent = false
-    
     @State var tag: Int = -1
-    
-    var isPpp = false
     
     var body: some View {
         ZStack {
@@ -31,8 +31,8 @@ struct RouteTestView: View {
                     isPresent = true
                 }
                 Button("Close") {
-                    if isPresent {
-                        isPresent = false
+                    if isFromPresent {
+                        presentationMode.wrappedValue.dismiss()
                     } else {
                         router.path.removeLast()
                     }
@@ -40,7 +40,7 @@ struct RouteTestView: View {
             }
         }
         .fullScreenCover(isPresented: $isPresent) {
-            RouteTestView(isPpp: true)
+            RouteTestView(isFromPresent: true)
         }
 //        .funnyAction {
 //            print("router.path: \(router.path)")
@@ -51,17 +51,6 @@ struct RouteTestView: View {
                 routeTag += 1
             }
             print("onAppear --- tag: \(tag), router.path: \(router.path)")
-            
-            guard isPpp else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                if let window = UIApplication.shared.windows.last {
-                    let view = UIView(frame: [200, 200, 100, 100])
-                    view.backgroundColor = .randomColor
-                    window.addSubview(view)
-                    print("222 Window: \(window.subviews)")
-                }
-                
-            }
         }
         .onDisappear() {
             print("onDisappear --- tag: \(tag), router.path: \(router.path)")
