@@ -26,6 +26,7 @@ enum Demo: String, CaseIterable, Identifiable {
     case MatchedGeometryEffect
     case LazyGrid
     case ResultBuilder
+    case WaterfallGrid
     
     // MARK: - Unit
     case Buttons
@@ -70,6 +71,7 @@ extension Demo {
         case .MatchedGeometryEffect: MatchedGeometryEffectView()
         case .LazyGrid: LazyGridView()
         case .ResultBuilder: ResultBuilderView()
+        case .WaterfallGrid: WaterfallGridView()
             
         // Unit
         case .Buttons: ButtonsView()
@@ -131,6 +133,7 @@ extension Demo {
             .MatchedGeometryEffect,
             .LazyGrid,
             .ResultBuilder,
+            .WaterfallGrid,
         ]),
         
         Section(title: "Unit", demos: [

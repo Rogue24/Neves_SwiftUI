@@ -12,7 +12,7 @@ target 'Neves_SwiftUI' do
 #    pod 'SDWebImageSwiftUI'
 #    pod 'lottie-ios'
     pod 'Kingfisher', '~> 7.4.0', :inhibit_warnings => true
-#    pod 'LookinServer', :configurations => ['Debug']
+    pod 'LookinServer', :configurations => ['Debug']
     pod 'FunnyButton_SwiftUI', '~> 0.1.1'
   
 end
