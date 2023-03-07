@@ -16,6 +16,8 @@ struct WaterfallGrid<Content: View, T: Identifiable>: View where T: Hashable {
     var list: [T]
     var content: (T) -> Content
     
+    var columnList: [[T]]
+    
     init(columns: Int,
          showsIndicators: Bool = false,
          verSpacing: CGFloat = 0,
@@ -29,6 +31,7 @@ struct WaterfallGrid<Content: View, T: Identifiable>: View where T: Hashable {
         self.horSpacing = horSpacing
         self.list = list
         self.content = content
+        self.columnList = Self.buildColumnList(columns, list)
     }
     
     var body: some View {
@@ -47,7 +50,7 @@ struct WaterfallGrid<Content: View, T: Identifiable>: View where T: Hashable {
 }
 
 private extension WaterfallGrid {
-    var columnList: [[T]] {
+    static func buildColumnList(_ columns: Int, _ list: [T]) -> [[T]] {
         guard columns >= 1 else { return [] }
 
         var columnList: [[T]] = Array(repeating: [], count: columns)
