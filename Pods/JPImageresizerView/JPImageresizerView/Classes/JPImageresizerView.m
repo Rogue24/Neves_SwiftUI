@@ -678,6 +678,10 @@
     [self __updateImageViewImage:NO];
 }
 
+- (BOOL)isCanRecovery {
+    return _frameView.isCanRecovery;
+}
+
 #pragma mark - 裁剪宽高比相关
 - (void)setInitialResizeWHScale:(CGFloat)initialResizeWHScale {
     self.frameView.initialResizeWHScale = initialResizeWHScale;
@@ -889,9 +893,14 @@
 
 #pragma mark 旋转
 - (void)rotation {
-    NSInteger directionIndex = self.directionIndex;
-    BOOL isNormal = _verticalityMirror == _horizontalMirror;
-    directionIndex += (isNormal ? 1 : -1);
+    if (self.frameView.isPrepareToScale) {
+        JPIRLog(@"jp_tip: 裁剪区域预备缩放至适合位置，旋转功能暂不可用，此时应该将旋转按钮设为不可点或隐藏");
+        return;
+    }
+    
+    // 如果只进行了单一方向的镜像翻转，那么旋转时为相反的方向（视觉上为相反的方向）
+    BOOL isSingleMirror = _verticalityMirror != _horizontalMirror;
+    NSInteger directionIndex = self.directionIndex + (isSingleMirror ? -1 : 1);
     
     NSInteger maxIndex = self.allDirections.count - 1;
     NSInteger minIndex = 0;
@@ -900,9 +909,11 @@
     } else if (directionIndex > maxIndex) {
         directionIndex = minIndex;
     }
+    self.directionIndex = directionIndex;
     
     JPImageresizerRotationDirection direction = [self.allDirections[directionIndex] integerValue];
-    [self rotationToDirection:direction];
+    CGFloat angle = M_PI_2 * (isSingleMirror ? -1 : 1) * (self.isClockwiseRotation ? 1 : -1);
+    [self __rotationToDirection:direction angle:angle];
 }
 
 - (void)rotationToDirection:(JPImageresizerRotationDirection)direction {
@@ -911,14 +922,28 @@
         return;
     }
     
-    NSInteger directionIndex = [self.allDirections indexOfObject:@(direction)];
-    NSInteger diffIndex = directionIndex - self.directionIndex;
-    if (diffIndex == 0) return;
-    self.directionIndex = directionIndex;
+    // 如果只进行了单一方向的镜像翻转，并且当前方向为水平方向，那么旋转时为相反的水平方向（视觉上为相反的方向）
+    BOOL isSingleMirror = _verticalityMirror != _horizontalMirror;
+    if (isSingleMirror) {
+        switch (direction) {
+            case JPImageresizerHorizontalLeftDirection:
+                direction = JPImageresizerHorizontalRightDirection;
+                break;
+            case JPImageresizerHorizontalRightDirection:
+                direction = JPImageresizerHorizontalLeftDirection;
+                break;
+            default:
+                break;
+        }
+    }
     
-    BOOL isNormal = _verticalityMirror == _horizontalMirror;
+    self.directionIndex = [self.allDirections indexOfObject:@(direction)];
     
-    CGFloat angle = (self.isClockwiseRotation ? diffIndex : -diffIndex) * (isNormal ? 1.0 : -1.0) * M_PI_2;
+    CGFloat angle = JPIRRotationDirectionDiffAngle(self.frameView.direction, direction);
+    [self __rotationToDirection:direction angle:angle];
+}
+
+- (void)__rotationToDirection:(JPImageresizerRotationDirection)direction angle:(CGFloat)angle {
     CATransform3D svTransform = CATransform3DRotate(self.scrollView.layer.transform, angle, 0, 0, 1);
     CATransform3D fvTransform = CATransform3DRotate(self.frameView.layer.transform, angle, 0, 0, 1);
     
@@ -1133,12 +1158,15 @@
                   orToRoundResize:(BOOL)isRoundResize
                     orToMaskImage:(UIImage *)maskImage
                 isToBeArbitrarily:(BOOL)isToBeArbitrarily {
-    BOOL isCanRecovery = (maskImage != nil || self.maskImage != nil) && self.maskImage != maskImage;
-    if (!isCanRecovery) isCanRecovery = self.frameView.isCanRecovery;
-    if (!isCanRecovery) {
-        JPIRLog(@"jp_tip: 已经是初始状态，不需要重置");
-        return;
-    }
+    ///【1.10.2】改动：
+    /// 由于`isCanRecovery`仅针对[旋转]、[缩放]、[镜像]的变化情况，
+    /// 导致其他如裁剪宽高比、圆切等变化后无法重置，现修改为无需判断，均可重置。
+//    BOOL isCanRecovery = (maskImage != nil || self.maskImage != nil) && self.maskImage != maskImage;
+//    if (!isCanRecovery) isCanRecovery = self.frameView.isCanRecovery;
+//    if (!isCanRecovery) {
+//        JPIRLog(@"jp_tip: 已经是初始状态，不需要重置");
+//        return;
+//    }
     
     BOOL isUpdateMaskImage = maskImage != nil && self.maskImage != maskImage;
 
@@ -1675,7 +1703,8 @@
                                           self.scrollView.contentInset,
                                           self.scrollView.contentOffset,
                                           self.scrollView.minimumZoomScale,
-                                          self.scrollView.zoomScale);
+                                          self.scrollView.zoomScale,
+                                          self.frameView.initialResizeWHScale);
     return configure;
 }
 
@@ -1714,6 +1743,7 @@
             
             [self.frameView recoveryToSavedHistoryWithDirection:direction
                                               imageresizerFrame:history.imageresizerFrame
+                                           initialResizeWHScale:history.initialResizeWHScale
                                               isToBeArbitrarily:self.configure.isArbitrarily];
         }
         if (self.configure.isCleanHistoryAfterInitial) [self.configure cleanHistory];

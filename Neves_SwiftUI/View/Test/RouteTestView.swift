@@ -4,6 +4,7 @@
 //
 //  Created by aa on 2023/2/7.
 //
+//  参考：https://www.fatbobman.com/posts/new_navigator_of_SwiftUI_4/
 
 import SwiftUI
 import FunnyButton_SwiftUI
