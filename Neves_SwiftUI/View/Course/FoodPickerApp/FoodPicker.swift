@@ -63,7 +63,7 @@ struct FoodPicker: View {
                     // 但是SwiftUI不会文字的变形动画，所以会用淡入淡出动画来代替，
                     // 加上下面这句的效果是：使用不同的id，那就是不同的View，让SwiftUI做转场动画！
                     .id(selectedFood)
-                    // transition：自定义转场效果，在【转场动画】中才有效
+                    // 使用自定义的转场效果（transition：在【转场动画】中才有效）
                     .transition(
                         // 缩放+滑动动画
 //                        .scale.combined(with: .slide)
