@@ -41,7 +41,7 @@ struct FrameTestView: View {
 //        .frame(maxWidth: .infinity, maxHeight: .infinity)
         
         // 要设置frame再设置背景，否则背景的frame不是最新的frame（也就是CGSize.zero）
-        .background(Color.randomColor)
+        .background(.randomColor)
         
         // 如果图片超出父视图区域就看不见这个圆角
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))

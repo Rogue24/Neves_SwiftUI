@@ -16,9 +16,9 @@ struct Test2View: View {
                         Text("123")
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.randomColor)
-                            .background(Color.randomColor)
+                            .background(.randomColor)
                         Text("dssss")
-                            .foregroundColor(Color.randomColor(0.7))
+                            .foregroundColor(.randomColor(0.7))
                     }
 
                     Spacer(minLength: 0) // 默认都会有一些间距的，当内容很长不想有间距就得手动设置为0
@@ -29,14 +29,14 @@ struct Test2View: View {
                         .font(.system(size: 16, weight: .medium))
                         .frame(width: 36, height: 36)
                         .foregroundColor(.white)
-                        .background(Color.randomColor)
+                        .background(.randomColor)
                         .clipShape(Circle())
                 }
                 .padding(30)
                 .padding(.top, 30)
                 .frame(maxWidth: .infinity,
                        maxHeight: 460)
-                .background(Color.randomColor)
+                .background(.randomColor)
             }
         }
     }

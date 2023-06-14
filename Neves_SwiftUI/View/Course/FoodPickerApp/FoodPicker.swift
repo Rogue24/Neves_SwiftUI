@@ -42,7 +42,7 @@ struct FoodPicker: View {
             // 在这里添加的话，点击的那个button反而不受这里的动画控制，得使用withAnimation
 //            .animation(.myEase, value: selectedFood)
         }
-        .background(Color.sysBg2)
+        .background(.sysBg2)
     }
 }
 
@@ -112,9 +112,9 @@ private extension FoodPicker {
         /// 如果父视图没有【明确的高度】，就根据其他`子View`决定（这里是`Text`）
         ///
         /// 说人话就是：
-        /// 父视图会先告诉`HStack`它有多少高度可以给你使用，
-        /// 有固定的高度的话，`HStack`就会尽可能占满；
-        /// 不固定的话，`HStack`的高度就用`子View`的，不然难道是无限高咩。
+        /// 父视图会先告诉`HStack`它有多少高度可以给你使用：
+        /// - 有明确高度，`HStack`就让`Divider`尽可能占满；
+        /// - 高度不确定，`HStack`就用里面那3个`VStack`综合得出的高度（里面的`Text`是固定高度），难不成是无限高咩。
         ///
         /// 而这里套了一层`ScrollView`，高度是【不明确】的，
         /// 这种情况`HStack`就根据`Text`决定。

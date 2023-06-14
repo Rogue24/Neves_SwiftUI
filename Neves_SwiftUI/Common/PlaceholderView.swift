@@ -13,10 +13,10 @@ struct PlaceholderView: View {
         VStack {
             Text("敬请期待！")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
-                .foregroundColor(Color.randomColor)
+                .foregroundColor(.randomColor)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.randomColor)
+        .background(.randomColor)
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle(title)
     }
