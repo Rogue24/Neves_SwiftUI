@@ -7,8 +7,11 @@
 //  参考：https://www.fatbobman.com/posts/centering_the_View_in_SwiftUI
 
 import SwiftUI
+import FunnyButton_SwiftUI
 
 struct ShapeTestView: View {
+    @State var isShapeTest = true
+    
     @State var str: String? = nil
     
     @State var shows = [
@@ -19,8 +22,33 @@ struct ShapeTestView: View {
     ]
     
     var body: some View {
-        shapeTestView
-//        zIndexView
+        Group {
+            if isShapeTest {
+                shapeTestView
+            } else {
+                zIndexView
+            }
+        }
+        .funnyAction {
+            isShapeTest.toggle()
+        }
+        
+        // 虽然`VStack`的大小类型是`Neutral`（高度根据`子View`决定），
+        // 但是可以通过设置frame来固定大小。
+//        VStack {
+//            VStack {
+//                if isShapeTest {
+//                    Text("trtttt")
+//                }
+//            }
+//            .frame(height: 80)
+//            .background(.randomColor)
+//
+//            Text("haaa")
+//        }
+//        .funnyAction {
+//            isShapeTest.toggle()
+//        }
     }
 }
 
@@ -79,6 +107,9 @@ private extension ShapeTestView {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 str = "What the hell?"
             }
+        }
+        .onDisappear() {
+            str = nil
         }
     }
 }
