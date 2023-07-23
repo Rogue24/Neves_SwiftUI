@@ -13,6 +13,7 @@ enum Demo: String, CaseIterable, Identifiable {
     
     // MARK: - Course
     case FoodPickerApp
+    case FoodList
     case AnimTest
     case ShapeTest
     case ListTest
@@ -64,6 +65,7 @@ extension Demo {
         switch self {
         // Course
         case .FoodPickerApp: FoodPicker()
+        case .FoodList: FoodListView()
         case .AnimTest: AnimTestView()
         case .ShapeTest: ShapeTestView()
         case .ListTest: ListTestView()
@@ -132,6 +134,7 @@ extension Demo {
     static let sections = [
         Section(title: "Course", demos: [
             .FoodPickerApp,
+            .FoodList,
             .AnimTest,
             .ShapeTest,
             .ListTest,

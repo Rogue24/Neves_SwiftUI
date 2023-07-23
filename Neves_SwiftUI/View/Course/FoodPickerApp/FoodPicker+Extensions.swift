@@ -30,6 +30,7 @@ extension AnyTransition {
 extension ShapeStyle where Self == Color {
     static var sysBg: Color { Self(.systemBackground) }
     static var sysBg2: Color { Self(.secondarySystemBackground) }
+    static var sysGb: Color { Self(.systemGroupedBackground) }
 }
 
 // MARK: - Animation
@@ -40,9 +41,9 @@ extension Animation {
 
 // MARK: - Modifier
 extension View {
-    func mainButtonStyle() -> some View {
-        self.buttonStyle(.bordered)
-            .buttonBorderShape(.capsule)
+    func mainButtonStyle(shape: ButtonBorderShape = .capsule) -> some View {
+        self.buttonStyle(.borderedProminent)
+            .buttonBorderShape(shape)
             .controlSize(.large)
     }
     
@@ -61,5 +62,17 @@ extension View {
                 /// `.foregroundStyle(XXX)`如果使用的对象不是`Shape`（例如`Text`），
                 /// 其实中间还做了一些裁剪的操作，最终还是对`Shape`进行了`.fill(XXX)`。
         )
+    }
+}
+
+// MARK: - AnyLayout
+extension AnyLayout {
+    static func userVStack(if condition: Bool,
+                           spacing: CGFloat = 0,
+                           @ViewBuilder content: @escaping () -> some View) -> some View {
+        let layout = condition ? AnyLayout(VStackLayout(spacing: spacing)) : AnyLayout(HStackLayout(spacing: spacing))
+        // AnyLayout可以直接当作函数来调用，调用会执行它的尾随闭包来生成视图排版。
+        // 可以在这个闭包里面来做视图构建（相当于把AnyLayout当作VStack和HStack的泛型来使用）。
+        return layout(content)
     }
 }

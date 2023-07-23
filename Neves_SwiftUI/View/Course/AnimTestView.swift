@@ -56,7 +56,7 @@ struct AnimTestView: View {
                 Text(name == .none ? "这是谁？" : "返回")
                     .font(.title2)
                     .frame(width: 100)
-                    // 2.移除淡入淡出动画
+                    // 2.移除文字的淡入淡出动画
                     // 必须要在添加`transformEffect`前面移除，否则就会连位置变形动画也一起移除
 //                    .animation(.none, value: name)
                     // 1.当SwiftUI遇到不会的变形动画，会用淡入淡出动画（类似默认的转场动画）来代替，并且会忽略其他所有它可以掌握的变形

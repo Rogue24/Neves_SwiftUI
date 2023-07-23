@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Food: Equatable {
+struct Food: Equatable, Identifiable {
+    let id = UUID()
+    
     var name: String
     var image: String
     @Suffix(" 大卡") var calorie: Double = 0

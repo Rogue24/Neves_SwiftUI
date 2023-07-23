@@ -203,7 +203,6 @@ private extension FoodPicker {
                 .animation(.none, value: selectedFood)
                 .transformEffect(.identity)
         }
-        .buttonStyle(.borderedProminent)
         .padding(.bottom, -15)
     }
     
@@ -217,6 +216,7 @@ private extension FoodPicker {
             Text("Reset")
                 .frame(width: 200)
         }
+        .buttonStyle(.bordered)
     }
 }
 
