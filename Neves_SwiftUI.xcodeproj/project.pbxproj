@@ -60,6 +60,7 @@
 		00FCC7822990A50C0086E2C7 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC7812990A50C0086E2C7 /* Hud.swift */; };
 		1A08C4862A5B1040000D4B68 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08C4852A5B1040000D4B68 /* FoodListView.swift */; };
 		1A467BA62A49971E0026F21B /* ListTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A467BA52A49971E0026F21B /* ListTestView.swift */; };
+		1A520DB22A6D2DBC0086ED82 /* FoodFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A520DB12A6D2DBC0086ED82 /* FoodFormView.swift */; };
 		1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A621CD02880FD8D00DC463F /* TestUIView.swift */; };
 		1A7936E32A35E9DA005F8747 /* AnimTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7936E22A35E9DA005F8747 /* AnimTestView.swift */; };
 		1A9D13C92A35A23C00276AA3 /* FoodPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13C82A35A23C00276AA3 /* FoodPicker.swift */; };
@@ -212,6 +213,7 @@
 		00FCC7812990A50C0086E2C7 /* Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
 		1A08C4852A5B1040000D4B68 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		1A467BA52A49971E0026F21B /* ListTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTestView.swift; sourceTree = "<group>"; };
+		1A520DB12A6D2DBC0086ED82 /* FoodFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFormView.swift; sourceTree = "<group>"; };
 		1A621CD02880FD8D00DC463F /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
 		1A7936E22A35E9DA005F8747 /* AnimTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimTestView.swift; sourceTree = "<group>"; };
 		1A9D13C82A35A23C00276AA3 /* FoodPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPicker.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 			children = (
 				1A9D13C82A35A23C00276AA3 /* FoodPicker.swift */,
 				1A08C4852A5B1040000D4B68 /* FoodListView.swift */,
+				1A520DB12A6D2DBC0086ED82 /* FoodFormView.swift */,
 				1AC95CC62A38867B002F19E9 /* FoodPicker+Extensions.swift */,
 				1AC95CC42A383F5B002F19E9 /* Food.swift */,
 				1AC95CC82A388AB4002F19E9 /* SuffixWrapper.swift */,
@@ -1032,6 +1035,7 @@
 				715ED7BF2700642C0030F279 /* UIImage.Extension.swift in Sources */,
 				715ED7D22700642C0030F279 /* Asyncs.swift in Sources */,
 				00F0A1E0296BFFCB006B5A28 /* UserDefault.swift in Sources */,
+				1A520DB22A6D2DBC0086ED82 /* FoodFormView.swift in Sources */,
 				715ED7BD2700642C0030F279 /* Literal.Extension.swift in Sources */,
 				71ADDF8827A0E8A900404FF4 /* ProgressHUDView.swift in Sources */,
 				71AD216628759EAF00AD5568 /* ResultBuilderView.swift in Sources */,
