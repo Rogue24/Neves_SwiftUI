@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00245A042A4B039400E5CF67 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00245A032A4B039400E5CF67 /* PlaygroundView.swift */; };
 		008DC2FE29778E300039AB22 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
 		008DC3192977DCCF0039AB22 /* FunnyPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */; };
 		00B3C6E629AC49370027F587 /* WaterfallGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E529AC49370027F587 /* WaterfallGrid.swift */; };
@@ -169,6 +170,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00245A032A4B039400E5CF67 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 		008DC2B8297254320039AB22 /* Neves-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Neves-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyPlayView.swift; sourceTree = "<group>"; };
 		00B3C6E529AC49370027F587 /* WaterfallGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGrid.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 		715ED7DD2700684E0030F279 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00245A032A4B039400E5CF67 /* PlaygroundView.swift */,
 				1A9D13C62A359FB800276AA3 /* Course */,
 				716828B8275DB9FB0039F3F7 /* Test */,
 				716828B9275DBA000039F3F7 /* Base */,
@@ -999,6 +1002,7 @@
 				7199D9C72761D6980001118E /* FrameTestView.swift in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				1A9D13CB2A35A3B400276AA3 /* Task.Extension.swift in Sources */,
+				00245A042A4B039400E5CF67 /* PlaygroundView.swift in Sources */,
 				00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */,
 				715ED7C52700642C0030F279 /* CGFloat.Extension.swift in Sources */,
 				71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */,

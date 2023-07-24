@@ -11,6 +11,9 @@ import Combine
 enum Demo: String, CaseIterable, Identifiable {
     var id: String { rawValue }
     
+    // MARK: - Playground
+    case Playground
+    
     // MARK: - Course
     case FoodPickerApp
     case FoodList
@@ -63,6 +66,9 @@ extension Demo {
     @ViewBuilder
     var body: some View {
         switch self {
+        // Playground
+        case .Playground: PlaygroundView()
+            
         // Course
         case .FoodPickerApp: FoodPicker()
         case .FoodList: FoodListView()
@@ -132,6 +138,10 @@ extension Demo {
     }
     
     static let sections = [
+        Section(title: "Playground", demos: [
+            .Playground,
+        ]),
+        
         Section(title: "Course", demos: [
             .FoodPickerApp,
             .FoodList,
