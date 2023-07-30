@@ -1,5 +1,5 @@
 //
-//  FoodPicker.swift
+//  FoodPickerScreen.swift
 //  Neves_SwiftUI
 //
 //  Created by 周健平 on 2023/6/11.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodPicker: View {
+struct FoodPickerScreen: View {
     @State private var selectedFood: Food?
     @State private var isShowInfo: Bool = false
     
@@ -36,7 +36,8 @@ struct FoodPicker: View {
                 resetButton
             }
             .padding()
-            .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height - 140)
+            .maxWidth()
+            .frame(minHeight: UIScreen.main.bounds.height - 140)
             .font(.title)
             .mainButtonStyle()
             // 在这里添加的话，点击的那个button反而不受这里的动画控制，得使用withAnimation
@@ -47,7 +48,7 @@ struct FoodPicker: View {
 }
 
 // MARK: - Subviews
-private extension FoodPicker {
+private extension FoodPickerScreen {
     var foodImage: some View {
         Group {
             if let selectedFood {
@@ -95,7 +96,7 @@ private extension FoodPicker {
                     isShowInfo.toggle()
                 }
             } label: {
-                Image(systemName: "info.circle.fill")
+                SFSymbol.infoCircleFill
                     .foregroundColor(.secondary)
             }
             .buttonStyle(.plain)
@@ -188,7 +189,7 @@ private extension FoodPicker {
                 .transition(.moveUpWithOpacity)
             }
         }
-        .frame(maxWidth: .infinity)
+        .maxWidth()
         .clipped()
     }
     
@@ -221,7 +222,7 @@ private extension FoodPicker {
 }
 
 // MARK: - Initializer
-extension FoodPicker {
+extension FoodPickerScreen {
     init(selectedFood: Food? = nil) {
         _selectedFood = State(wrappedValue: selectedFood)
     }

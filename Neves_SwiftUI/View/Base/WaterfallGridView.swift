@@ -42,7 +42,7 @@ struct WaterfallGridView: View {
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     columns -= 1
                 }
-            }) { Image(systemName: "minus") }
+            }) { SFSymbol.minus }
         )
         .navigationBarItems(
             trailing: Button(action: {
@@ -50,7 +50,7 @@ struct WaterfallGridView: View {
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                     columns += 1
                 }
-            }) { Image(systemName: "plus") }
+            }) { SFSymbol.plus }
         )
     }
 }

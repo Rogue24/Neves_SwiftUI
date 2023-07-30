@@ -15,7 +15,7 @@ struct ImagePickerShowView: View {
             show = true
         } label: {
             VStack(spacing: 8) {
-                Image(systemName: "photo.artframe")
+                SFSymbol.photoArtframe
                 Text("点击打开相册")
             }
         }

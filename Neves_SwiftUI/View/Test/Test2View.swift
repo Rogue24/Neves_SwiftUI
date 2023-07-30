@@ -23,9 +23,10 @@ struct Test2View: View {
 
                     Spacer(minLength: 0) // 默认都会有一些间距的，当内容很长不想有间距就得手动设置为0
 
-                    Image(systemName: "person.crop.circle") // 这种好像有一定间距？
+                    // SFSymbol好像有一定间距？
+                    SFSymbol.personCropCircle
 
-                    Image(systemName: "person.crop.circle")
+                    SFSymbol.personCropCircle
                         .font(.system(size: 16, weight: .medium))
                         .frame(width: 36, height: 36)
                         .foregroundColor(.white)

@@ -1,5 +1,5 @@
 //
-//  FoodListView.swift
+//  FoodListScreen.swift
 //  Neves_SwiftUI
 //
 //  Created by 周健平 on 2023/7/9.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodListView: View {
+struct FoodListScreen: View {
     @Environment(\.editMode) var editMode
     
     @State private var foods = Food.examples
@@ -45,133 +45,17 @@ struct FoodListView: View {
         // Tips: 把这两个Button一起放到ZStack中，ZStack高度则会【固定】是高度比较大的那个，
         // 并且能设置这两个Button水平对齐（alignment: .center，默认就是这个）。
         .safeAreaInset(edge: .bottom, content: buildFloatButton)
-        .sheet(item: $sheet) { $0 }
+        .sheet(item: $sheet)
     }
 }
 
-private extension FoodListView {
-    enum Sheet: View, Identifiable {
-        case newFood(_ onSubmit: (Food) -> Void)
-        case editFood(_ binding: Binding<Food>)
-        case foodDetail(_ food: Food)
-        
-        var id: UUID {
-            switch self {
-            case .newFood:
-                return UUID()
-                
-            case let .editFood(binding):
-                return binding.wrappedValue.id
-                
-            case let .foodDetail(food):
-                return food.id
-            }
-        }
-        
-        var body: some View {
-            switch self {
-            case let .newFood(onSubmit):
-                FoodFormView(food: .new, onSubmit: onSubmit)
-                
-            case let .editFood(binding):
-                FoodFormView(food: binding.wrappedValue) {
-                    binding.wrappedValue = $0
-                }
-                
-            case let .foodDetail(food):
-                FootDetailSheet(food: food)
-            }
-        }
-    }
-}
-
-private extension FoodListView {
-    struct DetailSheetHeightKey: PreferenceKey {
-        static var defaultValue: CGFloat = 300
-        static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-            value = nextValue()
-        }
-    }
-    
-    struct FootDetailSheet: View {
-        @Environment(\.dynamicTypeSize) var textSize
-        @State private var detailHeight: CGFloat = DetailSheetHeightKey.defaultValue
-        
-        let food: Food
-        
-        var body: some View {
-            // 是否使用`VStack`：
-            // 默认使用`HStack`，
-            // 但「辅助模式（大字号）」或「emoji数量大于1」的情况下，使用`VStack`。
-            // 因为`HStack`放不下，会被挤压成两行。
-            let shouldUseVStack = textSize.isAccessibilitySize || food.image.count > 1
-            
-            // 相当于把AnyLayout当作VStack和HStack的泛型来使用
-            AnyLayout.userVStack(if: shouldUseVStack, spacing: 30) {
-                Text(food.image)
-                    .font(.system(size: 100))
-                    .lineLimit(1)
-                    // 当【显示的区域】容不下【文本内容所需大小】时，会对文本内容进行缩放至适当大小
-                    .minimumScaleFactor(shouldUseVStack ? 1 : 0.5) // 最多能缩小至百分之多少
-                
-                Grid(horizontalSpacing: 30, verticalSpacing: 12) {
-                    buildNutritionView(title: "热量", value: food.$calorie)
-                    buildNutritionView(title: "蛋白质", value: food.$protein)
-                    buildNutritionView(title: "脂肪", value: food.$fat)
-                    buildNutritionView(title: "碳水", value: food.$carb)
-                }
-            }
-            .padding()
-            .padding(.vertical)
-            // 读取`overlay`上面这部分的视图大小
-            .overlay {
-                GeometryReader { proxy in
-                    //【注意】：不可以直接在【子视图内部】刷新父视图的State属性
-//                    detailHeight = proxy.size.height
-                    
-                    // `detailHeight`是父视图的State属性，
-                    // 改变该属性就会影响里面子视图的布局，
-                    // 然后此处子视图的布局只要发生改变，又会改变这个State属性，
-                    // 从而又会让父视图重复去改变里面子视图的布局，周而复始，导致死循环。
-                    // 参考：https://zhuanlan.zhihu.com/p/447836445
-                    
-                    // 解决方案：使用`PreferenceKey` ---【能够在视图之间传递值】
-                    // PS：需要在`GeometryReader`里面放入一个视图才能读取到其坐标变化值，
-                    // 因此放一个透明颜色，同时也可以防止遮挡到底下视图。
-                    Color.clear
-                        .preference(key: DetailSheetHeightKey.self, // PreferenceKey类型
-                                    value: proxy.size.height) // 监听的值
-                }
-            }
-            .onPreferenceChange(DetailSheetHeightKey.self) {
-                detailHeight = $0
-            }
-            // 自定义present形式：
-            // .medium：只占屏幕一半高度
-            // .height(500)：最大高度（如果比medium小，最大高度则是半屏）
-//            .presentationDetents([.medium, .height(500)])
-//            .presentationDetents([.medium])
-            .presentationDetents([.height(detailHeight)])
-        }
-        
-        private func buildNutritionView(title: String, value: String) -> some View {
-            GridRow {
-                Text(title)
-                    .gridCellAnchor(.leading)
-                Text(value)
-                    .gridCellAnchor(.trailing)
-            }
-        }
-    }
-}
-
-private extension FoodListView {
+private extension FoodListScreen {
     var titleBar: some View {
         HStack {
-            Label("食物清单", systemImage: "fork.knife")
+            Label("食物清单", sfs: .forkKnife)
                 .font(.title.bold())
                 .foregroundColor(.accentColor)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .xPush(to: .leading)
             
             EditButton()
                 .buttonStyle(.bordered)
@@ -184,7 +68,7 @@ private extension FoodListView {
         Button {
             sheet = .newFood { foods.append($0) }
         } label: {
-            Image(systemName: "plus.circle.fill")
+            SFSymbol.plusCircleFill
                 .font(.system(size: 50))
                 .padding()
                 // 使用色盘模式：可以设置主色和次色（去「SF字符」App查看）
@@ -202,7 +86,7 @@ private extension FoodListView {
         } label: {
             Text("删除已选项目")
                 .font(.title2.bold())
-                .frame(maxWidth: .infinity, alignment: .center)
+                .maxWidth()
         }
         .mainButtonStyle(shape: .roundedRectangle(radius: 8))
         .padding(.horizontal, 50)
@@ -225,8 +109,8 @@ private extension FoodListView {
                 .scaleEffect(isEditing ? 0.3 : 1)
                 .animation(.easeInOut, value: isEditing)
                 // 1.最后再设置frame是为了让动画只影响addButton（以上的部分），否则是整个区域都会缩放
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                // 2.又或者把`addButton`放入到`HStack`中再加个`Spacer()`也可以实现同样效果
+                .xPush(to: .trailing)
+                // 2.又或者把整个`addButton`放入到`HStack`中再加个`Spacer()`也可以实现同样效果
         }
     }
     
@@ -238,7 +122,7 @@ private extension FoodListView {
                 // =========== 给整行添加点击事件 ===========
                 // 📢 注意：如果直接添加`onTapGesture`，那响应范围就只有【文本】的范围，解决方法：
                 // 1.把`Text`的范围拉到最大
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .xPush(to: .leading)
                 // 只把范围拉大也是无法响应，因为除文本以外的地方就只是一个空间，并不是个实体
                 // 2.为了能让其余地方也能被点击，还得强制放入一个明确定义的、可以点击的形状
                 .contentShape(Rectangle()) // contentShape: Defines the content shape for hit testing.
@@ -257,7 +141,7 @@ private extension FoodListView {
                 }
             
             if isEditing {
-                Image(systemName: "pencil")
+                SFSymbol.pencil
                     .font(.title2.bold())
                     .foregroundColor(.accentColor)
                     .onTapGesture {
@@ -270,6 +154,6 @@ private extension FoodListView {
 
 struct FoodList_Previews: PreviewProvider {
     static var previews: some View {
-        FoodListView()
+        FoodListScreen()
     }
 }

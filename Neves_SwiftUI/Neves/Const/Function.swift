@@ -10,9 +10,13 @@ import Foundation
 
 private let JPrintQueue = DispatchQueue(label: "JPrintQueue")
 /// 自定义日志
-func JPrint(_ msg: Any..., file: NSString = #file, line: Int = #line, fn: String = #function) {
+func JPrint(_ msg: Any...) {
 #if DEBUG
     guard msg.count != 0, let lastItem = msg.last else { return }
+    
+    let file: NSString = #file
+    let line: Int = #line
+    let fn: String = #function
     
     // 时间+文件位置+行数
     let date = hhmmssSSFormatter.string(from: Date()).utf8

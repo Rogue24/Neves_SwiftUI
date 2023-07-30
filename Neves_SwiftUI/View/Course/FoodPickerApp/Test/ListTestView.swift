@@ -26,6 +26,9 @@ struct ListTestView: View {
     
     @State var selectedDogs = Set<Dog.ID>()
     
+    @State var str: String = ""
+    @State var isShowStr = false
+    
     var body: some View {
         VStack {
             List($dogs, editActions: .all, selection: $selectedDogs) { $dog in
@@ -52,6 +55,27 @@ struct ListTestView: View {
                 Text("look selected dogs")
             }
             .padding()
+            
+            Button {
+                // `@State`可以直接修改值
+//                isShowStr.toggle()
+                
+                // `$isShowStr`获取包装后的类型：`Binding<Bool>`，修改绑定值需要通过`wrappedValue`
+                let iss = $isShowStr
+                iss.wrappedValue.toggle()
+                
+            } label: {
+                Text("str: \(str)")
+            }
+            .padding()
+            
+            if isShowStr {
+                Test(str: $str)
+                    .padding()
+            }
+        }
+        .onAppear() {
+            str = "\(Int(Date().timeIntervalSince1970))"
         }
     }
     
@@ -64,6 +88,27 @@ struct ListTestView: View {
         
         JPrint(b.wrappedValue)
         JPrint(a)
+    }
+}
+
+private extension ListTestView {
+    struct Test: View {
+        @Binding var str: String
+        
+        var body: some View {
+            Text(str)
+                .frame(width: 200, height: 40)
+                .background(.randomColor)
+                .onTapGesture {
+                    // `@Binding`可以直接修改绑定值
+//                    str = "\(Int(Date().timeIntervalSince1970))"
+                    
+                    // `$str`获取原类型：`Binding<String>`，修改绑定值则需要通过`wrappedValue`
+                    let s = $str
+                    s.wrappedValue = "\(Int(Date().timeIntervalSince1970))"
+                }
+            
+        }
     }
 }
 
