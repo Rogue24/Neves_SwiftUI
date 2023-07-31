@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import FunnyButton_SwiftUI
 
 @main
 struct Neves_SwiftUIApp: App {
+    @StateObject var hud = Hud()
+    @StateObject var funny = Funny()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(hud)
+                .overlay(TTProgressHUD($hud.visible, config: hud.config))
+                .onOpenURL { url in
+                    hud.info(url.absoluteString)
+                }
+                .environmentObject(funny)
+                .onAppear() { FunnyWindow.show() }
         }
     }
 }

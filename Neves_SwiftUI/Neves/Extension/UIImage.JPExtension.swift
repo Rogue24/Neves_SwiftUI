@@ -14,10 +14,21 @@ extension UIImage {
     
     typealias GifResult = (images: [UIImage], duration: TimeInterval)
     static func decodeBundleGIF(_  name: String) async -> GifResult {
-        guard let path = Bundle.main.path(forResource: name, ofType: "gif"),
-              let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
-              let imageSource = CGImageSourceCreateWithData(data as CFData, nil)
-        else {
+        guard let path = Bundle.main.path(forResource: name, ofType: "gif") else {
+            return ([], 0)
+        }
+        return await decodeLocalGIF(URL(fileURLWithPath: path))
+    }
+    
+    static func decodeLocalGIF(_  url: URL) async -> GifResult {
+        guard let data = try? Data(contentsOf: url) else {
+            return ([], 0)
+        }
+        return await decodeGIF(data)
+    }
+    
+    static func decodeGIF(_  data: Data) async -> GifResult {
+        guard let imageSource = CGImageSourceCreateWithData(data as CFData, nil) else {
             return ([], 0)
         }
         
@@ -56,6 +67,7 @@ extension UIImage {
             if delay <= Double.ulpOfOne {
                 if let delayValue2 = CFDictionaryGetValue(gifDic, Unmanaged.passRetained(kCGImagePropertyGIFDelayTime).autorelease().toOpaque()) {
                     delayNum = Unmanaged<NSNumber>.fromOpaque(delayValue2).takeUnretainedValue()
+                    delay = delayNum.doubleValue
                 }
             }
             

@@ -13,8 +13,8 @@ struct Test3View: View {
     // @ViewBuilder：允许闭包中提供多个View
     var body: some View {
         RedBackgroundAndCornerView {
-            // 使用@ViewBuilder，就可以使用if或者switch选择性返回哪个View
-            // 如果不使用@ViewBuilder修饰，那么闭包里面只能返回一个View，这里就会报错
+            // 使用`@ViewBuilder，就可以使用`if`或者`switch`选择性返回哪个`View`
+            // 如果不使用`@ViewBuilder`修饰，那么闭包里面只能返回一个`View`，这里就会报错
             if isA {
                 Text("123")
                     .padding()

@@ -13,8 +13,8 @@ struct Test1View: View {
     
     // @ViewBuilder：允许闭包中提供多个View
     var body: some View {
-        // View的body就是使用@ViewBuilder修饰的：@ViewBuilder var body: Self.Body { get }
-        // 所以可以直接在这里面使用if或者switch选择性返回哪个View
+        // `View`的`body`就是使用`@ViewBuilder`修饰的：`@ViewBuilder var body: Self.Body { get }`
+        // 所以可以直接在这里面使用`if`或者`switch`选择性返回哪个`View`
         if isA {
             ZStack {
                 Color.yellow
