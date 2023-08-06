@@ -14,38 +14,40 @@ struct FoodPickerScreen: View {
     let foods = Food.examples
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 30) {
-                foodImage
-                
-                Text("今天吃啥？").bold()
-                
-                selectedFoodView
-                
-                /// 📢【2】
-                /// `Spacer`的大小类型是`Expanding`，`HStack`的大小类型是`Neutral`。
-                ///
-                /// `Neutral`优先级比`Expanding`高，所以优先让`HStack`决定高度。
-                /// - 而这里父视图给到的高度【不明确】，这样`HStack`内部的`Divider`会先占满剩余空间
-                ///
-                /// 所以在这里提高`Spacer`的布局优先级，先让`Spacer`决定高度（占满剩余空间）。
-                Spacer().layoutPriority(1)
-                
-                selectButton
-                
-                resetButton
+        GeometryReader { proxy in
+            ScrollView {
+                VStack(spacing: 30) {
+                    foodImage
+                    
+                    Text("今天吃啥？").bold()
+                    
+                    selectedFoodView
+                    
+                    /// 📢【2】
+                    /// `Spacer`的大小类型是`Expanding`，`HStack`的大小类型是`Neutral`。
+                    ///
+                    /// `Neutral`优先级比`Expanding`高，所以优先让`HStack`决定高度。
+                    /// - 而这里父视图给到的高度【不明确】，这样`HStack`内部的`Divider`会先占满剩余空间
+                    ///
+                    /// 所以在这里提高`Spacer`的布局优先级，先让`Spacer`决定高度（占满剩余空间）。
+                    Spacer().layoutPriority(1)
+                    
+                    selectButton
+                    
+                    resetButton
+                }
+                .padding()
+                .maxWidth()
+                .frame(minHeight: proxy.size.height)
+                .font(.title2.bold())
+                .mainButtonStyle()
+                // 在这里添加动画的话，【点击的那个button】反而不受这里的动画控制，变成系统的隐式动画，
+                // 得使用`withAnimation`，这样点击的那个button才能被这个动画控制。
+//                .animation(.mySpring, value: isShowInfo)
+//                .animation(.myEase, value: selectedFood)
             }
-            .padding()
-            .maxWidth()
-            .frame(minHeight: UIScreen.main.bounds.height - 140)
-            .font(.title)
-            .mainButtonStyle()
-            // 在这里添加动画的话，【点击的那个button】反而不受这里的动画控制，变成系统的隐式动画，
-            // 得使用`withAnimation`，这样点击的那个button才能被这个动画控制。
-//            .animation(.mySpring, value: isShowInfo)
-//            .animation(.myEase, value: selectedFood)
+            .background(.sysBg2)
         }
-        .background(.sysBg2)
     }
 }
 
