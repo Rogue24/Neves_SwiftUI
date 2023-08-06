@@ -40,7 +40,9 @@ struct FoodPickerScreen: View {
             .frame(minHeight: UIScreen.main.bounds.height - 140)
             .font(.title)
             .mainButtonStyle()
-            // 在这里添加的话，点击的那个button反而不受这里的动画控制，得使用withAnimation
+            // 在这里添加动画的话，【点击的那个button】反而不受这里的动画控制，变成系统的隐式动画，
+            // 得使用`withAnimation`，这样点击的那个button才能被这个动画控制。
+//            .animation(.mySpring, value: isShowInfo)
 //            .animation(.myEase, value: selectedFood)
         }
         .background(.sysBg2)

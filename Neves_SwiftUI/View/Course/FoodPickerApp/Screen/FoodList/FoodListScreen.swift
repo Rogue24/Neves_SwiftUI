@@ -118,6 +118,7 @@ private extension FoodListScreen {
         let food = foodBinding.wrappedValue
         return HStack {
             Text(food.name)
+                .font(.title3)
                 .padding(.vertical, 10)
                 // =========== 给整行添加点击事件 ===========
                 // 📢 注意：如果直接添加`onTapGesture`，那响应范围就只有【文本】的范围，解决方法：
