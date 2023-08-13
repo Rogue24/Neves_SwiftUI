@@ -45,6 +45,8 @@ extension FoodListScreen {
             }
             .padding()
             .padding(.vertical)
+            .maxWidth()
+            .background(.sysGb2)
             // 读取这一句之前上面这部分的视图大小
             .readGeometry(\.size.height, key: DetailSheetHeightKey.self)
             .onPreferenceChange(DetailSheetHeightKey.self) {

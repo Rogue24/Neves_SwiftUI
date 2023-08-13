@@ -38,7 +38,9 @@ struct FoodListScreen: View {
             List($foods, editActions: .all, selection: $selectedFoodIDs, rowContent: buildFoodRow)
                 .listStyle(.plain)
                 .background {
-                    // 使用`background{}`方式可以针对背景做安全区域的忽视
+                    /// 使用`background(_, in:)`方式只能使用`Shape`，那就无法自定义其他设定。
+                    /// 使用`background{}`方式就可以自定义背景View，
+                    /// 这样就可以只针对背景来做安全区域的忽视，不会影响到`List`。
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.sysGb2)
                         .ignoresSafeArea(.container, edges: .bottom)
