@@ -13,7 +13,7 @@ extension FoodListScreen {
         case editFood(_ binding: Binding<Food>)
         case foodDetail(_ food: Food)
         
-        var id: UUID {
+        var id: Food.ID {
             switch self {
             case .newFood:
                 return UUID()

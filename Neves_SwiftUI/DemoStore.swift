@@ -10,11 +10,13 @@ import Combine
 
 enum Demo: String, CaseIterable, Identifiable {
     var id: String { rawValue }
+    var title: String { rawValue }
     
     // MARK: - Playground
     case Playground
     
     // MARK: - Course
+    case FoodHome
     case FoodPicker
     case FoodList
     case AnimTest
@@ -60,16 +62,17 @@ enum Demo: String, CaseIterable, Identifiable {
     case NevesWidget
 }
 
-extension Demo {
-    var title: String { rawValue }
-    
-    @ViewBuilder
+/// 直接让`Demo`成为`View`：
+/// 否则自己实现的返回子`View`的【属性】或者【函数】会不断地被调用，造成这些子`View`会不断地初始化！
+/// - 另外如果需要判断返回不同类型`View`的话还得加上`@ViewBuilder`。
+extension Demo: View {
     var body: some View {
         switch self {
         // Playground
         case .Playground: PlaygroundView()
             
         // Course
+        case .FoodHome: HomeScreen()
         case .FoodPicker: FoodPickerScreen()
         case .FoodList: FoodListScreen()
         case .AnimTest: AnimTestView()
@@ -143,6 +146,7 @@ extension Demo {
         ]),
         
         Section(title: "Course", demos: [
+            .FoodHome,
             .FoodPicker,
             .FoodList,
             .AnimTest,

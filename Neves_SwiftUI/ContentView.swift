@@ -38,8 +38,7 @@ struct ContentView: View {
                 }
                 .navigationBarTitle("Neves", displayMode: .large)
                 .navigationDestination(for: Demo.self) { demo in
-                    demo.body
-                        .navigationBarTitle(demo.rawValue, displayMode: .inline)
+                    demo.navigationBarTitle(demo.rawValue, displayMode: .inline)
                 }
             }
         } else {
@@ -47,7 +46,7 @@ struct ContentView: View {
                 List(Demo.sections) { section in
                     Section(header: Text(section.title)) {
                         ForEach(section.demos) { demo in
-                            NavigationLink(destination: demo.body.navigationBarTitle(demo.rawValue, displayMode: .inline)) {
+                            NavigationLink(destination: demo.navigationBarTitle(demo.rawValue, displayMode: .inline)) {
                                 Text(demo.title)
                             }
                         }
