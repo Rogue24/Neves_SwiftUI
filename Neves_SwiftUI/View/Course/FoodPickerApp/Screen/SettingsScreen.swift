@@ -82,15 +82,17 @@ private enum Dialog: String {
     func action() {
         switch self {
         case .resetSettings:
-            UserDefaults.Key.allCases.forEach {
+            let keys: [UserDefaults.Key] = [.isUseDarkMode, .unit, .startTab]
+            keys.forEach {
                 UserDefaults.standard.removeObject(forKey: $0.rawValue)
             }
             
         case .resetFoodList:
-            break
+            // 清空缓存的食物列表（空了默认就取全部的）
+            UserDefaults.standard.removeObject(forKey: UserDefaults.Key.foodList.rawValue)
             
         default:
-            break
+            return
         }
     }
 }

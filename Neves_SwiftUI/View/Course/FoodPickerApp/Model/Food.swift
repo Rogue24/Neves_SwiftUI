@@ -8,8 +8,7 @@
 import Foundation
 
 struct Food: Equatable, Identifiable {
-    let id = UUID()
-    
+    var id = UUID() // 由于解码的内容包括id，所以要换成var，使解码时可以修改这个值
     var name: String
     var image: String
     @Suffix(" 大卡") var calorie: Double = 0
@@ -31,3 +30,27 @@ struct Food: Equatable, Identifiable {
     
     static var new: Food { Food(name: "", image: "") }
 }
+
+extension Food: Codable {
+    /// 遵守`Codable`，如果自己的所有属性都是`Codable`的，那么就不用自己去实现编码`endode`和解码`decode`。
+    /// PS: `Swift`提供的基本类型都是`Codable`的，如`String`、`Int`，还有`Array`和`Dictionary`（只要存储的元素也是`Codable`的即可）。
+}
+
+/// 使用泛型增强通用性 ---> `Array+`
+//extension [Food]: RawRepresentable {
+//    /// 解码
+//    public init?(rawValue: String) {
+//        guard let data = rawValue.data(using: .utf8),
+//              let foods = try? JSONDecoder().decode([Food].self, from: data)
+//        else { return nil }
+//        self = foods
+//    }
+//
+//    /// 编码
+//    public var rawValue: String {
+//        guard let data = try? JSONEncoder().encode(self),
+//              let str = String(data: data, encoding: .utf8)
+//        else { return "" }
+//        return str
+//    }
+//}

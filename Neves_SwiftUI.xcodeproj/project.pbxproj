@@ -85,6 +85,7 @@
 		1AC95CC72A38867B002F19E9 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC95CC62A38867B002F19E9 /* View+.swift */; };
 		1AC95CC92A388AB4002F19E9 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC95CC82A388AB4002F19E9 /* SuffixWrapper.swift */; };
 		1AC95CCB2A38B4B5002F19E9 /* ShapeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC95CCA2A38B4B5002F19E9 /* ShapeTestView.swift */; };
+		1AD4AAA22A928EA500322F04 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD4AAA12A928EA500322F04 /* Array+.swift */; };
 		71032D2C275E1E610030776A /* ImageCroperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2A275E1E610030776A /* ImageCroperView.swift */; };
 		71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2B275E1E610030776A /* ImagePickerView.swift */; };
 		71032D31275E21450030776A /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71032D2F275E21450030776A /* CropViewController.swift */; };
@@ -251,6 +252,7 @@
 		1AC95CC62A38867B002F19E9 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		1AC95CC82A388AB4002F19E9 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
 		1AC95CCA2A38B4B5002F19E9 /* ShapeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTestView.swift; sourceTree = "<group>"; };
+		1AD4AAA12A928EA500322F04 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		71032D2A275E1E610030776A /* ImageCroperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCroperView.swift; sourceTree = "<group>"; };
 		71032D2B275E1E610030776A /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		71032D2F275E21450030776A /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				1A630B762A7654B300F3D2C1 /* PreviewDevice+.swift */,
 				1AC7ECE92A894109006ADBDC /* UserDefaults+Key.swift */,
 				1AC7ECEB2A894114006ADBDC /* AppStorage+.swift */,
+				1AD4AAA12A928EA500322F04 /* Array+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1168,6 +1171,7 @@
 				715ED7D02700642C0030F279 /* File.swift in Sources */,
 				715ED7C02700642C0030F279 /* Bundle.Extension.swift in Sources */,
 				1A630B882A76D52500F3D2C1 /* ShapeStyle+.swift in Sources */,
+				1AD4AAA22A928EA500322F04 /* Array+.swift in Sources */,
 				00B3C6E829AC51A50027F587 /* WaterfallGridView.swift in Sources */,
 				715ED7C92700642C0030F279 /* JP.swift in Sources */,
 				1AC7ECE72A89407D006ADBDC /* Unit.swift in Sources */,

@@ -13,8 +13,7 @@ struct FoodListScreen: View {
     // 并且使用自定义的editMode要替换原来的Environment，否则会来回切换编辑状态。
 //    @Environment(\.editMode) var editMode
     @State private var editMode: EditMode = .inactive
-    
-    @State private var foods = Food.examples
+    @AppStorage(.foodList) private var foods = Food.examples
     @State private var selectedFoodIDs = Set<Food.ID>()
     @State private var sheet: Sheet?
     
