@@ -25,4 +25,17 @@ struct Neves_SwiftUIApp: App {
                 .onAppear() { FunnyWindow.show() }
         }
     }
+    
+    // 修改全局tabBar（滑动时有无内容在底下穿透）的背景
+//    func applyTabBarBackground() {
+//        let appearance = UITabBarAppearance()
+//        appearance.configureWithTransparentBackground()
+//        appearance.backgroundColor = .blue
+//        appearance.backgroundEffect = UIBlurEffect(style: .extraLight)
+//        UITabBar.appearance().scrollEdgeAppearance = appearance
+//    }
+//
+//    init() {
+//        applyTabBarBackground()
+//    }
 }
