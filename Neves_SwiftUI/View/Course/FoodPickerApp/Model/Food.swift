@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-typealias Energy = Suffix<JPEnergyUnit>
-typealias Weight = Suffix<JPWeightUnit>
-
 struct Food: Equatable, Identifiable {
     var id = UUID() // 由于解码的内容包括id，所以要换成var，使解码时可以修改这个值
     var name: String

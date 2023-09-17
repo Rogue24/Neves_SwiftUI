@@ -71,6 +71,7 @@
 		1A630B882A76D52500F3D2C1 /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B852A76D52500F3D2C1 /* ShapeStyle+.swift */; };
 		1A630B892A76D52500F3D2C1 /* AnyLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B862A76D52500F3D2C1 /* AnyLayout+.swift */; };
 		1A630B8A2A76D52500F3D2C1 /* Animation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B872A76D52500F3D2C1 /* Animation+.swift */; };
+		1A6C6CAE2AB77E3900CD2188 /* JPUnitCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */; };
 		1A7936E32A35E9DA005F8747 /* AnimTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7936E22A35E9DA005F8747 /* AnimTestView.swift */; };
 		1A86EE702A7FA61E00A151FB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86EE6F2A7FA61E00A151FB /* HomeScreen.swift */; };
 		1A86EE722A7FC77400A151FB /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86EE712A7FC77400A151FB /* SettingsScreen.swift */; };
@@ -248,6 +249,7 @@
 		1A630B852A76D52500F3D2C1 /* ShapeStyle+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
 		1A630B862A76D52500F3D2C1 /* AnyLayout+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyLayout+.swift"; sourceTree = "<group>"; };
 		1A630B872A76D52500F3D2C1 /* Animation+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animation+.swift"; sourceTree = "<group>"; };
+		1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPUnitCompatible.swift; sourceTree = "<group>"; };
 		1A7936E22A35E9DA005F8747 /* AnimTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimTestView.swift; sourceTree = "<group>"; };
 		1A86EE6F2A7FA61E00A151FB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		1A86EE712A7FC77400A151FB /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 		1A630B7C2A7655B800F3D2C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */,
 				1AC95CC82A388AB4002F19E9 /* SuffixWrapper.swift */,
 			);
 			path = Utils;
@@ -1149,6 +1152,7 @@
 				00D63E08299103C5003F0C29 /* View+blurEffect.swift in Sources */,
 				1A630B892A76D52500F3D2C1 /* AnyLayout+.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
+				1A6C6CAE2AB77E3900CD2188 /* JPUnitCompatible.swift in Sources */,
 				00E5D9D7296FB110006A6FDD /* EnvironmentValues.swift in Sources */,
 				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
 				00D63E0C299103C5003F0C29 /* EnvironmentValues+blurEffectStyle.swift in Sources */,
