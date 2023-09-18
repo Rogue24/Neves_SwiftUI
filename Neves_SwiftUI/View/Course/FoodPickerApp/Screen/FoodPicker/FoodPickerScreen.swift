@@ -75,7 +75,7 @@ private extension FoodPickerScreen {
         if let selectedFood {
             foodNameView(selectedFood)
             
-            Text("热量 " + selectedFood.$calorie).font(.title2)
+            Text("热量 " + selectedFood.$calorie.description).font(.title2)
             
             foodInfoView(selectedFood)
         } // 默认else返回EmptyView
@@ -181,9 +181,9 @@ private extension FoodPickerScreen {
                         .padding(.horizontal, -10)
                     
                     GridRow {
-                        Text(selectedFood.$protein)
-                        Text(selectedFood.$fat)
-                        Text(selectedFood.$carb)
+                        Text(selectedFood.$protein.description)
+                        Text(selectedFood.$fat.description)
+                        Text(selectedFood.$carb.description)
                     }
                 }
                 .font(.title3)

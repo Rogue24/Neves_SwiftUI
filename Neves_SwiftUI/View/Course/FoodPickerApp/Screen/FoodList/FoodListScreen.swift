@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct FoodListScreen: View {
-    // 自定义editMode：
+    // ========== 自定义editMode ==========
     // 在TabView中，当editMode发生变化触发不了floatButton的更新，
     // 并且使用自定义的editMode要替换原来的Environment，否则会来回切换编辑状态。
 //    @Environment(\.editMode) var editMode
     @State private var editMode: EditMode = .inactive
+    // ===================================
     @AppStorage(.foodList) private var foods = Food.examples
     @State private var selectedFoodIDs = Set<Food.ID>()
     @State private var sheet: Sheet?

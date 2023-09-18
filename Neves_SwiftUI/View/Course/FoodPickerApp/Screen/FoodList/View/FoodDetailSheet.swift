@@ -37,10 +37,10 @@ extension FoodListScreen {
                     .minimumScaleFactor(shouldUseVStack ? 1 : 0.5) // 最多能缩小至百分之多少
                 
                 Grid(horizontalSpacing: 30, verticalSpacing: 12) {
-                    buildNutritionView(title: "热量", value: food.$calorie)
-                    buildNutritionView(title: "蛋白质", value: food.$protein)
-                    buildNutritionView(title: "脂肪", value: food.$fat)
-                    buildNutritionView(title: "碳水", value: food.$carb)
+                    buildNutritionView(title: "热量", value: food.$calorie.description)
+                    buildNutritionView(title: "蛋白质", value: food.$protein.description)
+                    buildNutritionView(title: "脂肪", value: food.$fat.description)
+                    buildNutritionView(title: "碳水", value: food.$carb.description)
                 }
             }
             .padding()

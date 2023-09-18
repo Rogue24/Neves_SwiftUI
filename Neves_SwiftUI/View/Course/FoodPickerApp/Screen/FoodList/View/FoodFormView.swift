@@ -90,22 +90,24 @@ private extension FoodListScreen.FoodFormView {
                     .focused($field, equals: .image)
             }
             
+            /// 第一个`$`是获取`food`（`State`）的`Binding`，
+            /// 第二个`$`是自定义的属性包装器`Suffix`，用来获取`Suffix`本身。
+            
             buildNumberFiled(title: "热量",
-                             value: $food.calorie,
-                             field: .calorie,
-                             suffix: "大卡")
-            
-            buildNumberFiled(title: "碳水",
-                             value: $food.carb,
-                             field: .carb)
-            
-            buildNumberFiled(title: "脂肪",
-                             value: $food.fat,
-                             field: .fat)
+                             value: $food.$calorie,
+                             field: .calorie)
             
             buildNumberFiled(title: "蛋白质",
-                             value: $food.protein,
+                             value: $food.$protein,
                              field: .protein)
+            
+            buildNumberFiled(title: "脂肪",
+                             value: $food.$fat,
+                             field: .fat)
+            
+            buildNumberFiled(title: "碳水",
+                             value: $food.$carb,
+                             field: .carb)
         }
         .padding(.top, -16)
     }
@@ -127,21 +129,49 @@ private extension FoodListScreen.FoodFormView {
 
 // MARK: - View Builder
 private extension FoodListScreen.FoodFormView {
-    func buildNumberFiled(title: String,
-                          value: Binding<Double>,
-                          field: Field,
-                          suffix: String = "g") -> some View {
+    func buildNumberFiled<Unit: JPUnitCompatible & Hashable>(
+        title: String,
+//        value: Binding<Suffix<some JPUnitCompatible>>, // 这里不能使用some的方式，因为需要明确知道该类型才能通过allCases获取所有类型，所以换成泛型
+        value: Binding<Suffix<Unit>>,
+        field: Field
+    ) -> some View {
         LabeledContent(title) {
             HStack {
                 TextField(
                     "",
-                    value: value,
+                    /**
+                     * 此时【传进来】的`value`是一个嵌套的属性包装器（`Binding` + `Suffix`）：
+                     *
+                     Binding.wrappedValue -> value
+                        Suffix.wrappedValue -> value.wrappedValue
+                            targetValue: Double -> value.wrappedValue.wrappedValue
+                     *
+                     * 这里主要是对`Suffix`的`wrappedValue`进行读写，如果直接将这个`value`给到`TextField`，
+                     * 那么进行读写的是`Suffix`这个结构体对象，而非内部存储的值（只拆了一层包装），
+                     * 因此自定义`Binding`给到`TextField`，自己决定如何读写（多拆一层包装）。
+                     */
+                    value: Binding(
+                        get: { value.wrappedValue.wrappedValue },
+                        set: { value.wrappedValue.wrappedValue = $0 }
+                    ),
                     format: .number.precision(.fractionLength(1)) // 只显示小数点后1位
                 )
                 .focused(self.$field, equals: field)
                 .keyboardType(.decimalPad)
                 
-                Text(suffix)
+                if Unit.allCases.count <= 1 {
+                    // 已经遵循了`View`，可以直接返回
+//                    value.wrappedValue.unit // 方式1：先解绑
+                    value.unit.wrappedValue // 方式2：最后解绑
+                        .font(.body)
+                } else {
+                    // 这里的Picker是不需要显示标题的，这里设置标题是为了能让辅助模式进行朗读
+                    Picker("单位", selection: value.unit) {
+//                        ForEach(Unit.allCases)
+                        ForEach(Unit.allCases) { $0 }
+                    }
+                    .labelsHidden() // 不显示标题
+                }
             }
         }
     }

@@ -46,9 +46,14 @@ struct NevesWidgetEditView: View {
                 ImageDownloader() {
                     reloadWidget()
                 }
+                .zIndex(1)
             } else {
                 Text("需要iOS15+")
             }
+            
+            NevesWidgetView()
+                .frame(width: 300, height: 120)
+                .mask(RoundedRectangle(cornerRadius: 8, style: .continuous))
         }
         .environmentObject(store) // 给这棵树的View共用，例如EnvironmentText
     }

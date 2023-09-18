@@ -71,6 +71,7 @@
 		1A630B882A76D52500F3D2C1 /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B852A76D52500F3D2C1 /* ShapeStyle+.swift */; };
 		1A630B892A76D52500F3D2C1 /* AnyLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B862A76D52500F3D2C1 /* AnyLayout+.swift */; };
 		1A630B8A2A76D52500F3D2C1 /* Animation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B872A76D52500F3D2C1 /* Animation+.swift */; };
+		1A6C6CAE2AB77E3900CD2188 /* JPUnitCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */; };
 		1A7936E32A35E9DA005F8747 /* AnimTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7936E22A35E9DA005F8747 /* AnimTestView.swift */; };
 		1A86EE702A7FA61E00A151FB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86EE6F2A7FA61E00A151FB /* HomeScreen.swift */; };
 		1A86EE722A7FC77400A151FB /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86EE712A7FC77400A151FB /* SettingsScreen.swift */; };
@@ -78,6 +79,8 @@
 		1A9D13CB2A35A3B400276AA3 /* Task.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */; };
 		1A9D13CC2A35A3B400276AA3 /* Task.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */; };
 		1A9D13CE2A35A3CA00276AA3 /* View.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CD2A35A3CA00276AA3 /* View.Extension.swift */; };
+		1AA059622AAE5F74004142F6 /* JSONTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA059612AAE5F74004142F6 /* JSONTestView.swift */; };
+		1AC288A72AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC288A62AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift */; };
 		1AC7ECE72A89407D006ADBDC /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7ECE62A89407D006ADBDC /* Unit.swift */; };
 		1AC7ECEA2A894109006ADBDC /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7ECE92A894109006ADBDC /* UserDefaults+Key.swift */; };
 		1AC7ECEC2A894114006ADBDC /* AppStorage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7ECEB2A894114006ADBDC /* AppStorage+.swift */; };
@@ -160,6 +163,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1AC288A82AADB1F0007C1DB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 715ED74826FF2E310030F279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 715ED74F26FF2E310030F279;
+			remoteInfo = Neves_SwiftUI;
+		};
 		7115A6CB27EDC7DA00C5B145 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 715ED74826FF2E310030F279 /* Project object */;
@@ -239,12 +249,16 @@
 		1A630B852A76D52500F3D2C1 /* ShapeStyle+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
 		1A630B862A76D52500F3D2C1 /* AnyLayout+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyLayout+.swift"; sourceTree = "<group>"; };
 		1A630B872A76D52500F3D2C1 /* Animation+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animation+.swift"; sourceTree = "<group>"; };
+		1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPUnitCompatible.swift; sourceTree = "<group>"; };
 		1A7936E22A35E9DA005F8747 /* AnimTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimTestView.swift; sourceTree = "<group>"; };
 		1A86EE6F2A7FA61E00A151FB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		1A86EE712A7FC77400A151FB /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerScreen.swift; sourceTree = "<group>"; };
 		1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.Extension.swift; sourceTree = "<group>"; };
 		1A9D13CD2A35A3CA00276AA3 /* View.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.Extension.swift; sourceTree = "<group>"; };
+		1AA059612AAE5F74004142F6 /* JSONTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestView.swift; sourceTree = "<group>"; };
+		1AC288A42AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Neves_SwiftUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC288A62AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neves_SwiftUI_Tests.swift; sourceTree = "<group>"; };
 		1AC7ECE62A89407D006ADBDC /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		1AC7ECE92A894109006ADBDC /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
 		1AC7ECEB2A894114006ADBDC /* AppStorage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStorage+.swift"; sourceTree = "<group>"; };
@@ -330,6 +344,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1AC288A12AADB1F0007C1DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7115A6BA27EDC7D800C5B145 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,6 +535,7 @@
 				1A7936E22A35E9DA005F8747 /* AnimTestView.swift */,
 				1AC95CCA2A38B4B5002F19E9 /* ShapeTestView.swift */,
 				1A467BA52A49971E0026F21B /* ListTestView.swift */,
+				1AA059612AAE5F74004142F6 /* JSONTestView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -521,6 +543,7 @@
 		1A630B7C2A7655B800F3D2C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */,
 				1AC95CC82A388AB4002F19E9 /* SuffixWrapper.swift */,
 			);
 			path = Utils;
@@ -545,6 +568,14 @@
 				1A630B7B2A7655A500F3D2C1 /* Test */,
 			);
 			path = FoodPickerApp;
+			sourceTree = "<group>";
+		};
+		1AC288A52AADB1F0007C1DB2 /* Neves_SwiftUI_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1AC288A62AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift */,
+			);
+			path = Neves_SwiftUI_Tests;
 			sourceTree = "<group>";
 		};
 		1AC7ECE82A8940AA006ADBDC /* Constant */ = {
@@ -651,6 +682,7 @@
 				00ED8220296BB491006F035B /* NevesWidgetExtension.entitlements */,
 				715ED75226FF2E310030F279 /* Neves_SwiftUI */,
 				7115A6C227EDC7D900C5B145 /* NevesWidget */,
+				1AC288A52AADB1F0007C1DB2 /* Neves_SwiftUI_Tests */,
 				715ED75126FF2E310030F279 /* Products */,
 				561E8C64FB0C6ADCC7766560 /* Pods */,
 				3A01F6D206FA6FD3A6FB773E /* Frameworks */,
@@ -662,6 +694,7 @@
 			children = (
 				715ED75026FF2E310030F279 /* Neves_SwiftUI.app */,
 				7115A6BD27EDC7D800C5B145 /* NevesWidgetExtension.appex */,
+				1AC288A42AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -886,6 +919,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1AC288A32AADB1F0007C1DB2 /* Neves_SwiftUI_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AC288AC2AADB1F0007C1DB2 /* Build configuration list for PBXNativeTarget "Neves_SwiftUI_Tests" */;
+			buildPhases = (
+				1AC288A02AADB1F0007C1DB2 /* Sources */,
+				1AC288A12AADB1F0007C1DB2 /* Frameworks */,
+				1AC288A22AADB1F0007C1DB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AC288A92AADB1F0007C1DB2 /* PBXTargetDependency */,
+			);
+			name = Neves_SwiftUI_Tests;
+			productName = Neves_SwiftUI_Tests;
+			productReference = 1AC288A42AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7115A6BC27EDC7D800C5B145 /* NevesWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7115A6D127EDC7DA00C5B145 /* Build configuration list for PBXNativeTarget "NevesWidgetExtension" */;
@@ -931,9 +982,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					1AC288A32AADB1F0007C1DB2 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 715ED74F26FF2E310030F279;
+					};
 					7115A6BC27EDC7D800C5B145 = {
 						CreatedOnToolsVersion = 13.3;
 						LastSwiftMigration = 1330;
@@ -959,11 +1014,19 @@
 			targets = (
 				715ED74F26FF2E310030F279 /* Neves_SwiftUI */,
 				7115A6BC27EDC7D800C5B145 /* NevesWidgetExtension */,
+				1AC288A32AADB1F0007C1DB2 /* Neves_SwiftUI_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1AC288A22AADB1F0007C1DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7115A6BB27EDC7D800C5B145 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1039,6 +1102,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1AC288A02AADB1F0007C1DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC288A72AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7115A6B927EDC7D800C5B145 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1081,6 +1152,7 @@
 				00D63E08299103C5003F0C29 /* View+blurEffect.swift in Sources */,
 				1A630B892A76D52500F3D2C1 /* AnyLayout+.swift in Sources */,
 				716828C8275DDB450039F3F7 /* Test2View.swift in Sources */,
+				1A6C6CAE2AB77E3900CD2188 /* JPUnitCompatible.swift in Sources */,
 				00E5D9D7296FB110006A6FDD /* EnvironmentValues.swift in Sources */,
 				71032D2D275E1E610030776A /* ImagePickerView.swift in Sources */,
 				00D63E0C299103C5003F0C29 /* EnvironmentValues+blurEffectStyle.swift in Sources */,
@@ -1171,6 +1243,7 @@
 				715ED7D02700642C0030F279 /* File.swift in Sources */,
 				715ED7C02700642C0030F279 /* Bundle.Extension.swift in Sources */,
 				1A630B882A76D52500F3D2C1 /* ShapeStyle+.swift in Sources */,
+				1AA059622AAE5F74004142F6 /* JSONTestView.swift in Sources */,
 				1AD4AAA22A928EA500322F04 /* Array+.swift in Sources */,
 				00B3C6E829AC51A50027F587 /* WaterfallGridView.swift in Sources */,
 				715ED7C92700642C0030F279 /* JP.swift in Sources */,
@@ -1186,6 +1259,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1AC288A92AADB1F0007C1DB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 715ED74F26FF2E310030F279 /* Neves_SwiftUI */;
+			targetProxy = 1AC288A82AADB1F0007C1DB2 /* PBXContainerItemProxy */;
+		};
 		7115A6CC27EDC7DA00C5B145 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7115A6BC27EDC7D800C5B145 /* NevesWidgetExtension */;
@@ -1194,6 +1272,52 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1AC288AA2AADB1F0007C1DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.Neves-SwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neves_SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Neves_SwiftUI";
+			};
+			name = Debug;
+		};
+		1AC288AB2AADB1F0007C1DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zhoujianping.Neves-SwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neves_SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Neves_SwiftUI";
+			};
+			name = Release;
+		};
 		7115A6CF27EDC7DA00C5B145 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1445,6 +1569,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1AC288AC2AADB1F0007C1DB2 /* Build configuration list for PBXNativeTarget "Neves_SwiftUI_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AC288AA2AADB1F0007C1DB2 /* Debug */,
+				1AC288AB2AADB1F0007C1DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7115A6D127EDC7DA00C5B145 /* Build configuration list for PBXNativeTarget "NevesWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

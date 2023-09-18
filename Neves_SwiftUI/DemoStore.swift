@@ -22,6 +22,7 @@ enum Demo: String, CaseIterable, Identifiable {
     case AnimTest
     case ShapeTest
     case ListTest
+    case JSONTest
     
     // MARK: - Test
     case Test1
@@ -78,6 +79,7 @@ extension Demo: View {
         case .AnimTest: AnimTestView()
         case .ShapeTest: ShapeTestView()
         case .ListTest: ListTestView()
+        case .JSONTest: JSONTestView()
             
         // Test
         case .Test1: Test1View()
@@ -152,6 +154,7 @@ extension Demo {
             .AnimTest,
             .ShapeTest,
             .ListTest,
+            .JSONTest,
         ]),
         
         Section(title: "Test", demos: [
