@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Color {
+extension ShapeStyle where Self == Color {
     static var randomColor: Color { randomColor() }
     static func randomColor(_ a: Double = 1.0) -> Color {
         Color(.sRGB,

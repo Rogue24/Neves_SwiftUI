@@ -63,7 +63,7 @@ struct RectangleButton: View {
             // overlay：叠加层，可以在里面添加额外的view覆盖到父view上面
             .overlay(
                 HStack {
-                    Image(systemName: "person.crop.circle")
+                    SFSymbol.personCropCircle
                         .font(.system(size: 24, weight: .light))
                         .foregroundColor(Color.white.opacity(press ? 0 : 1))
                         .frame(width: press ? 64 : 54, height: press ? 4 : 54)
@@ -101,7 +101,7 @@ struct CircleButton: View {
     
     var body: some View {
         ZStack {
-            Image(systemName: "sun.max")
+            SFSymbol.sunMax
                 .font(.system(size: 44, weight: .light))
                 .offset(x: press ? -90 : 0, y: press ? -90 : 0)
                 .rotation3DEffect(
@@ -109,7 +109,7 @@ struct CircleButton: View {
                     axis: (x: 10, y: -10, z: 0.0)
                 )
             
-            Image(systemName: "moon")
+            SFSymbol.moon
                 .font(.system(size: 44, weight: .light))
                 .offset(x: press ? 0 : 90, y: press ? 0 : 90)
                 .rotation3DEffect(
@@ -173,7 +173,7 @@ struct PayButton: View {
                 .opacity(press ? 0 : 1)
                 .scaleEffect(press ? 0 : 1)
             
-            Image(systemName: "checkmark.circle.fill")
+            SFSymbol.checkmarkCircleFill
                 .font(.system(size: 44, weight: .light))
                 .foregroundColor(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)))
                 .opacity(press ? 1 : 0)

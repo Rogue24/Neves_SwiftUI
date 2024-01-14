@@ -6,22 +6,32 @@
 //
 
 import SwiftUI
+import FunnyButton_SwiftUI
 
 struct ProgressHUDView: View {
-    
-    @State var hudVisible = false
-    @State var hudConfig = TTProgressHUDConfig(type: .success, shouldAutoHide: true, allowsTapToHide: false, autoHideInterval: 1, hapticsEnabled: false)
+    @EnvironmentObject var hud: Hud
     
     var body: some View {
-        ZStack {
-            Text("Hello, World!")
-                .onTapGesture {
-                    hudVisible.toggle()
+        Text("Hello, World!")
+            .funnyAction {
+                if hud.visible {
+                    hud.hide()
+                    return
                 }
-            
-            TTProgressHUD($hudVisible, config: hudConfig)
-        }
-        .background(Color.randomColor)
+                let v = Int.random(in: 0...4)
+                switch v {
+                case 0:
+                    hud.loading("loading")
+                case 1:
+                    hud.success("success")
+                case 2:
+                    hud.warning("warning")
+                case 3:
+                    hud.error("error")
+                default:
+                    hud.info("Hello, World!")
+                }
+            }
     }
 }
 

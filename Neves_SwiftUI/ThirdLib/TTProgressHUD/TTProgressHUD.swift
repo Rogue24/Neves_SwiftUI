@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import SwiftUIVisualEffects
 
 public enum TTProgressHUDType {
     case loading
@@ -102,14 +101,17 @@ private struct LabelView: View {
             }
         }
         .multilineTextAlignment(.center)
-//        .vibrancyEffect()
-//        .vibrancyEffectStyle(.fill)
+        .vibrancyEffect()
+        .vibrancyEffectStyle(.fill)
     }
 }
 
 public struct TTProgressHUD: View {
     @Binding var isVisible: Bool
     var config: TTProgressHUDConfig
+    var showImage: Bool {
+        config.imageViewSize.width > 0 && config.imageViewSize.height > 0
+    }
     
     @Environment(\.colorScheme) private var colorScheme
     
@@ -142,27 +144,41 @@ public struct TTProgressHUD: View {
                         .edgesIgnoringSafeArea(.all)
                     
                     ZStack {
-                        Color(.systemBackground)
-//                            .blurEffect()
-//                            .blurEffectStyle(config.blurEffectStyle)
+                        // ------- JP 修改 begin ------- 使用自己的毛玻璃BlurView
+//                        if let blurEffect = config.blurEffectStyle {
+//                            config.foregroundColor
+//                                .blurEffect()
+//                                .blurEffectStyle(blurEffect)
+//                        } else {
+//                            config.foregroundColor
+//                        }
+                        config.foregroundColor
+                        if let blurEffect = config.blurEffectStyle {
+                            BlurView(style: blurEffect)
+                        }
+                        // ------- JP 修改 ended -------
                         
                         VStack(spacing: 20) {
-                            if config.type == .loading {
-                                IndefiniteAnimatedView(
-                                    animatedViewSize: config.imageViewSize,
-                                    animatedViewForegroundColor: config.imageViewForegroundColor,
-                                    lineWidth: config.lineWidth
-                                )
-                            } else {
-                                ImageView(
-                                    type: config.type,
-                                    imageViewSize: config.imageViewSize,
-                                    imageViewForegroundColor: config.imageViewForegroundColor,
-                                    successImage: config.successImage,
-                                    warningImage: config.warningImage,
-                                    errorImage: config.errorImage
-                                )
+                            // ------- JP 修改 begin ------- 图片有尺寸才显示
+                            if showImage {
+                                if config.type == .loading {
+                                    IndefiniteAnimatedView(
+                                        animatedViewSize: config.imageViewSize,
+                                        animatedViewForegroundColor: config.imageViewForegroundColor,
+                                        lineWidth: config.lineWidth
+                                    )
+                                } else {
+                                    ImageView(
+                                        type: config.type,
+                                        imageViewSize: config.imageViewSize,
+                                        imageViewForegroundColor: config.imageViewForegroundColor,
+                                        successImage: config.successImage,
+                                        warningImage: config.warningImage,
+                                        errorImage: config.errorImage
+                                    )
+                                }
                             }
+                            // ------- JP 修改 ended -------
                             LabelView(title: config.title, caption: config.caption)
                         }.padding()
                     }
@@ -173,7 +189,9 @@ public struct TTProgressHUD: View {
                         RoundedRectangle(cornerRadius: config.cornerRadius)
                             .stroke(config.borderColor, lineWidth: config.borderWidth)
                     )
-                    .aspectRatio(1, contentMode: .fit)
+                    // ------- JP 修改 begin ------- 显示图片才使用1:1的宽高比
+                    .aspectRatio(showImage ? 1 : nil, contentMode: .fit)
+                    // ------- JP 修改 ended -------
                     .padding(geometry.size.width / 7)
                     .shadow(color: config.shadowColor, radius: config.shadowRadius)
                 }

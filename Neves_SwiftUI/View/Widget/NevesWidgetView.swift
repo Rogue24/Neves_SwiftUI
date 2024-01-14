@@ -16,6 +16,7 @@ import SwiftUI
 
 struct NevesWidgetView: View {
     @StateObject var store = NevesWidgetStore()
+    @State var appear = false
     
     var body: some View {
         ZStack {
@@ -50,9 +51,24 @@ struct NevesWidgetView: View {
                     .font(.subheadline)
             }
             .baseShadow()
+            
+            HStack {
+                Spacer()
+                Text(appear ? "😺" : "😭")
+                    .font(.title)
+                    .rotationEffect(.degrees(appear ? 360 : 0))
+            }
+            .padding()
         }
         // 点击整个小组件跳转
         .widgetURL(URL(string: "urlschema://jp_link_00"))
+        .onAppear() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation(.linear(duration: 20).repeatForever(autoreverses: true)) {
+                    appear = true
+                }
+            }
+        }
     }
     
     var cacheEmoji: String {

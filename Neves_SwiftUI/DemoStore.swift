@@ -8,7 +8,22 @@
 import SwiftUI
 import Combine
 
-enum Demo: String {
+enum Demo: String, CaseIterable, Identifiable {
+    var id: String { rawValue }
+    var title: String { rawValue }
+    
+    // MARK: - Playground
+    case Playground
+    
+    // MARK: - Course
+    case FoodHome
+    case FoodPicker
+    case FoodList
+    case AnimTest
+    case ShapeTest
+    case ListTest
+    case JSONTest
+    
     // MARK: - Test
     case Test1
     case Test2
@@ -18,11 +33,13 @@ enum Demo: String {
     case StateObjectTest
     case StateInitTest
     case EnvironmentTest
+    case RouteTest
     
     // MARK: - Base
     case MatchedGeometryEffect
     case LazyGrid
     case ResultBuilder
+    case WaterfallGrid
     
     // MARK: - Unit
     case Buttons
@@ -46,135 +63,142 @@ enum Demo: String {
     case NevesWidget
 }
 
-extension Demo {
-    static let sections = [
-        Section(title: "Test", items: [
-            Item(demo: .Test1),
-            Item(demo: .Test2),
-            Item(demo: .Test3),
-            Item(demo: .GeometryReaderTest),
-            Item(demo: .StateObjectTest),
-            Item(demo: .StateInitTest),
-            Item(demo: .EnvironmentTest),
-        ]),
-        
-        Section(title: "Base", items: [
-            Item(demo: .MatchedGeometryEffect),
-            Item(demo: .LazyGrid),
-            Item(demo: .ResultBuilder),
-        ]),
-        
-        Section(title: "Unit", items: [
-            Item(demo: .Buttons),
-            Item(demo: .ProgressHUD),
-            Item(demo: .FunnyPlay),
-        ]),
-        
-        Section(title: "Animation", items: [
-            Item(demo: .AnimationValue),
-            Item(demo: .AnimExperience_iOS15),
-            Item(demo: .AnimExperience),
-        ]),
-        
-        Section(title: "GIF", items: [
-            Item(demo: .GifImage),
-            Item(demo: .AsyncGifImage),
-        ]),
-        
-        Section(title: "UIKit", items: [
-            Item(demo: .ImagePicker),
-            Item(demo: .ImageCroper),
-        ]),
-        
-        Section(title: "Widget", items: [
-            Item(demo: .NevesWidget),
-        ]),
-    ]
+/// 直接让`Demo`成为`View`：
+/// 否则自己实现的返回子`View`的【属性】或者【函数】会不断地被调用，造成这些子`View`会不断地初始化！
+/// - 另外如果需要判断返回不同类型`View`的话还得加上`@ViewBuilder`。
+extension Demo: View {
+    var body: some View {
+        switch self {
+        // Playground
+        case .Playground: PlaygroundView()
+            
+        // Course
+        case .FoodHome: HomeScreen()
+        case .FoodPicker: FoodPickerScreen()
+        case .FoodList: FoodListScreen()
+        case .AnimTest: AnimTestView()
+        case .ShapeTest: ShapeTestView()
+        case .ListTest: ListTestView()
+        case .JSONTest: JSONTestView()
+            
+        // Test
+        case .Test1: Test1View()
+        case .Test2: Test2View()
+        case .Test3: Test3View()
+        case .FrameTest: FrameTestView()
+        case .GeometryReaderTest: GeometryReaderTestView()
+        case .StateObjectTest: StateObjectTestView()
+        case .StateInitTest: StateInitTestView()
+        case .EnvironmentTest: EnvironmentTestView()
+        case .RouteTest: RouteTestView()
+            
+        // Base
+        case .MatchedGeometryEffect: MatchedGeometryEffectView()
+        case .LazyGrid: LazyGridView()
+        case .ResultBuilder: ResultBuilderView()
+        case .WaterfallGrid: WaterfallGridView()
+            
+        // Unit
+        case .Buttons: ButtonsView()
+        case .ProgressHUD: ProgressHUDView()
+        case .FunnyPlay: FunnyPlayView()
+            
+        // Animation
+        case .AnimationValue: AnimationValueView()
+        case .AnimExperience_iOS15: AnimExperience_iOS15_View()
+        case .AnimExperience: AnimExperienceView()
+            
+        // GIF
+        case .GifImage:
+            if #available(iOS 15.0.0, *) {
+                GifImageView()
+            } else {
+                PlaceholderView(title: "需要iOS15+")
+            }
+        case .AsyncGifImage:
+            if #available(iOS 15.0.0, *) {
+                AsyncGifImageView()
+            } else {
+                PlaceholderView(title: "需要iOS15+")
+            }
+            
+        // UIKit
+        case .ImagePicker:
+            ImagePickerShowView()
+        case .ImageCroper:
+            ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
+                .edgesIgnoringSafeArea(.all)
+            
+        // Widget
+        case .NevesWidget: NevesWidgetEditView()
+        }
+    }
 }
 
 extension Demo {
     struct Section: Identifiable {
         let id = UUID()
         let title: String
-        let items: [Item]
+        let demos: [Demo]
     }
     
-    struct Item: Identifiable {
-        let id = UUID()
-        let demo: Demo
+    static let sections = [
+        Section(title: "Playground", demos: [
+            .Playground,
+        ]),
         
-        var title: String { demo.rawValue }
+        Section(title: "Course", demos: [
+            .FoodHome,
+            .FoodPicker,
+            .FoodList,
+            .AnimTest,
+            .ShapeTest,
+            .ListTest,
+            .JSONTest,
+        ]),
         
-        @ViewBuilder
-        var body: some View {
-            Group {
-                switch demo {
-                // Test
-                case .Test1: Test1View()
-                case .Test2: Test2View()
-                case .Test3: Test3View()
-                case .FrameTest: FrameTestView()
-                case .GeometryReaderTest: GeometryReaderTestView()
-                case .StateObjectTest: StateObjectTestView()
-                case .StateInitTest: StateInitTestView()
-                case .EnvironmentTest: EnvironmentTestView()
-                    
-                // Base
-                case .MatchedGeometryEffect: MatchedGeometryEffectView()
-                case .LazyGrid: LazyGridView()
-                case .ResultBuilder: ResultBuilderView()
-                    
-                // Unit
-                case .Buttons: ButtonsView()
-                case .ProgressHUD: ProgressHUDView()
-                case .FunnyPlay: FunnyPlayView()
-                    
-                // Animation
-                case .AnimationValue: AnimationValueView()
-                case .AnimExperience_iOS15: AnimExperience_iOS15_View()
-                case .AnimExperience: AnimExperienceView()
-                    
-                // GIF
-                case .GifImage:
-                    if #available(iOS 15.0.0, *) {
-                        GifImageView()
-                    } else {
-                        Text("需要iOS15+")
-                    }
-                case .AsyncGifImage:
-                    if #available(iOS 15.0.0, *) {
-                        AsyncGifImageView()
-                    } else {
-                        Text("需要iOS15+")
-                    }
-                    
-                // UIKit
-                case .ImagePicker:
-                    ImagePickerShowView()
-                case .ImageCroper:
-                    ImageCroperView(cachePath: .constant(""), isCroped: .constant(false))
-                        .edgesIgnoringSafeArea(.all)
-                    
-                // Widget
-                case .NevesWidget: NevesWidgetEditView()
-                }
-            }
-            .navigationBarTitle(title, displayMode: .inline)
-        }
-    }
-    
-    struct PlaceholderView: View {
-        let title: String
-        var body: some View {
-            VStack {
-                Text("敬请期待！")
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                    .foregroundColor(Color.randomColor)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.randomColor)
-            .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle(title)
-        }
-    }
+        Section(title: "Test", demos: [
+            .Test1,
+            .Test2,
+            .Test3,
+            .GeometryReaderTest,
+            .StateObjectTest,
+            .StateInitTest,
+            .EnvironmentTest,
+            .RouteTest,
+        ]),
+        
+        Section(title: "Base", demos: [
+            .MatchedGeometryEffect,
+            .LazyGrid,
+            .ResultBuilder,
+            .WaterfallGrid,
+        ]),
+        
+        Section(title: "Unit", demos: [
+            .Buttons,
+            .ProgressHUD,
+            .FunnyPlay,
+        ]),
+        
+        Section(title: "Animation", demos: [
+            .AnimationValue,
+            .AnimExperience_iOS15,
+            .AnimExperience,
+        ]),
+        
+        Section(title: "GIF", demos: [
+            .GifImage,
+            .AsyncGifImage,
+        ]),
+        
+        Section(title: "UIKit", demos: [
+            .ImagePicker,
+            .ImageCroper,
+        ]),
+        
+        Section(title: "Widget", demos: [
+            .NevesWidget,
+        ]),
+    ]
 }

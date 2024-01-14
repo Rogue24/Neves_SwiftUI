@@ -35,7 +35,29 @@ struct GifImage: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIView, context: Context) {
         JPrint("更新了？！", abc, isAnimating)
-        abc = isAnimating
+        
+        // Modifying state during view update, this will cause undefined behavior.
+//        abc = isAnimating
+        /**
+         * 在`SwiftUI`中，当你尝试在视图更新期间修改状态时，你可能会遇到`"Modifying state during view update, this will cause undefined behavior."`的警告或错误。
+         * 这个问题通常是由于在视图的生命周期方法（例如`body`或`onAppear`）中对状态进行了修改，从而导致了不确定的行为。
+         *
+         * 这个问题的根本原因是在【视图更新期间】修改状态，会导致视图无限循环更新，因为每次状态发生变化时，`SwiftUI` 会尝试重新绘制视图，然后再次触发状态的修改，这会导致一个无限循环的过程。
+         *
+         * 说人话就是：
+         * 因为修改状态就会更新视图，如果更新视图的途中又修改状态，这样就会导致：更新视图->修改状态->更新视图->修改状态... 死循环！
+         *
+         * 解决方法：使用`DispatchQueue.main.async`
+         * 将状态修改操作放在`DispatchQueue.main.async`块中，以确保它在【下一个`RunLoop` 】中执行。
+         * 这样可以避免在视图更新期间进行状态修改，从而解决循环更新的问题。
+         *
+         * 参考：
+         * https://www.jianshu.com/p/7abc825693fd
+         * https://swiftui-lab.com/state-changes/
+         */
+        DispatchQueue.main.async {
+            abc = isAnimating
+        }
         
         guard let imgView = uiView.viewWithTag(33) as? UIImageView else { return }
         guard let gifResult = self.gifResult else {

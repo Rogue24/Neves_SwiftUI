@@ -98,7 +98,7 @@ struct AnimExperience_iOS15_View: View {
             }
         }
         .frame(maxHeight: .infinity)
-        .background(Color.randomColor)
+        .background(.randomColor)
         .padding()
         .animation(
             .spring(response: 0.5,
