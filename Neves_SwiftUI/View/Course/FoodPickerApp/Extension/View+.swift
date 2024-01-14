@@ -72,17 +72,24 @@ extension View {
     func maxHeight() -> some View {
         yPush(to: .center)
     }
+}
+
+// MARK: - Read Geometry
+
+@available(iOS 15.0, *)
+extension View {
+    // MARK: KeyPath
     
     /// 读取【目前】视图的`Geometry`信息（读取这一句之前上面这部分的视图的`Geometry`信息）
     /// 并通过`PreferenceKey`进行回传（防止在子视图里面修改父视图的`State`属性）
     func readGeometry<K: PreferenceKey, V>(_ keyPath: KeyPath<GeometryProxy, V>, key: K.Type) -> some View where K.Value == V {
         // 读取【调用`overlay`之前以上的这部分视图】的`Geometry`信息，并通过`PreferenceKey`进行回传
-        self.overlay {
+        overlay {
             GeometryReader { proxy in
                 //【注意】：不可以直接在【子视图内部】刷新父视图的State属性
-//                    detailHeight = proxy.size.height
+                // self.xxx = proxy.size.height
                 
-                // `detailHeight`是父视图的State属性，
+                // 假设`xxx`是父视图的State属性，
                 // 改变该属性就会影响里面子视图的布局，
                 // 然后此处子视图的布局只要发生改变，又会改变这个State属性，
                 // 从而又会让父视图重复去改变里面子视图的布局，周而复始，导致死循环。
@@ -97,4 +104,71 @@ extension View {
             }
         }
     }
+    
+    func readGeometry<K: PreferenceKey, V: Equatable>(_ keyPath: KeyPath<GeometryProxy, V>, key: K.Type, perform action: @escaping (K.Value) -> Void) -> some View where K.Value == V {
+        readGeometry(keyPath, key: key)
+            .onPreferenceChange(key, perform: action)
+    }
+    
+    // MARK: - Size
+    
+    func readSize<P: PreferenceKey>(key: P.Type) -> some View where P.Value == CGSize {
+        readGeometry(\.size, key: key)
+    }
+    
+    func readSize<P: PreferenceKey>(key: P.Type, perform action: @escaping (P.Value) -> Void) -> some View where P.Value == CGSize {
+        readGeometry(\.size, key: key)
+            .onPreferenceChange(key, perform: action)
+    }
+    
+    // MARK: - Size.Width
+    
+    func readWidth<P: PreferenceKey>(key: P.Type) -> some View where P.Value == CGFloat {
+        readGeometry(\.size.width, key: key)
+    }
+    
+    func readWidth<P: PreferenceKey>(key: P.Type, perform action: @escaping (P.Value) -> Void) -> some View where P.Value == CGFloat {
+        readGeometry(\.size.width, key: key)
+            .onPreferenceChange(key, perform: action)
+    }
+    
+    // MARK: - Size.Height
+    
+    func readHeight<P: PreferenceKey>(key: P.Type) -> some View where P.Value == CGFloat {
+        readGeometry(\.size.height, key: key)
+    }
+    
+    func readHeight<P: PreferenceKey>(key: P.Type, perform action: @escaping (P.Value) -> Void) -> some View where P.Value == CGFloat {
+        readGeometry(\.size.height, key: key)
+            .onPreferenceChange(key, perform: action)
+    }
+    
+    // MARK: - SafeAreaInsets
+    
+    func readSafeAreaInsets<P: PreferenceKey>(key: P.Type) -> some View where P.Value == EdgeInsets {
+        readGeometry(\.safeAreaInsets, key: key)
+    }
+    
+    func readSafeAreaInsets<P: PreferenceKey>(key: P.Type, perform action: @escaping (P.Value) -> Void) -> some View where P.Value == EdgeInsets {
+        readGeometry(\.safeAreaInsets, key: key)
+            .onPreferenceChange(key, perform: action)
+    }
+    
+    // MARK: - Frame
+    
+    func readFrame<P: PreferenceKey>(_ coordinateSpace: CoordinateSpace, key: P.Type) -> some View where P.Value == CGRect {
+        self.overlay {
+            GeometryReader { proxy in
+                Color.clear
+                    .preference(key: key, value: proxy.frame(in: coordinateSpace))
+            }
+        }
+    }
+    
+    func readFrame<P: PreferenceKey>(_ coordinateSpace: CoordinateSpace, key: P.Type, perform action: @escaping (P.Value) -> Void) -> some View where P.Value == CGRect {
+        readFrame(coordinateSpace, key: key)
+            .onPreferenceChange(key, perform: action)
+    }
+    
 }
+
