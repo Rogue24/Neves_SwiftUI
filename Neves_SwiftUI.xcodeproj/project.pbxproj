@@ -78,7 +78,6 @@
 		1A9D13C92A35A23C00276AA3 /* FoodPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */; };
 		1A9D13CB2A35A3B400276AA3 /* Task.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */; };
 		1A9D13CC2A35A3B400276AA3 /* Task.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */; };
-		1A9D13CE2A35A3CA00276AA3 /* View.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CD2A35A3CA00276AA3 /* View.Extension.swift */; };
 		1AA059622AAE5F74004142F6 /* JSONTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA059612AAE5F74004142F6 /* JSONTestView.swift */; };
 		1AC288A72AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC288A62AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift */; };
 		1AC7ECE72A89407D006ADBDC /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7ECE62A89407D006ADBDC /* Unit.swift */; };
@@ -255,7 +254,6 @@
 		1A86EE712A7FC77400A151FB /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerScreen.swift; sourceTree = "<group>"; };
 		1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.Extension.swift; sourceTree = "<group>"; };
-		1A9D13CD2A35A3CA00276AA3 /* View.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.Extension.swift; sourceTree = "<group>"; };
 		1AA059612AAE5F74004142F6 /* JSONTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestView.swift; sourceTree = "<group>"; };
 		1AC288A42AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Neves_SwiftUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC288A62AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neves_SwiftUI_Tests.swift; sourceTree = "<group>"; };
@@ -773,7 +771,6 @@
 				715ED79D2700642C0030F279 /* UIView.Extension.swift */,
 				715ED79B2700642C0030F279 /* UIViewController.Extension.swift */,
 				1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */,
-				1A9D13CD2A35A3CA00276AA3 /* View.Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1249,7 +1246,6 @@
 				715ED7C92700642C0030F279 /* JP.swift in Sources */,
 				1AC7ECE72A89407D006ADBDC /* Unit.swift in Sources */,
 				1A86EE702A7FA61E00A151FB /* HomeScreen.swift in Sources */,
-				1A9D13CE2A35A3CA00276AA3 /* View.Extension.swift in Sources */,
 				1AC7ECEC2A894114006ADBDC /* AppStorage+.swift in Sources */,
 				00D63E0A299103C5003F0C29 /* BlurEffectModifier.swift in Sources */,
 				715ED7C82700642C0030F279 /* String.Extension.swift in Sources */,

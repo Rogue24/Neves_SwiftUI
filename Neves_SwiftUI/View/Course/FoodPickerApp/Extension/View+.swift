@@ -8,6 +8,12 @@
 import SwiftUI
 
 extension View {
+    func intoUIVC() -> UIHostingController<Self> {
+        UIHostingController(rootView: self)
+    }
+}
+
+extension View {
     func mainButtonStyle(shape: ButtonBorderShape = .capsule) -> some View {
         self.buttonStyle(.borderedProminent)
             .buttonBorderShape(shape)
