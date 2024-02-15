@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00245A042A4B039400E5CF67 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00245A032A4B039400E5CF67 /* PlaygroundView.swift */; };
+		00535C6E2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */; };
 		008DC2FE29778E300039AB22 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
 		008DC3192977DCCF0039AB22 /* FunnyPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */; };
 		00B3C6E629AC49370027F587 /* WaterfallGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E529AC49370027F587 /* WaterfallGrid.swift */; };
@@ -194,6 +195,7 @@
 
 /* Begin PBXFileReference section */
 		00245A032A4B039400E5CF67 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
+		00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageDemoScreen.swift; sourceTree = "<group>"; };
 		008DC2B8297254320039AB22 /* Neves-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Neves-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyPlayView.swift; sourceTree = "<group>"; };
 		00B3C6E529AC49370027F587 /* WaterfallGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGrid.swift; sourceTree = "<group>"; };
@@ -369,6 +371,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00535C6C2B7CCC8A00C308C9 /* NetworkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */,
+			);
+			path = NetworkDemo;
+			sourceTree = "<group>";
+		};
 		00D63DEE299103C5003F0C29 /* SwiftUIVisualEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,7 +537,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A630B7B2A7655A500F3D2C1 /* Test */ = {
+		1A630B7B2A7655A500F3D2C1 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
 				1A7936E22A35E9DA005F8747 /* AnimTestView.swift */,
@@ -535,7 +545,7 @@
 				1A467BA52A49971E0026F21B /* ListTestView.swift */,
 				1AA059612AAE5F74004142F6 /* JSONTestView.swift */,
 			);
-			path = Test;
+			path = TestDemo;
 			sourceTree = "<group>";
 		};
 		1A630B7C2A7655B800F3D2C1 /* Utils */ = {
@@ -551,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				1A9D13C72A35A15C00276AA3 /* FoodPickerApp */,
+				00535C6C2B7CCC8A00C308C9 /* NetworkDemo */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -563,7 +574,7 @@
 				1A630B752A76548100F3D2C1 /* Extension */,
 				1AC7ECE82A8940AA006ADBDC /* Constant */,
 				1A630B7C2A7655B800F3D2C1 /* Utils */,
-				1A630B7B2A7655A500F3D2C1 /* Test */,
+				1A630B7B2A7655A500F3D2C1 /* TestDemo */,
 			);
 			path = FoodPickerApp;
 			sourceTree = "<group>";
@@ -1224,6 +1235,7 @@
 				008DC3192977DCCF0039AB22 /* FunnyPlayView.swift in Sources */,
 				71032D3927605D6F0030776A /* MatchedGeometryEffectView.swift in Sources */,
 				00D63E04299103C5003F0C29 /* BlurEffectStyleKey.swift in Sources */,
+				00535C6E2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift in Sources */,
 				71032D4E2760632E0030776A /* BeautyItem.swift in Sources */,
 				00D63E03299103C5003F0C29 /* VibrancyEffectStyleKey.swift in Sources */,
 				715ED7C32700642C0030F279 /* ScreenFit.Extension.swift in Sources */,
