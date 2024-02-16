@@ -19,7 +19,7 @@ extension URLSession {
  * `URLCache`不会缓存【大于预设容量5%】的数据：
  * The response size is small enough to reasonably fit within the cache. (For example, if you provide a disk cache, the response must be no larger than about 5% of the disk cache size.)
  * 响应大小足够小，可以合理地放入缓存中。（例如，如果你提供了一个磁盘缓存，则响应大小不能超过磁盘缓存大小的大约5%。）
- * 文档：https://developer.apple.com/documentation/foundation/urlsessiondatadelegate/1411612-urlsession
+ * 官方文档：https://developer.apple.com/documentation/foundation/urlsessiondatadelegate/1411612-urlsession
  */
 extension URLCache {
     static let imageCache = URLCache(
@@ -29,31 +29,46 @@ extension URLCache {
 }
 
 struct JPAsyncImage: View {
-    @State private var phase: AsyncImagePhase = .empty
-    let url: URL
-    var session = URLSession.imageSession
+    let urlRequest: URLRequest
+    var session: URLSession
+    @State private var phase: AsyncImagePhase
     
-    var body: some View {
-        switch phase {
-        case .empty:
-            ProgressView()
-                .scaleEffect(3)
-                .task { await load() }
-        case .success(let image):
-            image
-                .resizable()
-                .scaledToFit()
-        case .failure(let error):
-            Text(error.localizedDescription)
-        @unknown default:
-            Text("啊？")
+    init(url: URL, session: URLSession = .imageSession) {
+        self.urlRequest = URLRequest(url: url)
+        self.session = session
+        
+        /// 初始化`@State`的注意点：参考`StateInitTestView`
+        if let data = session.configuration.urlCache?.cachedResponse(for: urlRequest)?.data, 
+           let uiImage = UIImage(data: data) {
+            _phase = State(wrappedValue: .success(Image(uiImage: uiImage)))
+        } else {
+            _phase = State(wrappedValue: .empty)
         }
     }
     
+    var body: some View {
+        Group {
+            switch phase {
+            case .empty:
+                ProgressView()
+                    .scaleEffect(3)
+                    .task { await load() }
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFit()
+            case .failure(let error):
+                Text(error.localizedDescription)
+            @unknown default:
+                Text("啊？")
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+    
     func load() async {
-        let request = URLRequest(url: url)
         do {
-            let (data, response) = try await session.data(for: request)
+            let (data, response) = try await session.data(for: urlRequest)
             
             guard let response = response as? HTTPURLResponse,
                   200...299 ~= response.statusCode,
@@ -106,7 +121,9 @@ struct AsyncImageDemoScreen: View {
 //                }
 //            }.id(id)
             
-            JPAsyncImage(url: url).id(id)
+            JPAsyncImage(url: url)
+                .frame(height: 300)
+                .id(id)
             
             Button("重置") {
                 id = UUID()

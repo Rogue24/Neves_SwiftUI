@@ -46,7 +46,8 @@ struct DetailView0: View {
 //    private var _number: State<Int>
     
     /// 以前会报错，因为在调用`self.number`的时候，底层`_number`是没有完成初始化的。
-    /// 在最新的Xcode中已经不会报错了：对于初始化方法中【类型匹配】的情况（不匹配的情况如`Int`和`Int?`），
+    /// 在最新的Xcode中已经不会报错了：对于初始化方法中【类型匹配】的情况，
+    /// - 不匹配的情况：例如`DetailView1`中的`Int?`和`Int`
     /// Swift 编译时会将其映射到内部底层存储的值，并完成设置（相当于直接赋值：`_number._value = value`）。
     init(number: Int) {
         self.number = number + 1
@@ -77,6 +78,8 @@ struct DetailView1: View {
         self.number = number + 1
         print("111: init \(self.number ?? 0)") // -> 0
     }
+    /// 📢：对于初始化方法中【类型匹配】的情况（例如`DetailView0`），Swift 编译时会将其映射到内部底层存储的值，并完成设置。
+    /// 不过，对于【类型不匹配】的情况（例如`Int?`和`Int`），这个映射依旧不成立，所以无法通过这种方式完成初始化。
     
     /// - `init`【之后】
     /// * 此时`_graph`才被赋值，有值之后`_number`才能通过`self.number`进行赋值
@@ -91,7 +94,7 @@ struct DetailView1: View {
     }
 }
 
-// MARK: - 从外部给可选类型的State初始化（解决方案1）
+// MARK: - 从外部给可选类型的State初始化（解决方案1）【推荐】
 struct DetailView2: View {
     @State private var number: Int?
     /// 对于`@State`的声明，会在当前`View`中带来一个【自动生成】的私有存储属性，来存储真实的`State struct`值
