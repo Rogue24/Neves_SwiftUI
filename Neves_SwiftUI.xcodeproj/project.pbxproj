@@ -89,6 +89,8 @@
 		1A9D13C92A35A23C00276AA3 /* FoodPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */; };
 		1A9D13CB2A35A3B400276AA3 /* Task.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */; };
 		1A9D13CC2A35A3B400276AA3 /* Task.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */; };
+		1AA058052B94E030000909BE /* CatAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA058042B94E030000909BE /* CatAPIManager.swift */; };
+		1AA0580A2B94F7FB000909BE /* CatAPIManager+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA058092B94F7FB000909BE /* CatAPIManager+Env.swift */; };
 		1AA059622AAE5F74004142F6 /* JSONTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA059612AAE5F74004142F6 /* JSONTestView.swift */; };
 		1AA103EF2B7F67D900194C66 /* CodableTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA103EE2B7F67D900194C66 /* CodableTestView.swift */; };
 		1AC288A72AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC288A62AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.swift */; };
@@ -277,6 +279,8 @@
 		1A86EE712A7FC77400A151FB /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerScreen.swift; sourceTree = "<group>"; };
 		1A9D13CA2A35A3B400276AA3 /* Task.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.Extension.swift; sourceTree = "<group>"; };
+		1AA058042B94E030000909BE /* CatAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIManager.swift; sourceTree = "<group>"; };
+		1AA058092B94F7FB000909BE /* CatAPIManager+Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Env.swift"; sourceTree = "<group>"; };
 		1AA059612AAE5F74004142F6 /* JSONTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestView.swift; sourceTree = "<group>"; };
 		1AA103EE2B7F67D900194C66 /* CodableTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTestView.swift; sourceTree = "<group>"; };
 		1AC288A42AADB1F0007C1DB2 /* Neves_SwiftUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Neves_SwiftUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -501,9 +505,10 @@
 		1A34346C2B94D64C00EB4B35 /* CatImageApp */ = {
 			isa = PBXGroup;
 			children = (
-				1A34346D2B94D6B900EB4B35 /* Extension */,
+				1AA058082B94F7EE000909BE /* Manager */,
 				1A3434732B94D6B900EB4B35 /* Screen */,
 				1A3434772B94D6B900EB4B35 /* View */,
+				1A34346D2B94D6B900EB4B35 /* Extension */,
 			);
 			path = CatImageApp;
 			sourceTree = "<group>";
@@ -642,6 +647,15 @@
 				1A630B7B2A7655A500F3D2C1 /* TestDemo */,
 			);
 			path = FoodPickerApp;
+			sourceTree = "<group>";
+		};
+		1AA058082B94F7EE000909BE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1AA058042B94E030000909BE /* CatAPIManager.swift */,
+				1AA058092B94F7FB000909BE /* CatAPIManager+Env.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		1AC288A52AADB1F0007C1DB2 /* Neves_SwiftUI_Tests */ = {
@@ -1293,6 +1307,7 @@
 				1A630B802A76569F00F3D2C1 /* FoodSheet.swift in Sources */,
 				00B3C6E629AC49370027F587 /* WaterfallGrid.swift in Sources */,
 				00ED822E296BBF73006F035B /* AppGroups.swift in Sources */,
+				1AA058052B94E030000909BE /* CatAPIManager.swift in Sources */,
 				1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,
 				1A630B842A76D4FE00F3D2C1 /* AnyTransition+.swift in Sources */,
@@ -1325,6 +1340,7 @@
 				715ED7D02700642C0030F279 /* File.swift in Sources */,
 				1A3434802B94D6B900EB4B35 /* CatHomeScreen.swift in Sources */,
 				715ED7C02700642C0030F279 /* Bundle.Extension.swift in Sources */,
+				1AA0580A2B94F7FB000909BE /* CatAPIManager+Env.swift in Sources */,
 				1A3434822B94D6B900EB4B35 /* CatImageView.swift in Sources */,
 				1A630B882A76D52500F3D2C1 /* ShapeStyle+.swift in Sources */,
 				1A34347A2B94D6B900EB4B35 /* Decoding+.swift in Sources */,

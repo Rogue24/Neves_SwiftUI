@@ -82,16 +82,13 @@ private extension CatImageView {
     func load() async {
         do {
             let urlRequest = URLRequest(url: catImage.url)
-            let (data, response) = try await session.data(for: urlRequest)
-            guard let response = response as? HTTPURLResponse,
-                  200...299 ~= response.statusCode,
-                  let uiImage = UIImage(data: data)
-            else {
-                // FIXME: useful error
-                throw URLError(.unknown)
+            let data = try await session.data(for: urlRequest)
+            
+            guard let uiImage = UIImage(data: data) else {
+                throw URLSession.APIError.invalidData
             }
             
-            phase = .success(.init(uiImage: uiImage))
+            phase = .success(Image(uiImage: uiImage))
         } catch {
             phase = .failure(error)
         }

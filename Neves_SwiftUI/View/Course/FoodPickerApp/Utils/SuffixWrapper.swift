@@ -71,3 +71,19 @@ extension Suffix: Codable {
         try container.encode(unit, forKey: .unit)
     }
 }
+
+
+@propertyWrapper
+struct Old_Suffix: Equatable {
+    var wrappedValue: Double
+    private let suffix: String
+    
+    init(wrappedValue: Double, _ suffix: String) {
+        self.wrappedValue = wrappedValue
+        self.suffix = suffix
+    }
+    
+    var projectedValue: String {
+        wrappedValue.formatted() + suffix
+    }
+}

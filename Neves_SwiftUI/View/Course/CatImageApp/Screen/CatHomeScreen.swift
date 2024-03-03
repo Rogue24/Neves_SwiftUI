@@ -9,6 +9,7 @@ import SwiftUI
 
 // FIXME: Better implementation for handling favorites.
 struct CatHomeScreen: View {
+    @Environment(\.catApiManager) var apiManager: CatAPIManager
     @State private var tab: Tab = .images
     @State private var favoriteImages: [CatImageViewModel] = []
     
@@ -47,5 +48,6 @@ private extension CatHomeScreen {
 struct CatHomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         CatHomeScreen()
+            .environment(\.catApiManager, .stub) // 自定义环境变量
     }
 }

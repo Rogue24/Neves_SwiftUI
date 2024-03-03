@@ -30,8 +30,8 @@ struct Neves_SwiftUIApp: App {
 //    func applyTabBarBackground() {
 //        let appearance = UITabBarAppearance()
 //        appearance.configureWithTransparentBackground()
-//        appearance.backgroundColor = .blue
-//        appearance.backgroundEffect = UIBlurEffect(style: .extraLight)
+//        appearance.backgroundColor = .systemBackground.withAlphaComponent(0.3)
+//        appearance.backgroundEffect = UIBlurEffect(style: .systemChromeMaterial)
 //        UITabBar.appearance().scrollEdgeAppearance = appearance
 //    }
 //

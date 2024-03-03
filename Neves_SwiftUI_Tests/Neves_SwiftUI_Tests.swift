@@ -10,10 +10,6 @@ import XCTest
 @testable import Neves_SwiftUI
 
 final class Neves_SwiftUI_Tests: XCTestCase {
-    
-    /// 测试的主体
-    /// `sut`: ** system under test **
-    var sut: Suffix!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -46,27 +42,47 @@ final class Neves_SwiftUI_Tests: XCTestCase {
         }
     }
     
+    // MARK: - Test: Old_Suffix
+    
+    /// 测试的主体
+    /// `sut`: ** system under test **
+//    var sut: Old_Suffix!
+    
     /// 需要测试的函数需要加上`test`前缀！！！
-    func test_formatter() {
-        sut = Suffix(wrappedValue: 100, "g")
-        XCTAssertEqual(sut.projectedValue, "100 g", "这都搞不掂？！")
-        
-        sut = Suffix(wrappedValue: 100.888, "g")
-        XCTAssertEqual(sut.projectedValue, "100.9 g", "最多只显示1位小数点，并且四舍五入")
-        
-        sut = Suffix(wrappedValue: -100.234, "g")
-        XCTAssertEqual(sut.projectedValue, "-100.2 g", "最多只显示1位小数点，并且四舍五入")
-    }
+//    func test_formatter() {
+//        sut = Old_Suffix(wrappedValue: 100, "g")
+//        XCTAssertEqual(sut.projectedValue, "100 g", "这都搞不掂？！")
+//        
+//        sut = Old_Suffix(wrappedValue: 100.888, "g")
+//        XCTAssertEqual(sut.projectedValue, "100.9 g", "最多只显示1位小数点，并且四舍五入")
+//        
+//        sut = Old_Suffix(wrappedValue: -100.234, "g")
+//        XCTAssertEqual(sut.projectedValue, "-100.2 g", "最多只显示1位小数点，并且四舍五入")
+//    }
 
     /// 函数命名规范：`test_主体_情况_结果`
-    func test_formatteredString_suffixIsEmpty_shouldNotIncludeSpace() {
-        // 1.Arrange 设定
-        sut = Suffix(wrappedValue: 100, "")
+//    func test_formatteredString_suffixIsEmpty_shouldNotIncludeSpace() {
+//        // 1.Arrange 设定
+//        sut = Old_Suffix(wrappedValue: 100, "")
+//        
+//        // 2.Act 变化
+//        let result = sut.projectedValue
+//          
+//        // 3.Assert 结果
+//        XCTAssertEqual(result, "100", "没有后缀时别带上空格")
+//    }
+    
+    // MARK: - Test: CatAPIManager
+    
+    /// 测试的主体
+    /// `sut`: ** system under test **
+    let sut = CatAPIManager.stub
+    
+    // 调试网络数据的解码
+    func test_getImages() async throws {
+        let images = try await sut.getImages()
         
-        // 2.Act 变化
-        let result = sut.projectedValue
-          
-        // 3.Assert 结果
-        XCTAssertEqual(result, "100", "没有后缀时别带上空格")
+        // 检查是不是拿到了10张图片
+        XCTAssertEqual(images.count, 10)
     }
 }

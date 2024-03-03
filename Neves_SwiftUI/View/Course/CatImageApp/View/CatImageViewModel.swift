@@ -14,7 +14,16 @@ struct CatImageViewModel: Identifiable {
     let height: CGFloat?
 }
 
-extension CatImageViewModel: Equatable { }
+extension CatImageViewModel: Equatable {}
+
+extension CatImageViewModel {
+    init(_ response: CatAPIManager.ImageResponse) {
+        self.init(id: response.id,
+                  url: response.url,
+                  width: response.width,
+                  height: response.height)
+    }
+}
 
 extension [CatImageViewModel] {
     static let stub: [CatImageViewModel] = [
