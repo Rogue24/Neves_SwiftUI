@@ -8,22 +8,37 @@
 import Foundation
 
 struct DecodingKey: CodingKey {
+    // CodingKey:
+    // Int -> String 肯定可以的，所以`stringValue`是确定类型
+    // String -> Int 不一定可以，所以`intValue`是可选类型
+    
     var stringValue: String
     var intValue: Int?
     
     init?(stringValue: String) {
         self.stringValue = stringValue
+        self.intValue = Int(stringValue)
     }
     
     init?(intValue: Int) {
-        return nil
+        self.intValue = intValue
+        self.stringValue = "\(intValue)"
     }
 }
 
-
+// 直接String创建 -> let key: DecodingKey = "hello"
 extension DecodingKey: ExpressibleByStringLiteral {
-    init(stringLiteral: String) {
-        stringValue = stringLiteral
+    init(stringLiteral value: String) {
+        stringValue = value
+        intValue = Int(value)
+    }
+}
+
+// 直接Int创建 -> let key: DecodingKey = 123
+extension DecodingKey: ExpressibleByIntegerLiteral {
+    init(integerLiteral value: Int) {
+        intValue = value
+        stringValue = "\(value)"
     }
 }
 

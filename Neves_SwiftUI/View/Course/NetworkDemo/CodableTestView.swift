@@ -57,7 +57,7 @@ private extension CodableTestView {
             let rsp2: MyResponse<User3> = try JSONDecoder().decode(MyResponse.self, from: jsonData3)
             text3 = "\(rsp2)"
             
-            let rsp3: MyResponse<User4> = try JSONDecoder().decode(MyResponse.self, from: jsonData3)
+            let rsp3: MyResponse<User4> = try JSONDecoder().decode(MyResponse.self, from: jsonData4)
             text4 = "\(rsp3)"
         } catch {
             text1 = "\(error.localizedDescription)"
@@ -221,6 +221,23 @@ private extension CodableTestView {
 
 // MARK: - 🌰5
 
+private let jsonData4 = Data(
+"""
+{
+"status": 200,
+"quota": 100,
+"response": {
+    "id": 775,
+    "firstName": "Shuai",
+    "lastName": "Ge",
+    "friends":[
+        {"id": 97, "666": "sss"},
+        {"id": 23, "666": "bbb"},
+    ],
+},
+}
+""".utf8)
+
 private extension KeyedDecodingContainerProtocol {
     // subscript的语法类似于实例方法、计算属性，本质就是方法(函数)
     // subscript可以没有set方法，但必须要有get方法
@@ -235,6 +252,17 @@ private extension KeyedDecodingContainerProtocol {
     }
 }
 
+/// `UnkeyedDecodingContainer`顾名思义就是没有`key`的`Container`，相当于是「指向数组第x个元素的起始指针」，
+/// 🌰：
+///
+///     "friends":[
+///         {"id": 97, "666": "sss"},
+///         {"id": 23, "666": "bbb"},
+///     ]
+///
+/// 此时第一个`UnkeyedDecodingContainer`就是`{"id": 97, "666": "sss"}`，但ta并不是一个字典，没办法通过`key`获取对应的`value`，只是一个指向数组第一个元素的 “指针”。
+/// 接着通过`superDecoder`，获取到当前这一个`{"id": 97, "666": "sss"}`的`Decoder`（注意并不是整个`friends`的，而是第一个元素的），
+/// 这里把`superDecoder`抛出去，让外部自行决定如何解码，例如将该`Decoder`转成`KeyedDecodingContainer`，即可通过`key`获取对应的`value`了。
 private extension UnkeyedDecodingContainer {
     mutating func map<T>(_ transform: (Decoder) throws -> T) throws -> [T] {
         var items: [T] = []
@@ -256,13 +284,8 @@ private extension CodableTestView {
             case id, firstName, lastName, friends
         }
         
-        enum FriendKeys: CodingKey {
-            case id
-        }
-        
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: MyKeys.self)
-            
             
             self.id = try container[.id]
             
@@ -272,20 +295,37 @@ private extension CodableTestView {
             
             // 现在的`container`是【字典】的形状，转成【数组】形状的`friendContainer`去遍历数据
             // `nestedUnkeyedContainer(forKey:)`：【字典】->【数组】
-            var friendContainer = try container.nestedUnkeyedContainer(forKey: .friends)
-            self.friendIDs = try friendContainer.map { 
+            var friendContainer = try container.nestedUnkeyedContainer(forKey: .friends) 
+            // --> get "response.friends" -> [[String: Any]]
+            self.friendIDs = try friendContainer.map {
+                // --> get "friends[x]" -> {"id": xx, "666": "xx"}
+                
+                // 方式一
 //                friendDecoder in
 //                let frienndIDContainer = try friendDecoder.container(keyedBy: FriendKeys.self)
 //                return try frienndIDContainer[.id]
-                try $0.container(keyedBy: FriendKeys.self)[.id]
+                
+                // 方式二
+//                try $0.container(keyedBy: FriendKeys.self)[.id]
+                
+                // 方式三
+                // 获取可通过`String`和`Int`类型key解码的Container：
+                // Decoding+：container() -> KeyedDecodingContainer<DecodingKey>
+                
+                // 兼容Int类型的key
+                let abc: String = try $0.container()[666]
+                print(abc)
+                
+                return try $0.container()["id"]
+                
+//                var aaaaa: Int = try $0.container()[111]
+//                aaaaa += 3
+//                return aaaaa
             }
             
 //            container.superDecoder().container(keyedBy: )
             
 //            self.friendIDs = try container.decode([[String:Int]].self, forKey: .friends).map({ $0["id"] ?? 0 })
-            
-            
-            
         }
     }
 }
