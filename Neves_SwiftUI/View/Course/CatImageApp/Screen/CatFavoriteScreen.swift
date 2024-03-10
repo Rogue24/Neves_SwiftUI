@@ -12,12 +12,12 @@ struct CatFavoriteScreen: View {
     
     var body: some View {
         VStack {
-            Text("我的最愛")
+            Text("我的最爱")
                 .font(.largeTitle.bold())
             
             ScrollView {
                 if favorites.isEmpty {
-                    Text("雙擊圖片即可新增到最愛喲 😊")
+                    Text("双击图片即可新增到最爱哟 😊")
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .offset(x: favorites.isEmpty ? 0 : -UIScreen.main.bounds.maxX)

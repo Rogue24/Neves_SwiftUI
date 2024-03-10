@@ -63,7 +63,7 @@ struct CatImageView: View {
                 case .failure:
                     Color(.systemGray6)
                         .overlay {
-                            Text("圖片無法顯示")
+                            Text("图片无法显示")
                         }
                     
                     
@@ -82,7 +82,7 @@ private extension CatImageView {
     func load() async {
         do {
             let urlRequest = URLRequest(url: catImage.url)
-            let data = try await session.data(for: urlRequest)
+            let data = try await session.jp_data(for: urlRequest)
             
             guard let uiImage = UIImage(data: data) else {
                 throw URLSession.APIError.invalidData

@@ -17,11 +17,11 @@ struct CatImageScreen: View {
     var body: some View {
         VStack {
             HStack {
-                Text("可愛貓咪")
+                Text("阔爱喵喵")
                     .font(.largeTitle.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Button("換一批") { Task { await loadRandomImages() } }
+                Button("换一批") { Task { await loadRandomImages() } }
                     .buttonStyle(.bordered)
                     .font(.headline)
             }.padding(.horizontal)
@@ -30,7 +30,10 @@ struct CatImageScreen: View {
                 ForEach(catImages) { catImage in
                     let isFavourited = favorites.contains(where: \.id == catImage.id)
                     CatImageView(catImage, isFavourited: isFavourited) {
-                        toggleFavorite(catImage)
+                        Task {
+                            // FIXME: error handling & pass async closure?
+                            try! await toggleFavorite(catImage)
+                        }
                     }
                 }
             }
@@ -50,23 +53,25 @@ private extension CatImageScreen {
         catImages = try! await apiManager.getImages().map(CatImageViewModel.init)
     }
     
-    func toggleFavorite(_ cat: CatImageViewModel) {
+    func toggleFavorite(_ cat: CatImageViewModel) async throws {
         guard let index = favorites.firstIndex(where: \.id == cat.id)  else {
-            add(cat)
+            try await add(cat)
             return
         }
-        remove(index: index)
+        try await remove(index: index)
     }
 }
 
 
 private extension CatImageScreen {
-    func add(_ cat: CatImageViewModel) {
+    func add(_ cat: CatImageViewModel) async throws {
+        let id = try await apiManager.addToFavorite(imageID: cat.id)
+        JPrint("已添加：", id)
         favorites.append(cat)
         // TODO: send update to the server
     }
     
-    func remove(index: Int) {
+    func remove(index: Int) async throws {
         favorites.remove(at: index)
         // TODO:  send update to the server
     }

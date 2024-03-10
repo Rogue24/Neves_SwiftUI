@@ -234,6 +234,7 @@ private let jsonData4 = Data(
         {"id": 97, "666": "sss"},
         {"id": 23, "666": "bbb"},
     ],
+    "bestFriend": {"id": 43, "666": "kkk"}
 },
 }
 """.utf8)
@@ -243,7 +244,7 @@ private extension KeyedDecodingContainerProtocol {
     // subscript可以没有set方法，但必须要有get方法
     
     // associatedtype Key : CodingKey
-    subscript<T: Decodable>(_ key: Key) -> T { // ❌ -> throws T，subscript不能在函数的返回添加throws。
+    subscript<T: Decodable>(_ key: Key) -> T { // ❌ -> throws T，subscript不能在【函数的返回】添加「throws」。
         // 当需要在subscript或是属性中「抛出错误」，或者做「async」的时候，
         // 必须要在里面去定义ta的【get】方法：
         get throws {
@@ -279,13 +280,21 @@ private extension CodableTestView {
         var id: Int
         var name: String
         var friendIDs: [Int]
+        var bestFriendID: Int
         
         enum MyKeys: CodingKey {
-            case id, firstName, lastName, friends
+            case id, firstName, lastName, friends, bestFriend
         }
+        
+//        enum BestFriendKeys: CodingKey {
+//            case id
+//        }
         
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: MyKeys.self)
+            
+            // container.superDecoder() 拿到的也就是 decoder
+            // container <==> container.superDecoder().container(keyedBy: MyKeys.self)
             
             self.id = try container[.id]
             
@@ -322,10 +331,14 @@ private extension CodableTestView {
 //                aaaaa += 3
 //                return aaaaa
             }
-            
-//            container.superDecoder().container(keyedBy: )
-            
+            // 相当于：
 //            self.friendIDs = try container.decode([[String:Int]].self, forKey: .friends).map({ $0["id"] ?? 0 })
+            
+            let bestFriendContainer = try container.nestedContainer(key: .bestFriend)
+            self.bestFriendID = try bestFriendContainer["id"]
+            // 相当于：
+//            let bestFriendContainer = try container.nestedContainer(keyedBy: BestFriendKeys.self, forKey: .bestFriend)
+//            self.bestFriendID = try bestFriendContainer.decode(Int.self, forKey: .id)
         }
     }
 }

@@ -85,7 +85,7 @@ extension Demo: View {
         case .JSONTest: JSONTestView()
         case .AsyncImageTest: AsyncImageDemoScreen()
         case .CodableTest: CodableTestView()
-        case .CatHome: CatHomeScreen()
+        case .CatHome: CatHomeScreen().environment(\.catApiManager, .shared)
             
         // Test
         case .Test1: Test1View()

@@ -78,11 +78,28 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     /// `sut`: ** system under test **
     let sut = CatAPIManager.stub
     
-    // 调试网络数据的解码
+    // ----- 调试网络数据的解码 -----
+    
     func test_getImages() async throws {
         let images = try await sut.getImages()
-        
-        // 检查是不是拿到了10张图片
+        // 检查是不是拿到10张图片
         XCTAssertEqual(images.count, 10)
+    }
+    
+    func test_getFavorites() async throws {
+        do {
+            let favorites = try await sut.getFavorites()
+            let imageURL = favorites.first!.imageURL
+            // 检查是不是拿到目标URL
+            XCTAssertEqual(imageURL, "https://cdn2.thecatapi.com/images/E8dL1Pqpz.jpg")
+        } catch {
+            XCTFail("❌ Unexpected Error: \(error)")
+        }
+    }
+    
+    func test_addToFavorite() async throws {
+        let id = try await sut.addToFavorite(imageID: "")
+        // 检查解码拿到的id是不是100038507
+        XCTAssertEqual(id, 100038507)
     }
 }

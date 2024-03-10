@@ -30,20 +30,17 @@ struct CatHomeScreen: View {
     }
 }
 
-
 private extension CatHomeScreen {
     func loadFavorites() async throws {
         // TODO: fetch favorite
     }
 }
 
-
 private extension CatHomeScreen {
     enum Tab {
         case images, favorites
     }
 }
-
 
 struct CatHomeScreen_Previews: PreviewProvider {
     static var previews: some View {
