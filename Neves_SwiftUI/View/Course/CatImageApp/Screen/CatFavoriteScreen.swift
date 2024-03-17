@@ -28,10 +28,7 @@ struct CatFavoriteScreen: View {
                 
                 ForEach(Array(favorites.enumerated()), id: \.element.imageID) { index, favoriteItem in
                     CatImageView(CatImageViewModel(favoriteItem: favoriteItem), isFavourited: true) {
-                        Task {
-                            // FIXME: error handling & pass async closure?
-                            try! await favorites.remove(at: index, apiManager: apiManager)
-                        }
+                        try? await favorites.remove(at: index, apiManager: apiManager)
                     }.transition(.slide)
                 }
             }

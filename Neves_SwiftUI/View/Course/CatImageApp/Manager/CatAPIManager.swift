@@ -17,6 +17,11 @@ final class CatAPIManager {
         try await URLSession.cat_imageSession.jp_data(for: $0.request)
     }
     
+    static let preview = CatAPIManager {
+        try? await Task.sleep(for: .seconds(1)) // 模拟网络请求：停1s再回传
+        return $0.stub
+    }
+    
     static let stub = CatAPIManager { $0.stub }
     
     private init(getData: @escaping (Endpoint) async throws -> Data) {

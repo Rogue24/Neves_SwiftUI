@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CatImageView: View {
     @State private var phase: AsyncImagePhase
+    @State private var isLoading: Bool = false
     private var session: URLSession = .cat_imageSession
     
     private let catImage: CatImageViewModel
     private let isFavourited: Bool
-    private var onDoubleTap: () -> Void
+    private var onDoubleTap: () async -> Void
     
-    
-    init(_ catImage: CatImageViewModel, isFavourited: Bool, session: URLSession = .cat_imageSession, onDoubleTap: @escaping () -> Void) {
+    init(_ catImage: CatImageViewModel, isFavourited: Bool, session: URLSession = .cat_imageSession, onDoubleTap: @escaping () async -> Void) {
         self.session  = session
         self.catImage = catImage
         self.isFavourited = isFavourited
@@ -58,8 +58,25 @@ struct CatImageView: View {
                                 .padding()
                                 .foregroundStyle(.pink)
                         }
-                        // FIXME: 不该等网络请求结束才有动画
-                        .onTapGesture(count: 2, perform: onDoubleTap)
+                        .opacity(isLoading ? 0.1 : 1)
+                        // PS_1: `animation`设置`value`代表用到这个`value`的地方才会引用该动画（不跟随其他动画）
+                        .animation(.default, value: isLoading)
+                        // PS_2: 但仅限于【在此之上】的地方，也就是说【不包括】下面这个`if isLoading { ... }`，ta不受这个`animation`的影响，而是跟随这个View最底下设置的那个`animation`影响
+                        .overlay(alignment: .topTrailing) {
+                            if isLoading {
+                                ProgressView()
+                                    .controlSize(.large)
+                                    .padding()
+                            }
+                        }
+                        .onTapGesture(count: 2) {
+                            Task {
+                                isLoading = true
+                                await onDoubleTap()
+                                isLoading = false
+                            }
+                        }
+                        .disabled(isLoading) // 加载中不可交互
                     
                 case .failure:
                     Color(.systemGray6)

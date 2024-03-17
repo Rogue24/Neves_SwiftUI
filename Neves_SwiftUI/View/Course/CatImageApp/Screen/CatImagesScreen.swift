@@ -13,6 +13,9 @@ struct CatImageScreen: View {
     
     @State private var catImages: [CatImageViewModel] = []
     @State private var didFirstLoad: Bool = false
+    @State private var isLoading: Bool = false
+    @State private var isLoadFailed: Bool = false
+    @State private var loadError: Error? = nil
     
     var body: some View {
         VStack {
@@ -21,24 +24,44 @@ struct CatImageScreen: View {
                     .font(.largeTitle.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
-                // FIXME: 不该等网络请求结束才有动画
                 Button("换一批") { Task { await loadRandomImages() } }
                     .buttonStyle(.bordered)
                     .font(.headline)
+                    .overlay {
+                        if isLoading {
+                            ProgressView()
+                        }
+                    }
+                    .disabled(isLoading)
+                
             }.padding(.horizontal)
             
             ScrollView {
                 ForEach(catImages) { catImage in
                     let isFavourited = favorites.contains(where: \.imageID == catImage.id)
                     CatImageView(catImage, isFavourited: isFavourited) {
-                        Task {
-                            // FIXME: error handling & pass async closure?
-                            try! await toggleFavorite(catImage)
-                        }
+                        await toggleFavorite(catImage)
                     }
                 }
             }
         }
+        .alert("「阔爱喵喵」加载失败", isPresented: $isLoadFailed) {
+            Button("OK") { loadError = nil }
+        } message: {
+            if let loadError {
+                Text(loadError.localizedDescription)
+            }
+        }
+//        .alert(isPresented: Binding(
+//            get: { loadError != nil },
+//            set: { loadError = $0 as? Error }
+//        ), error: nil, actions: {
+//            Button("OK") { loadError = nil }
+//        }, message: {
+//            if let loadError {
+//                Text(loadError.localizedDescription)
+//            }
+//        })
         .task {
             if !didFirstLoad {
                 await loadRandomImages()
@@ -50,15 +73,25 @@ struct CatImageScreen: View {
 
 private extension CatImageScreen {
     func loadRandomImages() async {
-        // FIXME: error handling
-        catImages = try! await apiManager.getImages().map(CatImageViewModel.init)
+        isLoading = true
+        do {
+            catImages = try await apiManager.getImages().map(CatImageViewModel.init)
+        } catch {
+            loadError = error
+            isLoadFailed = true
+        }
+        isLoading = false
     }
     
-    func toggleFavorite(_ cat: CatImageViewModel) async throws {
-        if let index = favorites.firstIndex(where: \.imageID == cat.id) {
-            try await favorites.remove(at: index, apiManager: apiManager)
-        } else {
-            try await favorites.add(cat, apiManager: apiManager)
+    func toggleFavorite(_ cat: CatImageViewModel) async {
+        do {
+            if let index = favorites.firstIndex(where: \.imageID == cat.id) {
+                try await favorites.remove(at: index, apiManager: apiManager)
+            } else {
+                try await favorites.add(cat, apiManager: apiManager)
+            }
+        } catch {
+            
         }
     }
 }
