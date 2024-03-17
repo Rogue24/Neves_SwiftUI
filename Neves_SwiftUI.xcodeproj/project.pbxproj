@@ -86,6 +86,7 @@
 		1A630B8A2A76D52500F3D2C1 /* Animation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A630B872A76D52500F3D2C1 /* Animation+.swift */; };
 		1A6C6CAE2AB77E3900CD2188 /* JPUnitCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */; };
 		1A7936E32A35E9DA005F8747 /* AnimTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7936E22A35E9DA005F8747 /* AnimTestView.swift */; };
+		1A79F5B02BA75EC500B0E676 /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A79F5AF2BA75EC500B0E676 /* FavoriteItem.swift */; };
 		1A86EE702A7FA61E00A151FB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86EE6F2A7FA61E00A151FB /* HomeScreen.swift */; };
 		1A86EE722A7FC77400A151FB /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86EE712A7FC77400A151FB /* SettingsScreen.swift */; };
 		1A9D13C92A35A23C00276AA3 /* FoodPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */; };
@@ -279,6 +280,7 @@
 		1A630B872A76D52500F3D2C1 /* Animation+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animation+.swift"; sourceTree = "<group>"; };
 		1A6C6CAD2AB77E3900CD2188 /* JPUnitCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPUnitCompatible.swift; sourceTree = "<group>"; };
 		1A7936E22A35E9DA005F8747 /* AnimTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimTestView.swift; sourceTree = "<group>"; };
+		1A79F5AF2BA75EC500B0E676 /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
 		1A86EE6F2A7FA61E00A151FB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		1A86EE712A7FC77400A151FB /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		1A9D13C82A35A23C00276AA3 /* FoodPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerScreen.swift; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 				1AA058082B94F7EE000909BE /* Manager */,
 				1A3434732B94D6B900EB4B35 /* Screen */,
 				1A3434772B94D6B900EB4B35 /* View */,
+				1A79F5AE2BA75EB000B0E676 /* Model */,
 				1A34346D2B94D6B900EB4B35 /* Extension */,
 			);
 			path = CatImageApp;
@@ -629,6 +632,14 @@
 				1AC95CC82A388AB4002F19E9 /* SuffixWrapper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A79F5AE2BA75EB000B0E676 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A79F5AF2BA75EC500B0E676 /* FavoriteItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1A9D13C62A359FB800276AA3 /* Course */ = {
@@ -1265,6 +1276,7 @@
 				1A34347F2B94D6B900EB4B35 /* CatFavoriteScreen.swift in Sources */,
 				00D63E2D2991F1F1003F0C29 /* Function.swift in Sources */,
 				1A09FE662B9DB56800E3B6EE /* CatAPIManager+Stub.swift in Sources */,
+				1A79F5B02BA75EC500B0E676 /* FavoriteItem.swift in Sources */,
 				1A630B772A7654B300F3D2C1 /* PreviewDevice+.swift in Sources */,
 				7107CDA6287BF35500AC9B9F /* GifImage.swift in Sources */,
 				00F0A1DA296BEDF0006B5A28 /* NevesWidgetEditView.swift in Sources */,

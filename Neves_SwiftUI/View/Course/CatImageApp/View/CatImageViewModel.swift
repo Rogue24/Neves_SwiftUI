@@ -23,6 +23,13 @@ extension CatImageViewModel {
                   width: response.width,
                   height: response.height)
     }
+    
+    init(favoriteItem: FavoriteItem) {
+        self.init(id: favoriteItem.imageID,
+                  url: favoriteItem.imageURL,
+                  width: nil,
+                  height: nil)
+    }
 }
 
 extension [CatImageViewModel] {

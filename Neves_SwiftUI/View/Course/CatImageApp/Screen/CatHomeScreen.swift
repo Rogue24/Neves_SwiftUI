@@ -11,7 +11,7 @@ import SwiftUI
 struct CatHomeScreen: View {
     @Environment(\.catApiManager) var apiManager: CatAPIManager
     @State private var tab: Tab = .images
-    @State private var favoriteImages: [CatImageViewModel] = []
+    @State private var favoriteImages: [FavoriteItem] = []
     
     var body: some View {
         TabView(selection: $tab) {
@@ -32,7 +32,7 @@ struct CatHomeScreen: View {
 
 private extension CatHomeScreen {
     func loadFavorites() async throws {
-        // TODO: fetch favorite
+        favoriteImages = try await apiManager.getFavorites()
     }
 }
 

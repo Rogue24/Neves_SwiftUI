@@ -29,6 +29,7 @@ extension CatAPIManager {
         case images
         case addToFavorite(bodyData: Data)
         case favorites
+        case removeFromFavorite(id: Int)
         
         var request: URLRequest {
             switch self {
@@ -47,6 +48,10 @@ extension CatAPIManager {
                 // TODO: 补上分页参数
                 return URLRequest(url: "https://api.thecatapi.com/v1/favourites")
                 
+            case let .removeFromFavorite(id):
+                var request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/favourites/\(id)")!)
+                request.httpMethod = "DELETE" // 📢📢📢
+                return request
             }
         }
     }
@@ -63,38 +68,6 @@ extension CatAPIManager {
     struct FavoriteCreationResponse: Decodable {
         let id: Int
     }
-    
-    struct FavoriteResponse: Decodable {
-        let id: Int
-        let imageID: String
-        let createdAt: Date
-        let imageURL: URL
-
-        enum CodingKeys: String, CodingKey {
-            case id
-            case imageID = "image_id"
-            case createdAt = "created_at"
-            case image
-        }
-        
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.id = try container[.id]
-            self.imageID = try container[.imageID]
-            self.createdAt = try container[.createdAt]
-            self.imageURL = try container.nestedContainer(key: .image)["url"]
-        }
-        
-//        "id":100038507,
-//        "image_id":"E8dL1Pqpz",
-//        "sub_id":null,
-//        "created_at":"2022-07-10T12:24:39.000Z",
-//        "image":{
-//            "id":"E8dL1Pqpz",
-//            "url":"https://cdn2.thecatapi.com/images/E8dL1Pqpz.jpg"
-//            }
-//        },
-    }
 }
 
 extension CatAPIManager {
@@ -102,7 +75,7 @@ extension CatAPIManager {
         try await fetch(.images)
     }
     
-    func getFavorites() async throws -> [FavoriteResponse] {
+    func getFavorites() async throws -> [FavoriteItem] {
         try await fetch(.favorites)
     }
     
@@ -111,6 +84,10 @@ extension CatAPIManager {
         let bodyData = try JSONSerialization.data(withJSONObject: body)
         let response: FavoriteCreationResponse = try await fetch(.addToFavorite(bodyData: bodyData))
         return response.id
+    }
+    
+    func removeFromFavorite(id: Int) async throws {
+        _ = try await getData(.removeFromFavorite(id: id))
     }
 }
 
@@ -123,6 +100,19 @@ private extension CatAPIManager {
     
     func fetch<T: Decodable>(_ endpoint: Endpoint) async throws -> T{
         let data = try await getData(endpoint)
+        
+        // ------- look result 0 -------
+//        let str = String(data: data, encoding: .utf8)
+//        JPrint("请求结果：", str ?? "???")
+        
+//        do {
+//            let dict = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: Any]]
+//            JPrint("请求结果：", dict ?? [:])
+//        } catch {
+//            JPrint("请求失败！", error)
+//        }
+        // ------- look result 1 -------
+        
         let decoder = JSONDecoder()
         // 自定义日期解析格式（默认解析方式跟catServer的日期格式不匹配）
         decoder.dateDecodingStrategy = .formatted(Self.dateFormatter)

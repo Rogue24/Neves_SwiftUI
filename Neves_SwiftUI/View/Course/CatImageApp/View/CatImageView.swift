@@ -58,14 +58,15 @@ struct CatImageView: View {
                                 .padding()
                                 .foregroundStyle(.pink)
                         }
+                        // FIXME: 不该等网络请求结束才有动画
                         .onTapGesture(count: 2, perform: onDoubleTap)
                     
                 case .failure:
                     Color(.systemGray6)
                         .overlay {
+                            // TODO: retry button
                             Text("图片无法显示")
                         }
-                    
                     
                 @unknown default:
                     fatalError("This has not been implemented.")

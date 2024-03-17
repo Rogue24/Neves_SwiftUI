@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CatFavoriteScreen: View {
-    @Binding var favorites: [CatImageViewModel]
+    @Environment(\.catApiManager) var apiManager: CatAPIManager
+    @Binding var favorites: [FavoriteItem]
     
     var body: some View {
         VStack {
@@ -25,10 +26,12 @@ struct CatFavoriteScreen: View {
                         .padding()
                 }
                 
-                ForEach(Array(favorites.enumerated()), id: \.element.id) { index, catImage in
-                    CatImageView(catImage, isFavourited: true) {
-                        // TODO:  send update to the server
-                        favorites.remove(at: index)
+                ForEach(Array(favorites.enumerated()), id: \.element.imageID) { index, favoriteItem in
+                    CatImageView(CatImageViewModel(favoriteItem: favoriteItem), isFavourited: true) {
+                        Task {
+                            // FIXME: error handling & pass async closure?
+                            try! await favorites.remove(at: index, apiManager: apiManager)
+                        }
                     }.transition(.slide)
                 }
             }
@@ -38,7 +41,10 @@ struct CatFavoriteScreen: View {
 
 
 struct CatFavoriteScreen_Previews: PreviewProvider, View {
-    @State private var favorites: [CatImageViewModel] = .stub
+    @State private var favorites: [FavoriteItem] = [CatImageViewModel].stub.enumerated().map {
+        FavoriteItem(catImage: $0.element, id: $0.offset)
+    }
+    
     var body: some View {
         CatFavoriteScreen(favorites: $favorites)
     }
