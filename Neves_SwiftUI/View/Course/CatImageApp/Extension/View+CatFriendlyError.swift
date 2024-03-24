@@ -13,7 +13,7 @@ struct CatFriendlyError {
 }
 
 extension View {
-    func cat_alert(_ error: Binding<CatFriendlyError?>) -> some View {
+    func cat_alert(error: Binding<CatFriendlyError?>) -> some View {
         self.alert(isPresented: Binding(
             get: { error.wrappedValue != nil },
             set: { _ in error.wrappedValue = nil }

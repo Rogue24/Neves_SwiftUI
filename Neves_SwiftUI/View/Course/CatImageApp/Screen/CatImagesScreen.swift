@@ -52,7 +52,7 @@ struct CatImageScreen: View {
 //                Text(loadError.error.localizedDescription)
 //            }
 //        }
-        .cat_alert($loadError)
+        .cat_alert(error: $loadError)
         .task {
             if !didFirstLoad {
                 await loadRandomImages()

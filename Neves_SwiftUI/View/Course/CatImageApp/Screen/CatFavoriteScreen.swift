@@ -39,7 +39,7 @@ struct CatFavoriteScreen: View {
             }
         }
         .animation(.spring(), value: favorites)
-        .cat_alert($loadError)
+        .cat_alert(error: $loadError)
     }
 }
 
