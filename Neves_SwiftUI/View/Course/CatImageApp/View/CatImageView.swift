@@ -58,10 +58,10 @@ struct CatImageView: View {
                                 .padding()
                                 .foregroundStyle(.pink)
                         }
-                        .opacity(isLoading ? 0.1 : 1)
-                        // PS_1: `animation`设置`value`代表用到这个`value`的地方才会引用该动画（不跟随其他动画）
+                        .opacity(isLoading ? 0.5 : 1)
+                        // PS_1: `animation`设置`value`代表：只有用到这个`value`的地方，才会有该动画效果（不跟随其他动画）
                         .animation(.default, value: isLoading)
-                        // PS_2: 但仅限于【在此之上】的地方，也就是说【不包括】下面这个`if isLoading { ... }`，ta不受这个`animation`的影响，而是跟随这个View最底下设置的那个`animation`影响
+                        // PS_2: 但仅限于【在此之上】的地方，也就是说【不包括】下面这个`if isLoading { ... }`，因此ta不受这个`animation/isLoading`的影响
                         .overlay(alignment: .topTrailing) {
                             if isLoading {
                                 ProgressView()
@@ -69,9 +69,12 @@ struct CatImageView: View {
                                     .padding()
                             }
                         }
+                        // PS_3: 把上面的`animation/isLoading`注释，然后设置在这里，才可以让上面的`if isLoading { ... }`也能有该动画效果
+                        // .animation(.easeInOut(duration: 10), value: isLoading) // 用于调试`animation/isLoading`所在位置的影响 - 证明：只能影响【在此之上】的
                         .onTapGesture(count: 2) {
                             Task {
                                 isLoading = true
+                                // try? await Task.sleep(for: .seconds(10)) // 用于调试`animation/isLoading`所在位置的影响
                                 await onDoubleTap()
                                 isLoading = false
                             }
