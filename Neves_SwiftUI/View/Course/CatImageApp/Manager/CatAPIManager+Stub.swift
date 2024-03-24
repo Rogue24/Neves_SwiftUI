@@ -8,7 +8,6 @@
 import SwiftUI
 
 // MARK: - For Test
-
 extension CatAPIManager.Endpoint {
     var stub: Data {
         let string: String

@@ -29,52 +29,7 @@ final class CatAPIManager {
     }
 }
 
-extension CatAPIManager {
-    enum Endpoint {
-        case images
-        case addToFavorite(bodyData: Data)
-        case favorites
-        case removeFromFavorite(id: Int)
-        
-        var request: URLRequest {
-            switch self {
-            case .images:
-                return URLRequest(url: "https://api.thecatapi.com/v1/images/search?limit=10")
-                
-            case let .addToFavorite(bodyData):
-                var request = URLRequest(url: "https://api.thecatapi.com/v1/favourites")
-                request.httpMethod = "POST"
-                request.httpBody = bodyData
-                // 声明`httpBody`的类型（让服务器那边知道如何解析）：是json格式
-                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-                return request
-                
-            case .favorites:
-                // TODO: 补上分页参数
-                return URLRequest(url: "https://api.thecatapi.com/v1/favourites")
-                
-            case let .removeFromFavorite(id):
-                var request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/favourites/\(id)")!)
-                request.httpMethod = "DELETE" // 📢📢📢
-                return request
-            }
-        }
-    }
-}
-
-extension CatAPIManager {
-    struct ImageResponse: Decodable {
-        let id: String
-        let url: URL
-        let width: CGFloat
-        let height: CGFloat
-    }
-    
-    struct FavoriteCreationResponse: Decodable {
-        let id: Int
-    }
-}
-
+// MARK: - 公开API
 extension CatAPIManager {
     func getImages() async throws -> [ImageResponse] {
         try await fetch(.images)
@@ -101,6 +56,7 @@ extension CatAPIManager {
     }
 }
 
+// MARK: - 私有API
 private extension CatAPIManager {
     static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()

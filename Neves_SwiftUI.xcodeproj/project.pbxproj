@@ -14,6 +14,8 @@
 		00B3C6E629AC49370027F587 /* WaterfallGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E529AC49370027F587 /* WaterfallGrid.swift */; };
 		00B3C6E829AC51A50027F587 /* WaterfallGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E729AC51A50027F587 /* WaterfallGridView.swift */; };
 		00BF6B402BB01BFE007BEDDB /* View+CatFriendlyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */; };
+		00BF6B422BB02EC8007BEDDB /* CatAPIManager+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B412BB02EC8007BEDDB /* CatAPIManager+Response.swift */; };
+		00BF6B442BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B432BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift */; };
 		00D63E01299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D63DF0299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift */; };
 		00D63E02299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D63DF1299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift */; };
 		00D63E03299103C5003F0C29 /* VibrancyEffectStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D63DF3299103C5003F0C29 /* VibrancyEffectStyleKey.swift */; };
@@ -218,6 +220,8 @@
 		00B3C6E529AC49370027F587 /* WaterfallGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGrid.swift; sourceTree = "<group>"; };
 		00B3C6E729AC51A50027F587 /* WaterfallGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridView.swift; sourceTree = "<group>"; };
 		00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CatFriendlyError.swift"; sourceTree = "<group>"; };
+		00BF6B412BB02EC8007BEDDB /* CatAPIManager+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Response.swift"; sourceTree = "<group>"; };
+		00BF6B432BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Endpoint.swift"; sourceTree = "<group>"; };
 		00D63DF0299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrancyVisualEffectViewRepresentable.swift; sourceTree = "<group>"; };
 		00D63DF1299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurVisualEffectViewRepresentable.swift; sourceTree = "<group>"; };
 		00D63DF3299103C5003F0C29 /* VibrancyEffectStyleKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrancyEffectStyleKey.swift; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 				1AA058042B94E030000909BE /* CatAPIManager.swift */,
 				1AA058092B94F7FB000909BE /* CatAPIManager+Env.swift */,
 				1A09FE652B9DB56800E3B6EE /* CatAPIManager+Stub.swift */,
+				00BF6B432BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift */,
+				00BF6B412BB02EC8007BEDDB /* CatAPIManager+Response.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1247,6 +1253,7 @@
 			files = (
 				00D63E06299103C5003F0C29 /* View+blurEffectStyle.swift in Sources */,
 				00ED8253296BE99D006F035B /* GifImageView.swift in Sources */,
+				00BF6B422BB02EC8007BEDDB /* CatAPIManager+Response.swift in Sources */,
 				716828BD275DBBA50039F3F7 /* Buttons.swift in Sources */,
 				715ED7C42700642C0030F279 /* UIColor.Extension.swift in Sources */,
 				715ED7BB2700642C0030F279 /* NotificationCenter.Extension.swift in Sources */,
@@ -1370,6 +1377,7 @@
 				1A34347A2B94D6B900EB4B35 /* Decoding+.swift in Sources */,
 				1AA059622AAE5F74004142F6 /* JSONTestView.swift in Sources */,
 				1AD4AAA22A928EA500322F04 /* Array+.swift in Sources */,
+				00BF6B442BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift in Sources */,
 				00B3C6E829AC51A50027F587 /* WaterfallGridView.swift in Sources */,
 				715ED7C92700642C0030F279 /* JP.swift in Sources */,
 				1AC7ECE72A89407D006ADBDC /* Unit.swift in Sources */,
