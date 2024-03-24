@@ -9,8 +9,10 @@
 import SwiftUI
 
 final class CatAPIManager {
+    private(set) var favoriteImages: [FavoriteItem] = []
+    
     /// 提供`URLRequest`以决定如何获取`Data`的闭包
-    /// - Note: 有默认处理，可供外部更改
+    /// - Note: 有默认处理，并且可供外部修改
     var getData: (Endpoint) async throws -> Data
     
     static let shared = CatAPIManager {
