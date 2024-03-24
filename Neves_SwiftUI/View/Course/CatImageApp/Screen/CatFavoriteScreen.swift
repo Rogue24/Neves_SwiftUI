@@ -10,6 +10,7 @@ import SwiftUI
 struct CatFavoriteScreen: View {
     @Environment(\.catApiManager) var apiManager: CatAPIManager
     @Binding var favorites: [FavoriteItem]
+    @State private var loadError: CatFriendlyError? = nil
     
     var body: some View {
         VStack {
@@ -28,11 +29,17 @@ struct CatFavoriteScreen: View {
                 
                 ForEach(Array(favorites.enumerated()), id: \.element.imageID) { index, favoriteItem in
                     CatImageView(CatImageViewModel(favoriteItem: favoriteItem), isFavourited: true) {
-                        try? await favorites.remove(at: index, apiManager: apiManager)
+                        do {
+                            try await favorites.remove(at: index, apiManager: apiManager)
+                        } catch {
+                            loadError = .init(title: "「我的最爱」删除失败", error: error)
+                        }
                     }.transition(.slide)
                 }
             }
-        }.animation(.spring(), value: favorites)
+        }
+        .animation(.spring(), value: favorites)
+        .cat_alert($loadError)
     }
 }
 
@@ -44,6 +51,7 @@ struct CatFavoriteScreen_Previews: PreviewProvider, View {
     
     var body: some View {
         CatFavoriteScreen(favorites: $favorites)
+            .environment(\.catApiManager, .preview) // 自定义环境变量
     }
     
     static var previews: some View {

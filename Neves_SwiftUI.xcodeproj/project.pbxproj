@@ -13,6 +13,7 @@
 		008DC3192977DCCF0039AB22 /* FunnyPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */; };
 		00B3C6E629AC49370027F587 /* WaterfallGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E529AC49370027F587 /* WaterfallGrid.swift */; };
 		00B3C6E829AC51A50027F587 /* WaterfallGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E729AC51A50027F587 /* WaterfallGridView.swift */; };
+		00BF6B402BB01BFE007BEDDB /* View+CatFriendlyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */; };
 		00D63E01299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D63DF0299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift */; };
 		00D63E02299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D63DF1299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift */; };
 		00D63E03299103C5003F0C29 /* VibrancyEffectStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D63DF3299103C5003F0C29 /* VibrancyEffectStyleKey.swift */; };
@@ -216,6 +217,7 @@
 		008DC3182977DCCF0039AB22 /* FunnyPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyPlayView.swift; sourceTree = "<group>"; };
 		00B3C6E529AC49370027F587 /* WaterfallGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGrid.swift; sourceTree = "<group>"; };
 		00B3C6E729AC51A50027F587 /* WaterfallGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridView.swift; sourceTree = "<group>"; };
+		00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CatFriendlyError.swift"; sourceTree = "<group>"; };
 		00D63DF0299103C5003F0C29 /* VibrancyVisualEffectViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrancyVisualEffectViewRepresentable.swift; sourceTree = "<group>"; };
 		00D63DF1299103C5003F0C29 /* BlurVisualEffectViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurVisualEffectViewRepresentable.swift; sourceTree = "<group>"; };
 		00D63DF3299103C5003F0C29 /* VibrancyEffectStyleKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrancyEffectStyleKey.swift; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 				1A3434702B94D6B900EB4B35 /* URL+.swift */,
 				1A34346F2B94D6B900EB4B35 /* URLCache+.swift */,
 				1A3434712B94D6B900EB4B35 /* URLSession+.swift */,
+				00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1336,6 +1339,7 @@
 				00D63E0B299103C5003F0C29 /* VibrancyEffectModifier.swift in Sources */,
 				1AC95CC72A38867B002F19E9 /* View+.swift in Sources */,
 				00D63E3029924B65003F0C29 /* PlaceholderView.swift in Sources */,
+				00BF6B402BB01BFE007BEDDB /* View+CatFriendlyError.swift in Sources */,
 				716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */,
 				715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */,
 				715ED7C72700642C0030F279 /* UIScreen.Extension.swift in Sources */,

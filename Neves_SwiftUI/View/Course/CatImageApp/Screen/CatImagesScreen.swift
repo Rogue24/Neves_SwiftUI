@@ -14,8 +14,8 @@ struct CatImageScreen: View {
     @State private var catImages: [CatImageViewModel] = []
     @State private var didFirstLoad: Bool = false
     @State private var isLoading: Bool = false
-    @State private var isLoadFailed: Bool = false
-    @State private var loadError: Error? = nil
+//    @State private var isLoadFailed: Bool = false
+    @State private var loadError: CatFriendlyError? = nil
     
     var body: some View {
         VStack {
@@ -45,23 +45,14 @@ struct CatImageScreen: View {
                 }
             }
         }
-        .alert("「阔爱喵喵」加载失败", isPresented: $isLoadFailed) {
-            Button("OK") { loadError = nil }
-        } message: {
-            if let loadError {
-                Text(loadError.localizedDescription)
-            }
-        }
-//        .alert(isPresented: Binding(
-//            get: { loadError != nil },
-//            set: { loadError = $0 as? Error }
-//        ), error: nil, actions: {
+//        .alert(loadError?.title ?? "Fail!", isPresented: $isLoadFailed) {
 //            Button("OK") { loadError = nil }
-//        }, message: {
+//        } message: {
 //            if let loadError {
-//                Text(loadError.localizedDescription)
+//                Text(loadError.error.localizedDescription)
 //            }
-//        })
+//        }
+        .cat_alert($loadError)
         .task {
             if !didFirstLoad {
                 await loadRandomImages()
@@ -76,22 +67,27 @@ private extension CatImageScreen {
         isLoading = true
         do {
             catImages = try await apiManager.getImages().map(CatImageViewModel.init)
+//            throw URLError(.cancelled) // for error test
         } catch {
-            loadError = error
-            isLoadFailed = true
+            loadError = .init(title: "「阔爱喵喵」加载失败", error: error)
+//            isLoadFailed = true
         }
         isLoading = false
     }
     
     func toggleFavorite(_ cat: CatImageViewModel) async {
+        var isDelete = false
         do {
             if let index = favorites.firstIndex(where: \.imageID == cat.id) {
+                isDelete = true
                 try await favorites.remove(at: index, apiManager: apiManager)
             } else {
                 try await favorites.add(cat, apiManager: apiManager)
             }
+//            throw URLError(.cancelled) // for error test
         } catch {
-            
+            loadError = .init(title: "「我的最爱」\(isDelete ? "删除" : "添加")失败", error: error)
+//            isLoadFailed = true
         }
     }
 }

@@ -92,7 +92,12 @@ extension CatAPIManager {
     }
     
     func removeFromFavorite(id: Int) async throws {
-        _ = try await getData(.removeFromFavorite(id: id))
+        do {
+            _ = try await getData(.removeFromFavorite(id: id))
+//            _ = try await getData(.removeFromFavorite(id: Int.random(in: 1...100))) // for error test
+        } catch URLSession.APIError.invalidCode(400) {
+            JPrint("请求错误：INVALID_ACCOUNT！这是不存在的最爱ID，默默略过该错误...")
+        }
     }
 }
 

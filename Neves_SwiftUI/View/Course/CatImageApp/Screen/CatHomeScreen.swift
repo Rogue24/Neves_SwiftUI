@@ -12,8 +12,8 @@ struct CatHomeScreen: View {
     @Environment(\.catApiManager) var apiManager: CatAPIManager
     @State private var tab: Tab = .images
     @State private var favoriteImages: [FavoriteItem] = []
-    @State private var isLoadFailed: Bool = false
-    @State private var loadError: Error? = nil
+//    @State private var isLoadFailed: Bool = false
+    @State private var loadError: CatFriendlyError? = nil
     
     var body: some View {
         TabView(selection: $tab) {
@@ -25,13 +25,14 @@ struct CatHomeScreen: View {
                 .tabItem { Label("Favorite", systemImage: "heart.fill") }
                 .tag(Tab.favorites)
         }
-        .alert("「我的最爱」加载失败", isPresented: $isLoadFailed) {
-            Button("OK") { loadError = nil }
-        } message: {
-            if let loadError {
-                Text(loadError.localizedDescription)
-            }
-        }
+//        .alert(loadError?.title ?? "Fail!", isPresented: $isLoadFailed) {
+//            Button("OK") { loadError = nil }
+//        } message: {
+//            if let loadError {
+//                Text(loadError.error.localizedDescription)
+//            }
+//        }
+        .cat_alert($loadError)
         .task { await loadFavorites() }
     }
 }
@@ -40,9 +41,10 @@ private extension CatHomeScreen {
     func loadFavorites() async {
         do {
             favoriteImages = try await apiManager.getFavorites()
+//            throw URLError(.cancelled) // for error test
         } catch {
-            loadError = error
-            isLoadFailed = true
+            loadError = .init(title: "「我的最爱」加载失败", error: error)
+//            isLoadFailed = true
         }
     }
 }

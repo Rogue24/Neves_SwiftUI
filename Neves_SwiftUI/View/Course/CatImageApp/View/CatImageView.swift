@@ -84,8 +84,12 @@ struct CatImageView: View {
                 case .failure:
                     Color(.systemGray6)
                         .overlay {
-                            // TODO: retry button
-                            Text("图片无法显示")
+                            VStack {
+                                Text("图片无法显示")
+                                Button("重试") {
+                                    phase = .empty // 重置为`empty`状态会自动开启ta的`task`去加载图片
+                                }
+                            }
                         }
                     
                 @unknown default:

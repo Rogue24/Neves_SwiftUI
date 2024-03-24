@@ -52,15 +52,14 @@ extension FavoriteItem: Equatable {
 
 extension [FavoriteItem] {
     mutating func add(_ cat: CatImageViewModel, apiManager: CatAPIManager) async throws {
-        JPrint("即将添加cat：", cat.id)
+        JPrint("请求【添加】cat：", cat.id)
         let id = try await apiManager.addToFavorite(imageID: cat.id)
         append(FavoriteItem(catImage: cat, id: id))
     }
     
     mutating func remove(at index: Int, apiManager: CatAPIManager) async throws {
-        JPrint("即将删除cat：", self[index].imageID)
+        JPrint("请求【删除】cat：", self[index].imageID)
         try await apiManager.removeFromFavorite(id: self[index].id)
         remove(at: index)
-        // TODO:  send update to the server
     }
 }
