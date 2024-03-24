@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CatImageScreen: View {
     @Environment(\.catApiManager) var apiManager: CatAPIManager
-    @Binding var favorites: [FavoriteItem]
     
     @State private var catImages: [CatImageViewModel] = []
     @State private var didFirstLoad: Bool = false
@@ -38,7 +37,7 @@ struct CatImageScreen: View {
             
             ScrollView {
                 ForEach(catImages) { catImage in
-                    let isFavourited = favorites.contains(where: \.imageID == catImage.id)
+                    let isFavourited = apiManager.favorites.contains(where: \.imageID == catImage.id)
                     CatImageView(catImage, isFavourited: isFavourited) {
                         await toggleFavorite(catImage)
                     }
@@ -76,14 +75,9 @@ private extension CatImageScreen {
     }
     
     func toggleFavorite(_ cat: CatImageViewModel) async {
-        var isDelete = false
+        let isDelete = apiManager.favorites.contains(where: \.imageID == cat.id)
         do {
-            if let index = favorites.firstIndex(where: \.imageID == cat.id) {
-                isDelete = true
-                try await favorites.remove(at: index, apiManager: apiManager)
-            } else {
-                try await favorites.add(cat, apiManager: apiManager)
-            }
+            try await apiManager.toggleFavorite(cat)
 //            throw URLError(.cancelled) // for error test
         } catch {
             loadError = .init(title: "「我的最爱」\(isDelete ? "删除" : "添加")失败", error: error)
@@ -92,15 +86,9 @@ private extension CatImageScreen {
     }
 }
 
-struct CatImageScreen_Previews: PreviewProvider, View {
-    @State private var favorites: [FavoriteItem] = []
-    
-    var body: some View {
-        CatImageScreen(favorites: $favorites)
-            .environment(\.catApiManager, .stub) // 自定义环境变量
-    }
-    
+struct CatImageScreen_Previews: PreviewProvider {
     static var previews: some View {
-        Self()
+        CatImageScreen()
+            .environment(\.catApiManager, .preview) // 自定义环境变量
     }
 }

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct FavoriteItem: Decodable {
+    /// 「我的最爱」的`id`
     let id: Int
+    /// 「猫猫」的`id`
     let imageID: String // 相当于CatImageViewModel的id
     let createdAt: Date
     let imageURL: URL
@@ -50,16 +52,16 @@ extension FavoriteItem: Equatable {
     
 }
 
-extension [FavoriteItem] {
-    mutating func add(_ cat: CatImageViewModel, apiManager: CatAPIManager) async throws {
-        JPrint("请求【添加】cat：", cat.id)
-        let id = try await apiManager.addToFavorite(imageID: cat.id)
-        append(FavoriteItem(catImage: cat, id: id))
-    }
-    
-    mutating func remove(at index: Int, apiManager: CatAPIManager) async throws {
-        JPrint("请求【删除】cat：", self[index].imageID)
-        try await apiManager.removeFromFavorite(id: self[index].id)
-        remove(at: index)
-    }
-}
+//extension [FavoriteItem] {
+//    mutating func add(_ cat: CatImageViewModel, apiManager: CatAPIManager) async throws {
+//        JPrint("请求【添加】cat：", cat.id)
+//        let id = try await apiManager.addToFavorite(imageID: cat.id)
+//        append(FavoriteItem(catImage: cat, id: id))
+//    }
+//    
+//    mutating func remove(at index: Int, apiManager: CatAPIManager) async throws {
+//        JPrint("请求【删除】cat：", self[index].imageID)
+//        try await apiManager.removeFromFavorite(id: self[index].id)
+//        remove(at: index)
+//    }
+//}

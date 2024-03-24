@@ -76,7 +76,12 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     
     /// 测试的主体
     /// `sut`: ** system under test **
-    let sut = CatAPIManager.stub
+    var sut: CatAPIManager! 
+    
+    /// 执行【每一次】测试前都会调用该函数
+    override func setUp() async throws {
+        sut = .stub // 清空数据：重置一下`CatAPIManager`
+    }
     
     // ----- 调试网络数据的解码 -----
     
@@ -88,8 +93,8 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     
     func test_getFavorites() async throws {
         do {
-            let favorites = try await sut.getFavorites()
-            let imageURL = favorites.first!.imageURL
+            try await sut.getFavorites()
+            let imageURL = sut.favorites.first!.imageURL
             // 检查是不是拿到目标URL
             XCTAssertEqual(imageURL, "https://cdn2.thecatapi.com/images/E8dL1Pqpz.jpg")
         } catch {
@@ -98,8 +103,15 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     }
     
     func test_addToFavorite() async throws {
-        let id = try await sut.addToFavorite(imageID: "")
+        try await sut.addToFavorite([CatImageViewModel].stub.first!) // 测试：无论丢啥进去，返回的`response`的`id`固定为`100038507`
+        let id = sut.favorites.first!.id
         // 检查解码拿到的id是不是100038507
         XCTAssertEqual(id, 100038507)
+    }
+}
+
+extension CatAPIManager {
+    static var stub: CatAPIManager {
+        CatAPIManager { $0.stub }
     }
 }

@@ -11,17 +11,16 @@ import SwiftUI
 struct CatHomeScreen: View {
     @Environment(\.catApiManager) var apiManager: CatAPIManager
     @State private var tab: Tab = .images
-    @State private var favoriteImages: [FavoriteItem] = []
 //    @State private var isLoadFailed: Bool = false
     @State private var loadError: CatFriendlyError? = nil
     
     var body: some View {
         TabView(selection: $tab) {
-            CatImageScreen(favorites: $favoriteImages)
+            CatImageScreen()
                 .tabItem { Label("Home", systemImage: "house") }
                 .tag(Tab.images)
             
-            CatFavoriteScreen(favorites: $favoriteImages)
+            CatFavoriteScreen()
                 .tabItem { Label("Favorite", systemImage: "heart.fill") }
                 .tag(Tab.favorites)
         }
@@ -40,7 +39,7 @@ struct CatHomeScreen: View {
 private extension CatHomeScreen {
     func loadFavorites() async {
         do {
-            favoriteImages = try await apiManager.getFavorites()
+            try await apiManager.getFavorites()
 //            throw URLError(.cancelled) // for error test
         } catch {
             loadError = .init(title: "「我的最爱」加载失败", error: error)
@@ -58,6 +57,6 @@ private extension CatHomeScreen {
 struct CatHomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         CatHomeScreen()
-            .environment(\.catApiManager, .stub) // 自定义环境变量
+            .environment(\.catApiManager, .preview) // 自定义环境变量
     }
 }

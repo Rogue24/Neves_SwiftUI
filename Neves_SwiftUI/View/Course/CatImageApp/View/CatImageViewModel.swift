@@ -8,6 +8,7 @@
 import Foundation
 
 struct CatImageViewModel: Identifiable {
+    /// 「猫猫」的`id`
     let id: String
     let url: URL
     let width: CGFloat?
