@@ -43,7 +43,7 @@ extension URLSession {
         }
         
         guard 200...299 ~= response.statusCode else {
-            assertionFailure(String(format: "请求错误：%@", String(data: data, encoding: .utf8) ?? "unknow failure"))
+            assertionFailure(String(format: "cat_session 请求错误：%@", String(data: data, encoding: .utf8) ?? "unknow failure"))
             throw APIError.invalidCode(response.statusCode)
         }
         

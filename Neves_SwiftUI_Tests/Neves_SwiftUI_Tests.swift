@@ -80,7 +80,9 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     
     /// 执行【每一次】测试前都会调用该函数
     override func setUp() async throws {
-        sut = .stub // 清空数据：重置一下`CatAPIManager`
+        await MainActor.run {
+            sut = .stub // 清空数据：重置一下`CatAPIManager`
+        }
     }
     
     // ----- 调试网络数据的解码 -----
@@ -91,6 +93,7 @@ final class Neves_SwiftUI_Tests: XCTestCase {
         XCTAssertEqual(images.count, 10)
     }
     
+    @MainActor
     func test_getFavorites() async throws {
         do {
             try await sut.getFavorites()
@@ -102,6 +105,7 @@ final class Neves_SwiftUI_Tests: XCTestCase {
         }
     }
     
+    @MainActor
     func test_addToFavorite() async throws {
         try await sut.addToFavorite([CatImageViewModel].stub.first!) // 测试：无论丢啥进去，返回的`response`的`id`固定为`100038507`
         let id = sut.favorites.first!.id

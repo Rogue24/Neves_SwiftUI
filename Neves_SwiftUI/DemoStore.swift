@@ -85,7 +85,11 @@ extension Demo: View {
         case .JSONTest: JSONTestView()
         case .AsyncImageTest: AsyncImageDemoScreen()
         case .CodableTest: CodableTestView()
-        case .CatHome: CatHomeScreen().environment(\.catApiManager, .shared)
+        case .CatHome:
+            CatHomeScreen()
+//                .environment(\.catApiManager, .shared)
+                .environmentObject(CatAPIManager.shared) // 改用environmentObject：能跟随属性的变化去更新视图
+                            
             
         // Test
         case .Test1: Test1View()

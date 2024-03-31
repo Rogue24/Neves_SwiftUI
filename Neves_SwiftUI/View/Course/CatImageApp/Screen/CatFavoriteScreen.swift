@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CatFavoriteScreen: View {
-    @Environment(\.catApiManager) var apiManager: CatAPIManager
+//    @Environment(\.catApiManager) var apiManager: CatAPIManager
+    @EnvironmentObject private var apiManager: CatAPIManager
+    // ⚠️`EnvironmentObject`的注意点：如果上层没有传递该值过来会直接【Crash】！！！
     
     @State private var loadError: CatFriendlyError? = nil
     
@@ -49,6 +51,7 @@ struct CatFavoriteScreen: View {
 struct CatFavoriteScreen_Previews: PreviewProvider {
     static var previews: some View {
         CatFavoriteScreen()
-            .environment(\.catApiManager, .preview) // 自定义环境变量
+//            .environment(\.catApiManager, .preview) // 使用自定义的环境变量
+            .environmentObject(CatAPIManager.preview) // 改用environmentObject：能跟随属性的变化去更新视图
     }
 }
