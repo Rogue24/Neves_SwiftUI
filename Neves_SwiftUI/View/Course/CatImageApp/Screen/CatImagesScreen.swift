@@ -13,7 +13,7 @@ struct CatImageScreen: View {
     // ⚠️`EnvironmentObject`的注意点：如果「上层或直至根层」都没有传递该值过来会直接【Crash】！！！
     
     @State private var catImages: [CatImageViewModel] = []
-    @State private var didFirstLoad: Bool = false
+    
     @State private var isLoading: Bool = false
 //    @State private var isLoadFailed: Bool = false
     @State private var loadError: CatFriendlyError? = nil
@@ -55,10 +55,8 @@ struct CatImageScreen: View {
 //        }
         .cat_alert(error: $loadError)
         .task {
-            if !didFirstLoad {
-                await loadRandomImages()
-                didFirstLoad = true
-            }
+            guard catImages.isEmpty else { return }
+            await loadRandomImages()
         }
     }
 }

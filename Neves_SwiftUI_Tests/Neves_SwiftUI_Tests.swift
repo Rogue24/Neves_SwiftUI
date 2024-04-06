@@ -97,9 +97,8 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     func test_getFavorites() async throws {
         do {
             try await sut.getFavorites()
-            let imageURL = sut.favorites.first!.imageURL
-            // 检查是不是拿到目标URL
-            XCTAssertEqual(imageURL, "https://cdn2.thecatapi.com/images/E8dL1Pqpz.jpg")
+            // 检查是不是拿到13个数据
+            XCTAssertEqual(13, sut.favorites.count)
         } catch {
             XCTFail("❌ Unexpected Error: \(error)")
         }
