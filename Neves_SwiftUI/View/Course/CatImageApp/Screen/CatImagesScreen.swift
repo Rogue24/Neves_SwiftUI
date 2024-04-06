@@ -10,7 +10,7 @@ import SwiftUI
 struct CatImageScreen: View {
 //    @Environment(\.catApiManager) var apiManager: CatAPIManager
     @EnvironmentObject private var apiManager: CatAPIManager
-    // ⚠️`EnvironmentObject`的注意点：如果上层没有传递该值过来会直接【Crash】！！！
+    // ⚠️`EnvironmentObject`的注意点：如果「上层或直至根层」都没有传递该值过来会直接【Crash】！！！
     
     @State private var catImages: [CatImageViewModel] = []
     @State private var didFirstLoad: Bool = false

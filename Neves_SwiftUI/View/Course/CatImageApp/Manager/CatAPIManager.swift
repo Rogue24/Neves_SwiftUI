@@ -59,10 +59,7 @@ final class CatAPIManager: ObservableObject {
     /// - Note: 有默认处理，并且可供外部修改
     var getData: (Endpoint) async throws -> Data
     
-    
-    
-    init(favorites: [FavoriteItem] = [], getData: @escaping (Endpoint) async throws -> Data) {
-        self.favorites = favorites
+    init(getData: @escaping (Endpoint) async throws -> Data) {
         self.getData = getData
     }
 }
@@ -73,9 +70,7 @@ extension CatAPIManager {
         try await URLSession.cat_imageSession.jp_data(for: $0.request)
     }
     
-    static let preview = CatAPIManager(favorites: [CatImageViewModel].stub.enumerated().map {
-        FavoriteItem(catImage: $0.element, id: $0.offset)
-    }) {
+    static let preview = CatAPIManager {
         try? await Task.sleep(for: .seconds(1)) // 模拟网络请求：停1s再回传
         return $0.stub
     }

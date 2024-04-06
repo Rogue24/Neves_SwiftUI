@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct CatHomeScreen: View {
-//    @Environment(\.catApiManager) var apiManager: CatAPIManager
-    @EnvironmentObject private var apiManager: CatAPIManager
-    // ⚠️`EnvironmentObject`的注意点：如果上层没有传递该值过来会直接【Crash】！！！
-    
     @State private var tab: Tab = .images
-//    @State private var isLoadFailed: Bool = false
-    @State private var loadError: CatFriendlyError? = nil
+    
+    // 📢 挪到`CatFavoriteScreen`内部获取
+//    @EnvironmentObject private var apiManager: CatAPIManager
+    // ⚠️`EnvironmentObject`的注意点：如果「上层或直至根层」都没有传递该值过来会直接【Crash】！！！
+    
+    // 📢 挪到`CatFavoriteScreen`内部处理
+//    @State private var loadError: CatFriendlyError? = nil
     
     var body: some View {
         TabView(selection: $tab) {
@@ -26,29 +27,23 @@ struct CatHomeScreen: View {
                 .tabItem { Label("Favorite", systemImage: "heart.fill") }
                 .tag(Tab.favorites)
         }
-//        .alert(loadError?.title ?? "Fail!", isPresented: $isLoadFailed) {
-//            Button("OK") { loadError = nil }
-//        } message: {
-//            if let loadError {
-//                Text(loadError.error.localizedDescription)
-//            }
-//        }
-        .cat_alert(error: $loadError)
-        .task { await loadFavorites() }
+        // 📢 挪到`CatFavoriteScreen`内部处理
+//        .cat_alert(error: $loadError)
+//        .task { await loadFavorites() }
     }
 }
 
-private extension CatHomeScreen {
-    func loadFavorites() async {
-        do {
-            try await apiManager.getFavorites()
-//            throw URLError(.cancelled) // for error test
-        } catch {
-            loadError = .init(title: "「我的最爱」加载失败", error: error)
-//            isLoadFailed = true
-        }
-    }
-}
+// 📢 挪到`CatFavoriteScreen`内部获取
+//private extension CatHomeScreen {
+//    func loadFavorites() async {
+//        do {
+//            try await apiManager.getFavorites()
+////            throw URLError(.cancelled) // for error test
+//        } catch {
+//            loadError = .init(title: "「我的最爱」加载失败", error: error)
+//        }
+//    }
+//}
 
 private extension CatHomeScreen {
     enum Tab {
