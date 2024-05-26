@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CodableTestView: View {
+    @State var text0: String = ""
     @State var text1: String = ""
     @State var text2: String = ""
     @State var text3: String = ""
@@ -17,6 +18,10 @@ struct CodableTestView: View {
         VStack(spacing: 20) {
             Button("Do it!") {
                 doit()
+            }
+            
+            if text0.count > 0 {
+                Text(text0)
             }
             
             if text1.count > 0 {
@@ -35,6 +40,7 @@ struct CodableTestView: View {
                 Text(text4)
             }
         }
+        .padding(.horizontal, 10)
     }
 }
 
@@ -49,26 +55,47 @@ private extension CodableTestView {
         do {
             let user = try JSONDecoder().decode(User.self, from: jsonData1)
             let data = try JSONEncoder().encode(user)
-            text1 = String(data: data, encoding: .utf8)!
-            
-            let rsp1: MyResponse<[User2]> = try JSONDecoder().decode(MyResponse.self, from: jsonData2)
-            text2 = "\(rsp1)"
-            
-            let rsp2: MyResponse<User3> = try JSONDecoder().decode(MyResponse.self, from: jsonData3)
-            text3 = "\(rsp2)"
-            
-            let rsp3: MyResponse<User4> = try JSONDecoder().decode(MyResponse.self, from: jsonData4)
-            text4 = "\(rsp3)"
+            text0 = String(data: data, encoding: .utf8)!
         } catch {
-            text1 = "\(error.localizedDescription)"
-            text2 = ""
-            text3 = ""
-            text4 = ""
+            print("error0: \(error.localizedDescription)")
+            text0 = "error0: \(error.localizedDescription)"
+        }
+        
+        do {
+            let user = try JSONDecoder().decode(User1.self, from: jsonData1)
+            text1 = "\(user)"
+        } catch {
+            print("error1: \(error.localizedDescription)")
+            text1 = "error1: \(error.localizedDescription)"
+        }
+        
+        do {
+            let rsp: MyResponse<[User2]> = try JSONDecoder().decode(MyResponse.self, from: jsonData2)
+            text2 = "\(rsp)"
+        } catch {
+            print("error2: \(error.localizedDescription)")
+            text2 = "error2: \(error.localizedDescription)"
+        }
+        
+        do {
+            let rsp: MyResponse<User3> = try JSONDecoder().decode(MyResponse.self, from: jsonData3)
+            text3 = "\(rsp)"
+        } catch {
+            print("error3: \(error.localizedDescription)")
+            text3 = "error3: \(error.localizedDescription)"
+        }
+        
+        do {
+            let rsp: MyResponse<User4> = try JSONDecoder().decode(MyResponse.self, from: jsonData4)
+            text4 = "\(rsp)"
+        } catch {
+            print("error4: \(error.localizedDescription)")
+            text4 = "error4: \(error.localizedDescription)"
         }
     }
 }
 
-// MARK: - 🌰1 使用Enum的RawVallue声明不同名称
+// MARK: - 🌰0 使用Enum的RawVallue声明不同名称
 
 private let jsonData1 = Data(
 """
@@ -108,6 +135,17 @@ extension CodableTestView.User: Encodable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
+    }
+}
+
+// MARK: - 🌰1 数据中可能没有某个属性的情况
+
+private extension CodableTestView {
+    struct User1: Decodable {
+        var id: Int
+        var fullName: String
+        // 📢 如果data中可能没有对应的某个属性，那就让该属性成为可选类型，解码时会自动置nil，否则会throw error
+        var address: Int?
     }
 }
 
@@ -286,6 +324,10 @@ private extension CodableTestView {
             case id, firstName, lastName, friends, bestFriend
         }
         
+//        enum FriendKeys: CodingKey {
+//            case id
+//        }
+        
 //        enum BestFriendKeys: CodingKey {
 //            case id
 //        }
@@ -306,25 +348,25 @@ private extension CodableTestView {
             // `nestedUnkeyedContainer(forKey:)`：【字典】->【数组】
             var friendContainer = try container.nestedUnkeyedContainer(forKey: .friends) 
             // --> get "response.friends" -> [[String: Any]]
-            self.friendIDs = try friendContainer.map {
+            self.friendIDs = try friendContainer.map { // friendDecoder in
                 // --> get "friends[x]" -> {"id": xx, "666": "xx"}
                 
                 // 方式一
-//                friendDecoder in
 //                let frienndIDContainer = try friendDecoder.container(keyedBy: FriendKeys.self)
 //                return try frienndIDContainer[.id]
                 
                 // 方式二
-//                try $0.container(keyedBy: FriendKeys.self)[.id]
+//                return try $0.container(keyedBy: FriendKeys.self)[.id]
+                
+                // ~~~~~~ test ~~~~~~
+                // 兼容Int类型的key
+                let abc: String = try $0.container()[666]
+                print(abc)
+                // ~~~~~~ test ~~~~~~
                 
                 // 方式三
                 // 获取可通过`String`和`Int`类型key解码的Container：
                 // Decoding+：container() -> KeyedDecodingContainer<DecodingKey>
-                
-                // 兼容Int类型的key
-                let abc: String = try $0.container()[666]
-                print(abc)
-                
                 return try $0.container()["id"]
                 
 //                var aaaaa: Int = try $0.container()[111]
