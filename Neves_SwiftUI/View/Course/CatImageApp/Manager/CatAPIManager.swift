@@ -9,8 +9,9 @@
 import SwiftUI
 
 enum CatFavoriteLoadingState: Equatable {
-    case notStarted
-    case loading
+    case old_notStarted
+    case old_loading
+    case loading(page: Int)
     case success(nextPage: Int?)
     case fail(retryPage: Int)
 }

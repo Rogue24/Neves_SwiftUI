@@ -45,7 +45,7 @@ struct CatImageView: View {
                 case .empty:
                     ProgressView()
                         .controlSize(.large)
-                        .task { await load() }
+                        .onAppear(perform: load)
                     
                 case .success(let image):
                     image
@@ -104,18 +104,22 @@ struct CatImageView: View {
 
 
 private extension CatImageView {
-    func load() async {
-        do {
-            let urlRequest = URLRequest(url: catImage.url)
-            let data = try await session.jp_data(for: urlRequest)
-            
-            guard let uiImage = UIImage(data: data) else {
-                throw URLSession.APIError.invalidData
+    func load() {
+        // 使用`.task {}`的话，当View被替换或移除，顺带的`task`及其子任务立马被取消执行，由于此时网络正在请求中，因此请求则会被取消（失败）
+        // 为了让当前View被替换或移除时也能继续加载数据，将这些操作包在一个新的`Task`中去执行（跟View的生命周期解绑，相互独立）：
+        Task {
+            do {
+                let urlRequest = URLRequest(url: catImage.url)
+                let data = try await session.jp_data(for: urlRequest)
+                
+                guard let uiImage = UIImage(data: data) else {
+                    throw URLSession.APIError.invalidData
+                }
+                
+                phase = .success(Image(uiImage: uiImage))
+            } catch {
+                phase = .failure(error)
             }
-            
-            phase = .success(Image(uiImage: uiImage))
-        } catch {
-            phase = .failure(error)
         }
     }
 }
