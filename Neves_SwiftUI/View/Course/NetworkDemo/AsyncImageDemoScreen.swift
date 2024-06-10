@@ -52,13 +52,18 @@ struct JPAsyncImage: View {
             case .empty:
                 ProgressView()
                     .scaleEffect(3)
-                    .task { await load() }
+                    .task {
+                        await load()
+                    }
+                
             case .success(let image):
                 image
                     .resizable()
                     .scaledToFit()
+                
             case .failure(let error):
                 Text(error.localizedDescription)
+                
             @unknown default:
                 Text("啊？")
             }
@@ -87,8 +92,8 @@ struct JPAsyncImage: View {
 
 struct AsyncImageDemoScreen: View {
     @State private var id = UUID()
-//    let url = LoremPicsum.photoURLwithRandomId(size: [500, 500])
-    let url = URL(string: "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png")!
+    let url = LoremPicsum.photoURLwithRandomId(size: [500, 500])
+//    let url = URL(string: "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png")!
     
     var body: some View {
         VStack {

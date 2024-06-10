@@ -11,7 +11,7 @@ extension CatAPIManager {
     enum Endpoint {
         case images
         case addToFavorite(bodyData: Data)
-        case favorites
+        case favorites(page: Int, limit: Int)
         case removeFromFavorite(id: Int)
         
         var request: URLRequest {
@@ -27,9 +27,9 @@ extension CatAPIManager {
                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 return request
                 
-            case .favorites:
-                // TODO: 补上分页参数
-                return URLRequest(url: "https://api.thecatapi.com/v1/favourites")
+            case let .favorites(page, limit):
+                let url = URL(string: "https://api.thecatapi.com/v1/favourites?page=\(page)&limit=\(limit)")
+                return URLRequest(url: url!)
                 
             case let .removeFromFavorite(id):
                 var request = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/favourites/\(id)")!)

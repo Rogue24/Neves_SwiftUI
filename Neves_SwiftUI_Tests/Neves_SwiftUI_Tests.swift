@@ -94,14 +94,29 @@ final class Neves_SwiftUI_Tests: XCTestCase {
     }
     
     @MainActor
+    func test_getFavoritesAndAppend() async {
+        let result1 = await sut.getFavoritesAndAppend(page: 0, limit: 5)
+        XCTAssertEqual(result1, .success(nextPage: 1))
+        XCTAssertEqual(5, sut.favorites.count)
+        
+        let result2 = await sut.getFavoritesAndAppend(page: 1, limit: 5)
+        XCTAssertEqual(result2, .success(nextPage: 2))
+        XCTAssertEqual(10, sut.favorites.count)
+        
+        let result3 = await sut.getFavoritesAndAppend(page: 2, limit: 5)
+        XCTAssertEqual(result3, .success(nextPage: nil))
+        XCTAssertEqual(13, sut.favorites.count)
+    }
+    
     func test_getFavorites() async throws {
-        do {
-            try await sut.getFavorites()
-            // 检查是不是拿到13个数据
-            XCTAssertEqual(13, sut.favorites.count)
-        } catch {
-            XCTFail("❌ Unexpected Error: \(error)")
-        }
+        let result1 = try await sut.getFavorites(page: 1, limit: 5)
+        XCTAssertEqual(result1.count, 5)
+        
+        let result2 = try await sut.getFavorites(page: 2, limit: 5)
+        XCTAssertEqual(result2.count, 3)
+        
+        let result3 = try await sut.getFavorites(page: 5, limit: 5)
+        XCTAssertEqual(result3.count, 0)
     }
     
     @MainActor

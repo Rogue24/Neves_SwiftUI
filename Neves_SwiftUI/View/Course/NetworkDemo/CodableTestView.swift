@@ -114,6 +114,8 @@ private extension CodableTestView {
             case id
             // 本地属性名跟服务器数据名不一样的情况：
             case name = "fullName" // 使用case的名字作为属性名，`rawValue`作为服务器数据对应的key
+            //    ↓         ↓
+            // 自定义名字  原数据名字
         }
     }
 }
@@ -277,42 +279,6 @@ private let jsonData4 = Data(
 }
 """.utf8)
 
-private extension KeyedDecodingContainerProtocol {
-    // subscript的语法类似于实例方法、计算属性，本质就是方法(函数)
-    // subscript可以没有set方法，但必须要有get方法
-    
-    // associatedtype Key : CodingKey
-    subscript<T: Decodable>(_ key: Key) -> T { // ❌ -> throws T，subscript不能在【函数的返回】添加「throws」。
-        // 当需要在subscript或是属性中「抛出错误」，或者做「async」的时候，
-        // 必须要在里面去定义ta的【get】方法：
-        get throws {
-            try decode(T.self, forKey: key)
-        }
-    }
-}
-
-/// `UnkeyedDecodingContainer`顾名思义就是没有`key`的`Container`，相当于是「指向数组第x个元素的起始指针」，
-/// 🌰：
-///
-///     "friends":[
-///         {"id": 97, "666": "sss"},
-///         {"id": 23, "666": "bbb"},
-///     ]
-///
-/// 此时第一个`UnkeyedDecodingContainer`就是`{"id": 97, "666": "sss"}`，但ta并不是一个字典，没办法通过`key`获取对应的`value`，只是一个指向数组第一个元素的 “指针”。
-/// 接着通过`superDecoder`，获取到当前这一个`{"id": 97, "666": "sss"}`的`Decoder`（注意并不是整个`friends`的，而是第一个元素的），
-/// 这里把`superDecoder`抛出去，让外部自行决定如何解码，例如将该`Decoder`转成`KeyedDecodingContainer`，即可通过`key`获取对应的`value`了。
-private extension UnkeyedDecodingContainer {
-    mutating func map<T>(_ transform: (Decoder) throws -> T) throws -> [T] {
-        var items: [T] = []
-        while !isAtEnd {
-            let item = try transform(superDecoder())
-            items.append(item)
-        }
-        return items
-    }
-}
-
 private extension CodableTestView {
     struct User4: Decodable {
         var id: Int
@@ -385,6 +351,44 @@ private extension CodableTestView {
     }
 }
 
+// MARK: - extension for KeyedDecodingContainerProtocol 类似字典可以通过`[key]`的方式获取`value`的subscript
+/// `KeyedDecodingContainer`类似`【字典】`，是通过`key`去`decode`对应的`value`。
+private extension KeyedDecodingContainerProtocol {
+    // subscript的语法类似于实例方法、计算属性，本质就是方法(函数)
+    // subscript可以没有set方法，但必须要有get方法
+    
+    // associatedtype Key : CodingKey
+    subscript<T: Decodable>(_ key: Key) -> T { // ❌ -> throws T，subscript不能在【函数的返回】添加「throws」。
+        // 当需要在subscript或是属性中「抛出错误」，或者做「async」的时候，
+        // 必须要在里面去定义ta的【get】方法：
+        get throws {
+            try decode(T.self, forKey: key)
+        }
+    }
+}
+
+// MARK: - extension for UnkeyedDecodingContainer 自定义`map`函数
+/// `UnkeyedDecodingContainer`顾名思义就是没有`key`的`Container`，类似`【数组】`，相当于是「指向数组第x个元素的起始指针」。
+/// 🌰：
+///
+///     "friends":[
+///         {"id": 97, "666": "sss"},
+///         {"id": 23, "666": "bbb"},
+///     ]
+///
+/// 此时第一个`UnkeyedDecodingContainer`就是`{"id": 97, "666": "sss"}`，但ta并不是一个字典，没办法通过`key`获取对应的`value`，只是一个指向数组第一个元素的 “指针”。
+/// 接着通过`superDecoder`，获取到当前这一个`{"id": 97, "666": "sss"}`的`Decoder`（注意并不是整个`friends`的，而是第一个元素的），
+/// 这里把`superDecoder`抛出去，让外部自行决定如何解码，例如将该`Decoder`转成`KeyedDecodingContainer`，即可通过`key`获取对应的`value`了。
+private extension UnkeyedDecodingContainer {
+    mutating func map<T>(_ transform: (Decoder) throws -> T) throws -> [T] {
+        var items: [T] = []
+        while !isAtEnd {
+            let item = try transform(superDecoder())
+            items.append(item)
+        }
+        return items
+    }
+}
 
 #Preview {
     CodableTestView()

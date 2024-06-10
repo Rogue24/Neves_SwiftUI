@@ -89,7 +89,7 @@ extension Demo: View {
             CatHomeScreen()
 //                .environment(\.catApiManager, .shared)
                 .environmentObject(CatAPIManager.shared) // 改用environmentObject：能跟随属性的变化去更新视图
-                            
+                // preview 本地，shared 服务器
             
         // Test
         case .Test1: Test1View()
