@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0011007E2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011007D2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework */; };
+		0011007F2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0011007D2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework */; };
+		001100832C47A56700DF0C89 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100802C47A56600DF0C89 /* View+Extension.swift */; };
+		001100842C47A56700DF0C89 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100802C47A56600DF0C89 /* View+Extension.swift */; };
+		001100852C47A56700DF0C89 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100812C47A56600DF0C89 /* Direction.swift */; };
+		001100862C47A56700DF0C89 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100812C47A56600DF0C89 /* Direction.swift */; };
+		001100872C47A56700DF0C89 /* SwingAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100822C47A56700DF0C89 /* SwingAnimationModifier.swift */; };
+		001100882C47A56700DF0C89 /* SwingAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100822C47A56700DF0C89 /* SwingAnimationModifier.swift */; };
+		0011008A2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100892C47A62300DF0C89 /* SwingAnimationView.swift */; };
+		0011008B2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100892C47A62300DF0C89 /* SwingAnimationView.swift */; };
 		00245A042A4B039400E5CF67 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00245A032A4B039400E5CF67 /* PlaygroundView.swift */; };
 		00535C6E2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */; };
 		008DC2FE29778E300039AB22 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
@@ -213,6 +223,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0011007D2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ClockHandRotationKit.xcframework; sourceTree = "<group>"; };
+		001100802C47A56600DF0C89 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		001100812C47A56600DF0C89 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		001100822C47A56700DF0C89 /* SwingAnimationModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingAnimationModifier.swift; sourceTree = "<group>"; };
+		001100892C47A62300DF0C89 /* SwingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingAnimationView.swift; sourceTree = "<group>"; };
 		00245A032A4B039400E5CF67 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 		00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageDemoScreen.swift; sourceTree = "<group>"; };
 		008DC2B8297254320039AB22 /* Neves-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Neves-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -394,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7115A6C127EDC7D900C5B145 /* SwiftUI.framework in Frameworks */,
+				0011007F2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework in Frameworks */,
 				7115A6BF27EDC7D800C5B145 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0011007E2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework in Frameworks */,
 				A900AE262C842F6285A5D29F /* Pods_Neves_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +426,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0011007C2C47A53B00DF0C89 /* SwingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				001100822C47A56700DF0C89 /* SwingAnimationModifier.swift */,
+				001100802C47A56600DF0C89 /* View+Extension.swift */,
+				001100812C47A56600DF0C89 /* Direction.swift */,
+				0011007D2C47A55C00DF0C89 /* ClockHandRotationKit.xcframework */,
+			);
+			path = SwingAnimation;
+			sourceTree = "<group>";
+		};
 		00535C6C2B7CCC8A00C308C9 /* NetworkDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,6 +801,7 @@
 				00F0A1D4296BEDA5006B5A28 /* NevesWidgetView.swift */,
 				00F0A1DC296BF62E006B5A28 /* NevesWidgetStore.swift */,
 				00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */,
+				001100892C47A62300DF0C89 /* SwingAnimationView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -1013,6 +1042,7 @@
 		71ADDF7F27A0E88000404FF4 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				0011007C2C47A53B00DF0C89 /* SwingAnimation */,
 				00D63DEE299103C5003F0C29 /* SwiftUIVisualEffects */,
 				71ADDF8027A0E88000404FF4 /* TTProgressHUD */,
 			);
@@ -1233,6 +1263,8 @@
 				00F0A1E7296D607F006B5A28 /* UserDefault.swift in Sources */,
 				7107CD84287BBE5A00AC9B9F /* UIScreen.Extension.swift in Sources */,
 				00E5D9CE296EA130006A6FDD /* Modifiers.swift in Sources */,
+				0011008B2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */,
+				001100882C47A56700DF0C89 /* SwingAnimationModifier.swift in Sources */,
 				00F0A1DE296BF696006B5A28 /* NevesWidgetStore.swift in Sources */,
 				00F0A1E5296D453D006B5A28 /* NevesWidgetModel.swift in Sources */,
 				00E5D9D8296FB112006A6FDD /* EnvironmentValues.swift in Sources */,
@@ -1240,9 +1272,11 @@
 				7107CD82287BBE4900AC9B9F /* JP.swift in Sources */,
 				7115A6C427EDC7D900C5B145 /* NevesWidget.swift in Sources */,
 				00F0A1D6296BEDA7006B5A28 /* NevesWidgetView.swift in Sources */,
+				001100862C47A56700DF0C89 /* Direction.swift in Sources */,
 				008DC2FE29778E300039AB22 /* LoremPicsum.swift in Sources */,
 				00ED822F296BBF76006F035B /* AppGroups.swift in Sources */,
 				00D63E2C2991F1F1003F0C29 /* Const.swift in Sources */,
+				001100842C47A56700DF0C89 /* View+Extension.swift in Sources */,
 				00D63E2E2991F1F1003F0C29 /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1317,6 +1351,7 @@
 				1AA103EF2B7F67D900194C66 /* CodableTestView.swift in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
 				1A9D13CB2A35A3B400276AA3 /* Task.Extension.swift in Sources */,
+				0011008A2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */,
 				1A34347E2B94D6B900EB4B35 /* Operator+.swift in Sources */,
 				00245A042A4B039400E5CF67 /* PlaygroundView.swift in Sources */,
 				00DFE9F9290905ED00B6611B /* ButtonStyles.swift in Sources */,
@@ -1326,6 +1361,7 @@
 				1AC95CC92A388AB4002F19E9 /* SuffixWrapper.swift in Sources */,
 				71032D31275E21450030776A /* CropViewController.swift in Sources */,
 				1A630B822A76580700F3D2C1 /* SFSymbol.swift in Sources */,
+				001100852C47A56700DF0C89 /* Direction.swift in Sources */,
 				00F0A1DD296BF62E006B5A28 /* NevesWidgetStore.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
 				7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
@@ -1340,6 +1376,7 @@
 				1AA058052B94E030000909BE /* CatAPIManager.swift in Sources */,
 				1A621CD12880FD8D00DC463F /* TestUIView.swift in Sources */,
 				716828C0275DBBD80039F3F7 /* Func.swift in Sources */,
+				001100872C47A56700DF0C89 /* SwingAnimationModifier.swift in Sources */,
 				1A630B842A76D4FE00F3D2C1 /* AnyTransition+.swift in Sources */,
 				1AC95CC52A383F5B002F19E9 /* Food.swift in Sources */,
 				1A467BA62A49971E0026F21B /* ListTestView.swift in Sources */,
@@ -1348,6 +1385,7 @@
 				00D63E3029924B65003F0C29 /* PlaceholderView.swift in Sources */,
 				00BF6B402BB01BFE007BEDDB /* View+CatFriendlyError.swift in Sources */,
 				716828CA275DDB4D0039F3F7 /* Test3View.swift in Sources */,
+				001100832C47A56700DF0C89 /* View+Extension.swift in Sources */,
 				715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */,
 				715ED7C72700642C0030F279 /* UIScreen.Extension.swift in Sources */,
 				716828C4275DC0580039F3F7 /* Color.Extension.swift in Sources */,
