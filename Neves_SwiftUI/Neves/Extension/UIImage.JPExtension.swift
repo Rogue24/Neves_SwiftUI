@@ -24,10 +24,10 @@ extension UIImage {
         guard let data = try? Data(contentsOf: url) else {
             return ([], 0)
         }
-        return await decodeGIF(data)
+        return decodeGIF(data)
     }
     
-    static func decodeGIF(_  data: Data) async -> GifResult {
+    static func decodeGIF(_  data: Data) -> GifResult {
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, nil) else {
             return ([], 0)
         }

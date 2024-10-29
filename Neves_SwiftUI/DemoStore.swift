@@ -65,6 +65,8 @@ enum Demo: String, CaseIterable, Identifiable {
     // MARK: - Widget
     case NevesWidget
     case SwingAnimation
+    case TestArc_V
+    case TestArc_Z
 }
 
 /// 直接让`Demo`成为`View`：
@@ -143,6 +145,8 @@ extension Demo: View {
         // Widget
         case .NevesWidget: NevesWidgetEditView()
         case .SwingAnimation: SwingAnimationView()
+        case .TestArc_V: TestArcView(isUseVStack: true)
+        case .TestArc_Z: TestArcView(isUseVStack: false)
         }
     }
 }
@@ -215,6 +219,8 @@ extension Demo {
         Section(title: "Widget", demos: [
             .NevesWidget,
             .SwingAnimation,
+            .TestArc_V,
+            .TestArc_Z,
         ]),
     ]
 }

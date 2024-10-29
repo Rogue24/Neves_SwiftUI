@@ -93,7 +93,7 @@ private extension FoodPickerScreen {
                 // 加上下面这句的效果是：使用不同的id，那就是不同的View，让SwiftUI做转场动画！
                 .id(selectedFood.name)
                 // 使用自定义的转场效果（transition：在【转场动画】中才有效）
-                .transition( .delayInsertionOpacity)
+                .transition(.delayInsertionOpacity)
             
             Button {
                 withAnimation(.mySpring) {
