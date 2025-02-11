@@ -27,13 +27,18 @@ struct CatFavoriteScreen: View {
                     favoriteFeatureHintText
                 }
                 
-                // 使用`LazyVStack`可以保证View在【看到】的时候才会被创建。
+                // 使用`LazyVStack`可以保证里面的View在【看到】的时候才会被创建。
                 // 这样就不会不断地去【自动】加载更多了（使用LazyVStack就可以滑到底部时才会去创建「成功状态的ProgressView」去加载更多）
                 LazyVStack {
                     favoriteList
 //                    old_footer // 旧实现
                     footer
                 }
+                // 这里的【看到】是指真的在屏幕上看到这个View的时候，
+                // 默认的`.task`（和`onAppear`）是在View排版完出现在整个父View的架构之上时就执行，也就是说超出屏幕范围都会执行，这样会造成很多不必要的浪费（自动加载），
+                // 为了避免这种问题，采用`LazyVStack`将其包裹，让这个View真的出现在屏幕上时才会开始进行排版，真的看到的时候才去执行它的`.task`。
+                // https://www.bilibili.com/video/BV1DV4y1m7YT?spm_id_from=333.788.videopod.sections&vd_source=05ccbbed10d0de65a33ef63c4e5dd2fe
+                // 在23:00处进行了解释。
             }
         }
         .animation(.spring(), value: apiManager.favorites)
