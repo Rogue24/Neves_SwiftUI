@@ -75,6 +75,7 @@
 		00F0A1E5296D453D006B5A28 /* NevesWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */; };
 		00F0A1E7296D607F006B5A28 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1DF296BFFCB006B5A28 /* UserDefault.swift */; };
 		00F0A1F5296E584F006B5A28 /* LoremPicsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */; };
+		00F112C82CD08B70001F5906 /* ToastsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F112C72CD08B70001F5906 /* ToastsView.swift */; };
 		00FCC7822990A50C0086E2C7 /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC7812990A50C0086E2C7 /* Hud.swift */; };
 		1A08C4862A5B1040000D4B68 /* FoodListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08C4852A5B1040000D4B68 /* FoodListScreen.swift */; };
 		1A09FE642B9DAFB400E3B6EE /* JPSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09FE632B9DAFB300E3B6EE /* JPSecret.swift */; };
@@ -290,6 +291,7 @@
 		00F0A1DF296BFFCB006B5A28 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		00F0A1E3296D3148006B5A28 /* NevesWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NevesWidgetModel.swift; sourceTree = "<group>"; };
 		00F0A1F4296E584F006B5A28 /* LoremPicsum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremPicsum.swift; sourceTree = "<group>"; };
+		00F112C72CD08B70001F5906 /* ToastsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastsView.swift; sourceTree = "<group>"; };
 		00FCC7812990A50C0086E2C7 /* Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
 		1A08C4852A5B1040000D4B68 /* FoodListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListScreen.swift; sourceTree = "<group>"; };
 		1A09FE632B9DAFB300E3B6EE /* JPSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPSecret.swift; sourceTree = "<group>"; };
@@ -549,6 +551,14 @@
 				7107CDA5287BF35500AC9B9F /* GifImage.swift */,
 			);
 			path = GIF;
+			sourceTree = "<group>";
+		};
+		00F112C62CD08B48001F5906 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				00F112C72CD08B70001F5906 /* ToastsView.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		00FCC7802990A4DA0086E2C7 /* HUD */ = {
@@ -965,6 +975,7 @@
 				716828B8275DB9FB0039F3F7 /* Test */,
 				716828B9275DBA000039F3F7 /* Base */,
 				716828B5275DB9E40039F3F7 /* Unit */,
+				00F112C62CD08B48001F5906 /* Utilities */,
 				716828B7275DB9EF0039F3F7 /* Animation */,
 				00ED8251296BE6CB006F035B /* GIF */,
 				71032D29275E1CA50030776A /* UIKit */,
@@ -1409,6 +1420,7 @@
 				001100832C47A56700DF0C89 /* View+Extension.swift in Sources */,
 				715ED75426FF2E310030F279 /* Neves_SwiftUIApp.swift in Sources */,
 				715ED7C72700642C0030F279 /* UIScreen.Extension.swift in Sources */,
+				00F112C82CD08B70001F5906 /* ToastsView.swift in Sources */,
 				716828C4275DC0580039F3F7 /* Color.Extension.swift in Sources */,
 				008DC3192977DCCF0039AB22 /* FunnyPlayView.swift in Sources */,
 				71032D3927605D6F0030776A /* MatchedGeometryEffectView.swift in Sources */,

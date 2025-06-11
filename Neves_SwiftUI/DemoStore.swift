@@ -49,6 +49,9 @@ enum Demo: String, CaseIterable, Identifiable {
     case ProgressHUD
     case FunnyPlay
     
+    // MARK: - Utilities
+    case Toasts
+    
     // MARK: - Animation
     case AnimationValue
     case AnimExperience_iOS15
@@ -115,6 +118,9 @@ extension Demo: View {
         case .Buttons: ButtonsView()
         case .ProgressHUD: ProgressHUDView()
         case .FunnyPlay: FunnyPlayView()
+            
+        // Utilities
+        case .Toasts: ToastsView()
             
         // Animation
         case .AnimationValue: AnimationValueView()
@@ -198,6 +204,10 @@ extension Demo {
             .Buttons,
             .ProgressHUD,
             .FunnyPlay,
+        ]),
+        
+        Section(title: "Utilities", demos: [
+            .Toasts,
         ]),
         
         Section(title: "Animation", demos: [
