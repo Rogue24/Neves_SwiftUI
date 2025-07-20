@@ -15,7 +15,7 @@ enum Demo: String, CaseIterable, Identifiable {
     // MARK: - Playground
     case Playground
     
-    // MARK: - Course
+    // MARK: - Courses
     case Course1_FoodHome
     case Course1_FoodPicker
     case Course1_FoodList
@@ -82,7 +82,7 @@ extension Demo: View {
         // Playground
         case .Playground: PlaygroundView()
             
-        // Course
+        // Courses
         case .Course1_FoodHome: HomeScreen()
         case .Course1_FoodPicker: FoodPickerScreen()
         case .Course1_FoodList: FoodListScreen()
@@ -171,7 +171,7 @@ extension Demo {
             .Playground,
         ]),
         
-        Section(title: "Course", demos: [
+        Section(title: "Courses", demos: [
             .Course1_FoodHome,
             .Course1_FoodPicker,
             .Course1_FoodList,
