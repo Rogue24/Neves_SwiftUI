@@ -26,6 +26,7 @@
 		00B3C6E629AC49370027F587 /* WaterfallGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E529AC49370027F587 /* WaterfallGrid.swift */; };
 		00B3C6E829AC51A50027F587 /* WaterfallGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6E729AC51A50027F587 /* WaterfallGridView.swift */; };
 		00B6E8612C576C2400E01936 /* TestArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B6E8602C576C2400E01936 /* TestArcView.swift */; };
+		00B757692E2CFC1F001DFA02 /* FoundationModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B757682E2CFC1F001DFA02 /* FoundationModelsView.swift */; };
 		00BF6B402BB01BFE007BEDDB /* View+CatFriendlyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */; };
 		00BF6B422BB02EC8007BEDDB /* CatAPIManager+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B412BB02EC8007BEDDB /* CatAPIManager+Response.swift */; };
 		00BF6B442BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF6B432BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift */; };
@@ -251,6 +252,7 @@
 		00B3C6E529AC49370027F587 /* WaterfallGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGrid.swift; sourceTree = "<group>"; };
 		00B3C6E729AC51A50027F587 /* WaterfallGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridView.swift; sourceTree = "<group>"; };
 		00B6E8602C576C2400E01936 /* TestArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArcView.swift; sourceTree = "<group>"; };
+		00B757682E2CFC1F001DFA02 /* FoundationModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationModelsView.swift; sourceTree = "<group>"; };
 		00BF6B3F2BB01BFE007BEDDB /* View+CatFriendlyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CatFriendlyError.swift"; sourceTree = "<group>"; };
 		00BF6B412BB02EC8007BEDDB /* CatAPIManager+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Response.swift"; sourceTree = "<group>"; };
 		00BF6B432BB02F1F007BEDDB /* CatAPIManager+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Endpoint.swift"; sourceTree = "<group>"; };
@@ -462,6 +464,14 @@
 				1AA103EE2B7F67D900194C66 /* CodableTestView.swift */,
 			);
 			path = NetworkDemo;
+			sourceTree = "<group>";
+		};
+		00B757672E2CF87F001DFA02 /* FoundationModels */ = {
+			isa = PBXGroup;
+			children = (
+				00B757682E2CFC1F001DFA02 /* FoundationModelsView.swift */,
+			);
+			path = FoundationModels;
 			sourceTree = "<group>";
 		};
 		00D63DEE299103C5003F0C29 /* SwiftUIVisualEffects */ = {
@@ -709,6 +719,7 @@
 				1A9D13C72A35A15C00276AA3 /* FoodPickerApp */,
 				00535C6C2B7CCC8A00C308C9 /* NetworkDemo */,
 				1A34346C2B94D64C00EB4B35 /* CatImageApp */,
+				00B757672E2CF87F001DFA02 /* FoundationModels */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -1264,9 +1275,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Neves_SwiftUI/Pods-Neves_SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1382,6 +1397,7 @@
 				1AC7ECEA2A894109006ADBDC /* UserDefaults+Key.swift in Sources */,
 				1AA103EF2B7F67D900194C66 /* CodableTestView.swift in Sources */,
 				715ED7C22700642C0030F279 /* Date.Extension.swift in Sources */,
+				00B757692E2CFC1F001DFA02 /* FoundationModelsView.swift in Sources */,
 				1A9D13CB2A35A3B400276AA3 /* Task.Extension.swift in Sources */,
 				0011008A2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */,
 				1A34347E2B94D6B900EB4B35 /* Operator+.swift in Sources */,

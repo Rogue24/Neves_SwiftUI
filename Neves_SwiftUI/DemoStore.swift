@@ -16,16 +16,17 @@ enum Demo: String, CaseIterable, Identifiable {
     case Playground
     
     // MARK: - Course
-    case FoodHome
-    case FoodPicker
-    case FoodList
-    case AnimTest
-    case ShapeTest
-    case ListTest
-    case JSONTest
-    case AsyncImageTest
-    case CodableTest
-    case CatHome
+    case Course1_FoodHome
+    case Course1_FoodPicker
+    case Course1_FoodList
+    case Course1_AnimTest
+    case Course1_ShapeTest
+    case Course1_ListTest
+    case Course1_JSONTest
+    case Course2_AsyncImageTest
+    case Course2_CodableTest
+    case Course3_CatHome
+    case Course4_FoundationModels
     
     // MARK: - Test
     case Test1
@@ -82,20 +83,21 @@ extension Demo: View {
         case .Playground: PlaygroundView()
             
         // Course
-        case .FoodHome: HomeScreen()
-        case .FoodPicker: FoodPickerScreen()
-        case .FoodList: FoodListScreen()
-        case .AnimTest: AnimTestView()
-        case .ShapeTest: ShapeTestView()
-        case .ListTest: ListTestView()
-        case .JSONTest: JSONTestView()
-        case .AsyncImageTest: AsyncImageDemoScreen()
-        case .CodableTest: CodableTestView()
-        case .CatHome:
+        case .Course1_FoodHome: HomeScreen()
+        case .Course1_FoodPicker: FoodPickerScreen()
+        case .Course1_FoodList: FoodListScreen()
+        case .Course1_AnimTest: AnimTestView()
+        case .Course1_ShapeTest: ShapeTestView()
+        case .Course1_ListTest: ListTestView()
+        case .Course1_JSONTest: JSONTestView()
+        case .Course2_AsyncImageTest: AsyncImageDemoScreen()
+        case .Course2_CodableTest: CodableTestView()
+        case .Course3_CatHome:
             CatHomeScreen()
 //                .environment(\.catApiManager, .shared)
                 .environmentObject(CatAPIManager.shared) // 改用environmentObject：能跟随属性的变化去更新视图
-                // preview 本地，shared 服务器
+                // CatAPIManager.preview - 本地，CatAPIManager.shared - 服务器
+        case .Course4_FoundationModels: FoundationModelsView()
             
         // Test
         case .Test1: Test1View()
@@ -170,16 +172,17 @@ extension Demo {
         ]),
         
         Section(title: "Course", demos: [
-            .FoodHome,
-            .FoodPicker,
-            .FoodList,
-            .AnimTest,
-            .ShapeTest,
-            .ListTest,
-            .JSONTest,
-            .AsyncImageTest,
-            .CodableTest,
-            .CatHome,
+            .Course1_FoodHome,
+            .Course1_FoodPicker,
+            .Course1_FoodList,
+            .Course1_AnimTest,
+            .Course1_ShapeTest,
+            .Course1_ListTest,
+            .Course1_JSONTest,
+            .Course2_AsyncImageTest,
+            .Course2_CodableTest,
+            .Course3_CatHome,
+            .Course4_FoundationModels,
         ]),
         
         Section(title: "Test", demos: [
