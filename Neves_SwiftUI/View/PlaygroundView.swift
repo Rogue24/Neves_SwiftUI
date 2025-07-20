@@ -4,12 +4,13 @@
 //
 //  Created by aa on 2023/6/27.
 //
+//  公告：这是【临时游玩】的场所！游玩结束后记得【清空代码】！！！
 
 import SwiftUI
 
 struct PlaygroundView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Try some test...")
     }
 }
 
