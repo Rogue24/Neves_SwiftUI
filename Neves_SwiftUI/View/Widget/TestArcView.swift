@@ -78,7 +78,7 @@ struct TestArcView: View {
             }
         }
         .task {
-            gifResult = await UIImage.decodeBundleGIF("1650349583")
+            gifResult = await UIImage.decodeBundleGIF("KamisatoAyaka")
         }
         .funnyAction {
             withAnimation(.spring(duration: 1)) {
