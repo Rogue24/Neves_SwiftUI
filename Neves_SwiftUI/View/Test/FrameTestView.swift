@@ -12,7 +12,7 @@ struct FrameTestView: View {
     var body: some View {
         ZStack(alignment: .top) {
             // SwiftUI默认始终采用图像的原始尺寸（图片多大就多大）
-            Image(uiImage: UIImage.jp.fromBundle(forName: "Girl2", ofType: "jpg")!)
+            Image(uiImage: UIImage.jp.fromBundle("Girl2", type: "jpg")!)
                 // 使用这个Modifier可以确保图片的【最小边】限制在父视图内
                 .resizable()
             

@@ -77,7 +77,7 @@ private extension WaterfallGridView {
         }
         
         var body: some View {
-            Image(uiImage: UIImage.jp.fromBundle(forName: girl.imgName, ofType: "jpg")!)
+            Image(uiImage: UIImage.jp.fromBundle(girl.imgName, type: "jpg")!)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .scaledToFit()

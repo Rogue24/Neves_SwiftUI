@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension URL: ExpressibleByStringLiteral {
+extension URL: @retroactive ExpressibleByStringLiteral {
     public init(stringLiteral value: StaticString) {
         self.init(string: value.description)!
     }
