@@ -29,7 +29,7 @@ extension FoodListScreen {
             let shouldUseVStack = textSize.isAccessibilitySize || food.image.count > 1
             
             // 相当于把AnyLayout当作VStack和HStack的泛型来使用
-            AnyLayout.userVStack(if: shouldUseVStack, spacing: 30) {
+            AnyLayout.useVStack(if: shouldUseVStack, spacing: 30) {
                 Text(food.image)
                     .font(.system(size: 100))
                     .lineLimit(1)
