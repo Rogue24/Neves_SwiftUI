@@ -40,6 +40,7 @@ enum Demo: String, CaseIterable, Identifiable {
     case RouteTest
     
     // MARK: - Base
+    case StateInitial
     case MatchedGeometryEffect
     case LazyGrid
     case ResultBuilder
@@ -111,6 +112,7 @@ extension Demo: View {
         case .RouteTest: RouteTestView()
             
         // Base
+        case .StateInitial: StateInitialView()
         case .MatchedGeometryEffect: MatchedGeometryEffectView()
         case .LazyGrid: LazyGridView()
         case .ResultBuilder: ResultBuilderView()
@@ -197,6 +199,7 @@ extension Demo {
         ]),
         
         Section(title: "Base", demos: [
+            .StateInitial,
             .MatchedGeometryEffect,
             .LazyGrid,
             .ResultBuilder,
