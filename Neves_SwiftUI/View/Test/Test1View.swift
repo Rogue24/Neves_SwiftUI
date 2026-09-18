@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Test1View: View {
     @State var isA = true
-    @State(initialValue: "123") var testStr
+//    @State(initialValue: "123") var testStr
+    @State var testStr = "123"
     
     // @ViewBuilder：允许闭包中提供多个View
     var body: some View {
