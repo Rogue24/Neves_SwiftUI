@@ -4,7 +4,8 @@
 //
 //  Created by aa on 2026/9/18.
 //
-//  参考：https://chatgpt.com/share/6aad1472-d054-83ee-a65f-f1849dc79a88
+//  参考1：https://chatgpt.com/share/6aad1472-d054-83ee-a65f-f1849dc79a88
+//  参考2：https://share.gemini.google/pRJgR53qFMlc
 //
 
 import SwiftUI
@@ -64,7 +65,8 @@ struct StateStorageView: View {
     @State var showCounter = true
     
     var body: some View {
-        // 🌰：`View`被重新创建，`State`仍然可以存在
+        // 🌰：`View`被重新创建，`State`仍然可以存在：
+        // 通过修饰符隐藏（如`.opacity(0)`）——> 不会重新创建
         // 1.当`showCounter`为false时：
         //  `CounterView`只是隐藏了，并没有从SwiftUI的视图层级中消失，因此对应的`State storage`没有被销毁。
         // 2.当`showCounter`为true时：
@@ -79,7 +81,8 @@ struct StateStorageView: View {
                 showCounter.toggle()
             }
         
-        // 🌰：`View`和`State`都被重新创建
+        // 🌰：`View`和`State`都被重新创建：
+        // 使用条件渲染（`if`/`if-else`）——> 会重新创建
         // 1.当`showCounter`为false时：
         //  `CounterView`从SwiftUI的视图层级中消失，所以对应的`State storage`也随之结束生命周期。
         // 2.当`showCounter`为true时：
