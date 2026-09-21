@@ -1,5 +1,5 @@
 //
-//  StateInitialView.swift
+//  StateStorageView.swift
 //  Neves_SwiftUI
 //
 //  Created by aa on 2026/9/18.
@@ -60,7 +60,7 @@ import SwiftUI
  - 不是：`View struct`被重新创建 → `State`消失，而更接近：SwiftUI认为这个`View`的`identity`已经不存在了 → 对应的`State storage`才会被销毁。
  */
 
-struct StateInitialView: View {
+struct StateStorageView: View {
     @State var showCounter = true
     
     var body: some View {
