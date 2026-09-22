@@ -58,6 +58,7 @@ enum Demo: String, CaseIterable, Identifiable {
     case AnimationValue
     case AnimExperience_iOS15
     case AnimExperience
+    case PhaseAnimBall
     
     // MARK: - TypingText
     case TypingText
@@ -134,6 +135,7 @@ extension Demo: View {
         case .AnimationValue: AnimationValueView()
         case .AnimExperience_iOS15: AnimExperience_iOS15_View()
         case .AnimExperience: AnimExperienceView()
+        case .PhaseAnimBall: PhaseAnimBallView()
             
         // MARK: - TypingText
         case .TypingText: TypingTextView()
@@ -228,6 +230,7 @@ extension Demo {
             .AnimationValue,
             .AnimExperience_iOS15,
             .AnimExperience,
+            .PhaseAnimBall,
         ]),
         
         Section(title: "TypingText", demos: [

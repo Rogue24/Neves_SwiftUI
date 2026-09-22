@@ -17,7 +17,7 @@
 		0011008A2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100892C47A62300DF0C89 /* SwingAnimationView.swift */; };
 		0011008B2C47A62300DF0C89 /* SwingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001100892C47A62300DF0C89 /* SwingAnimationView.swift */; };
 		00245A042A4B039400E5CF67 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00245A032A4B039400E5CF67 /* PlaygroundView.swift */; };
-		002C31A5306135510016F4B4 /* AnimBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C31A4306135510016F4B4 /* AnimBallView.swift */; };
+		002C31A5306135510016F4B4 /* PhaseAnimBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C31A4306135510016F4B4 /* PhaseAnimBallView.swift */; };
 		002C31A9306143470016F4B4 /* TypingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C31A6306143470016F4B4 /* TypingTextView.swift */; };
 		002C31AA306143470016F4B4 /* AnimatedTypingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C31A7306143470016F4B4 /* AnimatedTypingTextView.swift */; };
 		00535C6E2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */; };
@@ -249,7 +249,7 @@
 		001100822C47A56700DF0C89 /* SwingAnimationModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwingAnimationModifier.swift; sourceTree = "<group>"; };
 		001100892C47A62300DF0C89 /* SwingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingAnimationView.swift; sourceTree = "<group>"; };
 		00245A032A4B039400E5CF67 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
-		002C31A4306135510016F4B4 /* AnimBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimBallView.swift; sourceTree = "<group>"; };
+		002C31A4306135510016F4B4 /* PhaseAnimBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseAnimBallView.swift; sourceTree = "<group>"; };
 		002C31A6306143470016F4B4 /* TypingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingTextView.swift; sourceTree = "<group>"; };
 		002C31A7306143470016F4B4 /* AnimatedTypingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTypingTextView.swift; sourceTree = "<group>"; };
 		00535C6D2B7CCCC700C308C9 /* AsyncImageDemoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageDemoScreen.swift; sourceTree = "<group>"; };
@@ -1038,7 +1038,7 @@
 				00DFE9FA2909062400B6611B /* AnimationValueView.swift */,
 				00DFE9F52908E88400B6611B /* AnimExperienceView_iOS15.swift */,
 				716828BA275DBA4C0039F3F7 /* AnimExperienceView.swift */,
-				002C31A4306135510016F4B4 /* AnimBallView.swift */,
+				002C31A4306135510016F4B4 /* PhaseAnimBallView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1435,7 +1435,7 @@
 				00F0A1DD296BF62E006B5A28 /* NevesWidgetStore.swift in Sources */,
 				715ED7BC2700642C0030F279 /* UIViewController.Extension.swift in Sources */,
 				7115A6CA27EDC7DA00C5B145 /* NevesWidget.intentdefinition in Sources */,
-				002C31A5306135510016F4B4 /* AnimBallView.swift in Sources */,
+				002C31A5306135510016F4B4 /* PhaseAnimBallView.swift in Sources */,
 				00DFE9FD29090ABA00B6611B /* AnimatableModifiers.swift in Sources */,
 				00D63E05299103C5003F0C29 /* BlurEffect.swift in Sources */,
 				719F9FBB28616015008B4C1F /* StateObjectTestView.swift in Sources */,
